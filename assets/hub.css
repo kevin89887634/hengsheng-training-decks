@@ -3,7 +3,8 @@
 body{background:var(--bg);color:var(--ink);font-family:var(--font-body);min-height:100vh;transition:background .4s,color .4s}
 .hero{max-width:1100px;margin:0 auto;padding:clamp(40px,8vh,90px) clamp(22px,5vw,60px) clamp(20px,4vh,40px)}
 .hero .logo{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:clamp(18px,2.2vw,26px);color:var(--key);margin-bottom:22px}
-.hero .logo .mk{width:1.1em;height:1.1em;border-radius:7px;background:var(--key);color:var(--bg);display:flex;align-items:center;justify-content:center;font-size:.62em}
+.hero .logo .mk{width:1.4em;height:1.4em;background:transparent;display:inline-flex;align-items:center;justify-content:center;font-size:.62em}
+.hero .logo .mk img{width:100%;height:100%;object-fit:contain;display:block}
 .hero h1{font-family:var(--font-display);font-weight:700;font-size:clamp(30px,5.4vw,58px);line-height:1.1;letter-spacing:.01em}
 .hero p{font-size:clamp(15px,1.9vw,21px);color:var(--ink-2);margin-top:14px;line-height:1.6;max-width:640px}
 .grid{max-width:1100px;margin:0 auto;padding:0 clamp(22px,5vw,60px) clamp(50px,10vh,100px);

@@ -67,7 +67,8 @@ details.q .ans{font-size:clamp(13px,1.5vw,19px);color:var(--ink-2);line-height:1
 .cover-quote{font-family:var(--font-display);font-size:clamp(15px,1.9vw,24px);color:var(--ink-2);line-height:1.7;font-style:italic}
 .foot{font-size:clamp(12px,1.3vw,16px);color:var(--ink-2);letter-spacing:.04em}
 .logo{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:clamp(18px,2.2vw,28px);color:var(--key)}
-.logo .mk{width:1.1em;height:1.1em;border-radius:7px;background:var(--key);color:var(--bg);display:flex;align-items:center;justify-content:center;font-size:.62em;font-weight:700}
+.logo .mk{width:1.4em;height:1.4em;background:transparent;display:inline-flex;align-items:center;justify-content:center;font-size:.62em;font-weight:700;color:var(--key)}
+.logo .mk img{width:100%;height:100%;object-fit:contain;display:block}
 
 /* 自绘线条插画(Lemonade 风，纯 SVG+CSS) */
 .ln{fill:none;stroke-width:4.5;stroke-linecap:round;stroke-linejoin:round}
