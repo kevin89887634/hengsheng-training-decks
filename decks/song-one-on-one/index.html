@@ -11,9 +11,25 @@
 <div class="bar" id="bar"></div>
 <div class="deck">
 
-  <!-- 1 封面 -->
+  <!-- 1 封面 — 慢速光球漂移背景 -->
   <section class="slide center">
-    <div class="wrap">
+    <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"
+         style="position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:0.55">
+      <defs><filter id="cv-blur-song" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="70"/></filter></defs>
+      <circle cx="220" cy="180" r="200" fill="#A87E2E" opacity="0.55" filter="url(#cv-blur-song)">
+        <animate attributeName="cx" values="220;1380;220" dur="72s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="180;720;180" dur="86s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="1380" cy="720" r="220" fill="#2A4A8C" opacity="0.50" filter="url(#cv-blur-song)">
+        <animate attributeName="cx" values="1380;220;1380" dur="80s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="720;180;720" dur="94s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="800" cy="450" r="160" fill="#2C8A60" opacity="0.30" filter="url(#cv-blur-song)">
+        <animate attributeName="cx" values="800;500;1100;800" dur="100s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="160;220;160" dur="48s" repeatCount="indefinite"/>
+      </circle>
+    </svg>
+    <div class="wrap" style="position:relative;z-index:1">
       <div class="hs-lottie rv" data-lottie="../../assets/lottie/pulse-ring-gold.json" data-loop="true" style="width:120px;height:120px;margin:0 auto 14px;display:block"></div>
       <div class="tag rv" style="margin-bottom:20px">2026 内部培训 · 销售方法论</div>
       <h1 class="rv">一对一保险销售</h1>
@@ -83,11 +99,83 @@
     <div class="wrap">
       <div class="toprow"><div class="tag rv">保额计算 · DEDI 四步法</div><div class="stepno rv">06 / 22</div></div>
       <h2 class="rv">DEDI 保额计算法</h2>
-      <div class="path rv" style="margin-top:22px">
-        <div class="node"><div class="nt">D</div><div class="ne">DEBT · 负债</div><div class="nd">房贷、车贷<br><small style="color:var(--key);font-weight:600">问:你还欠多少钱？</small></div></div>
-        <div class="node"><div class="nt">E</div><div class="ne">EXPENSE · 花费</div><div class="nd">家庭每年花费、孩子教育<br><small style="color:var(--key);font-weight:600">问:需要多少钱？</small></div></div>
-        <div class="node"><div class="nt">D</div><div class="ne">DEPENDENT · 依靠</div><div class="nd">孩子、父母赡养<br><small style="color:var(--key);font-weight:600">问:他们需要多少？</small></div></div>
-        <div class="node last"><div class="nt">I</div><div class="ne">INCOME · 收入</div><div class="nd">我本来能挣多少<br><small style="color:var(--key);font-weight:600">问:现在挣不到了怎么办？</small></div></div>
+      <!-- 大型永久流动时间轴 SVG (DEDI 四步) -->
+      <div class="rv" style="margin:14px 0;width:100%">
+        <svg viewBox="0 0 1200 360" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto;max-height:50vh;display:block">
+          <defs>
+            <filter id="dedi-glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="5" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <linearGradient id="dedi-line" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#2A4A8C"/>
+              <stop offset="1" stop-color="#A87E2E"/>
+            </linearGradient>
+          </defs>
+          <line x1="100" y1="190" x2="1100" y2="190" stroke="rgba(42,74,140,0.18)" stroke-width="4" stroke-linecap="round"/>
+          <line x1="100" y1="190" x2="1100" y2="190" stroke="url(#dedi-line)" stroke-width="4" stroke-linecap="round" stroke-dasharray="14 16">
+            <animate attributeName="stroke-dashoffset" from="0" to="-60" dur="1.8s" repeatCount="indefinite"/>
+          </line>
+          <!-- D DEBT 负债 -->
+          <g>
+            <circle cx="100" cy="190" r="56" fill="#2A4A8C" opacity="0.18">
+              <animate attributeName="r" values="50;64;50" dur="3.2s" begin="0s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.18;0.04;0.18" dur="3.2s" begin="0s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="100" cy="190" r="40" fill="#2A4A8C"/>
+            <text x="100" y="200" text-anchor="middle" fill="#fff" font-size="28" font-weight="700" font-family="var(--font-display)">D</text>
+            <text x="100" y="110" text-anchor="middle" fill="#2A4A8C" font-size="15" font-weight="700" letter-spacing="2">DEBT · 负债</text>
+            <text x="100" y="262" text-anchor="middle" fill="currentColor" opacity="0.6" font-size="12">房贷 · 车贷</text>
+            <text x="100" y="288" text-anchor="middle" fill="#A87E2E" font-size="12" font-weight="600">问:还欠多少？</text>
+          </g>
+          <!-- E EXPENSE 花费 -->
+          <g>
+            <circle cx="430" cy="190" r="56" fill="#2A4A8C" opacity="0.18">
+              <animate attributeName="r" values="50;64;50" dur="3.2s" begin="0.5s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.18;0.04;0.18" dur="3.2s" begin="0.5s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="430" cy="190" r="40" fill="#2A4A8C"/>
+            <text x="430" y="200" text-anchor="middle" fill="#fff" font-size="28" font-weight="700" font-family="var(--font-display)">E</text>
+            <text x="430" y="110" text-anchor="middle" fill="#2A4A8C" font-size="15" font-weight="700" letter-spacing="2">EXPENSE · 花费</text>
+            <text x="430" y="262" text-anchor="middle" fill="currentColor" opacity="0.6" font-size="12">家庭花费 · 孩子教育</text>
+            <text x="430" y="288" text-anchor="middle" fill="#A87E2E" font-size="12" font-weight="600">问:需要多少？</text>
+          </g>
+          <!-- D DEPENDENT 依靠 -->
+          <g>
+            <circle cx="770" cy="190" r="56" fill="#2A4A8C" opacity="0.18">
+              <animate attributeName="r" values="50;64;50" dur="3.2s" begin="1.0s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.18;0.04;0.18" dur="3.2s" begin="1.0s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="770" cy="190" r="40" fill="#2A4A8C"/>
+            <text x="770" y="200" text-anchor="middle" fill="#fff" font-size="28" font-weight="700" font-family="var(--font-display)">D</text>
+            <text x="770" y="110" text-anchor="middle" fill="#2A4A8C" font-size="15" font-weight="700" letter-spacing="2">DEPENDENT · 依靠</text>
+            <text x="770" y="262" text-anchor="middle" fill="currentColor" opacity="0.6" font-size="12">孩子 · 父母</text>
+            <text x="770" y="288" text-anchor="middle" fill="#A87E2E" font-size="12" font-weight="600">问:他们需要多少？</text>
+          </g>
+          <!-- I INCOME 收入 主角金辉光 -->
+          <g filter="url(#dedi-glow)">
+            <circle cx="1100" cy="190" r="82" fill="#A87E2E" opacity="0.10">
+              <animate attributeName="r" values="72;94;72" dur="2.2s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.10;0;0.10" dur="2.2s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="1100" cy="190" r="64" fill="#A87E2E" opacity="0.22">
+              <animate attributeName="r" values="56;74;56" dur="2.2s" begin="-0.5s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.22;0.06;0.22" dur="2.2s" begin="-0.5s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="1100" cy="190" r="48" fill="#A87E2E"/>
+            <text x="1100" y="201" text-anchor="middle" fill="#fff" font-size="32" font-weight="700" font-family="var(--font-display)">I</text>
+          </g>
+          <text x="1100" y="100" text-anchor="middle" fill="#A87E2E" font-size="15" font-weight="700" letter-spacing="2">INCOME · 收入</text>
+          <text x="1100" y="265" text-anchor="middle" fill="#A87E2E" opacity="0.75" font-size="12">我本来能挣多少</text>
+          <text x="1100" y="290" text-anchor="middle" fill="#A87E2E" font-size="12" font-weight="600">问:挣不到怎么办？</text>
+          <!-- 光点永久行走 -->
+          <circle r="10" fill="#fff" stroke="#A87E2E" stroke-width="2.5" filter="url(#dedi-glow)">
+            <animateMotion dur="8s" repeatCount="indefinite" path="M 100 190 L 1100 190"/>
+          </circle>
+          <circle r="7" fill="#A87E2E" opacity="0.8" filter="url(#dedi-glow)">
+            <animateMotion dur="8s" begin="-4s" repeatCount="indefinite" path="M 100 190 L 1100 190"/>
+          </circle>
+        </svg>
       </div>
       <div class="callout rv" style="margin-top:22px"><div class="lbl">快速估算公式</div><div class="q">"年收入乘以十是一个人需要的最基本的保障"</div></div>
     </div>
@@ -279,10 +367,72 @@
     <div class="wrap">
       <div class="toprow"><div class="tag rv">成交 · 销售升级</div><div class="stepno rv">19 / 22</div></div>
       <h2 class="rv">从卖保险到卖人设</h2>
-      <div class="path rv" style="margin-top:22px">
-        <div class="node"><div class="nt">第一阶段</div><div class="ne">卖产品</div><div class="nd">讲条款、讲价格、讲对比</div></div>
-        <div class="node"><div class="nt">第二阶段</div><div class="ne">卖专业度</div><div class="nd">DEDI 计算、产品对比、风险等级</div></div>
-        <div class="node last"><div class="nt">第三阶段</div><div class="ne">卖信任和感情</div><div class="nd">站在客户角度、长期关系、真诚</div></div>
+      <!-- 大型永久流动升级轴 SVG -->
+      <div class="rv" style="margin:14px 0;width:100%">
+        <svg viewBox="0 0 1200 360" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto;max-height:50vh;display:block">
+          <defs>
+            <filter id="up-glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="5" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <linearGradient id="up-line" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#5E6A82"/>
+              <stop offset="0.5" stop-color="#2A4A8C"/>
+              <stop offset="1" stop-color="#A87E2E"/>
+            </linearGradient>
+          </defs>
+          <line x1="160" y1="190" x2="1040" y2="190" stroke="rgba(94,106,130,0.18)" stroke-width="4" stroke-linecap="round"/>
+          <line x1="160" y1="190" x2="1040" y2="190" stroke="url(#up-line)" stroke-width="4" stroke-linecap="round" stroke-dasharray="14 16">
+            <animate attributeName="stroke-dashoffset" from="0" to="-60" dur="1.8s" repeatCount="indefinite"/>
+          </line>
+          <!-- 第一阶段 卖产品 灰 -->
+          <g>
+            <circle cx="160" cy="190" r="62" fill="#5E6A82" opacity="0.18">
+              <animate attributeName="r" values="56;72;56" dur="3.4s" begin="0s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.18;0.04;0.18" dur="3.4s" begin="0s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="160" cy="190" r="44" fill="#5E6A82"/>
+            <text x="160" y="200" text-anchor="middle" fill="#fff" font-size="22" font-weight="700" font-family="var(--font-display)">卖产品</text>
+            <text x="160" y="100" text-anchor="middle" fill="#5E6A82" font-size="15" font-weight="700" letter-spacing="2">第一阶段</text>
+            <text x="160" y="270" text-anchor="middle" fill="currentColor" opacity="0.6" font-size="13">讲条款 · 讲价格</text>
+            <text x="160" y="294" text-anchor="middle" fill="currentColor" opacity="0.6" font-size="13">讲对比</text>
+          </g>
+          <!-- 第二阶段 卖专业度 蓝 -->
+          <g>
+            <circle cx="600" cy="190" r="62" fill="#2A4A8C" opacity="0.20">
+              <animate attributeName="r" values="56;72;56" dur="3.4s" begin="0.6s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.20;0.05;0.20" dur="3.4s" begin="0.6s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="600" cy="190" r="46" fill="#2A4A8C"/>
+            <text x="600" y="200" text-anchor="middle" fill="#fff" font-size="22" font-weight="700" font-family="var(--font-display)">卖专业</text>
+            <text x="600" y="98" text-anchor="middle" fill="#2A4A8C" font-size="15" font-weight="700" letter-spacing="2">第二阶段</text>
+            <text x="600" y="270" text-anchor="middle" fill="currentColor" opacity="0.65" font-size="13">DEDI · 产品对比</text>
+            <text x="600" y="294" text-anchor="middle" fill="currentColor" opacity="0.65" font-size="13">风险等级</text>
+          </g>
+          <!-- 第三阶段 卖信任和感情 金 主角辉光 -->
+          <g filter="url(#up-glow)">
+            <circle cx="1040" cy="190" r="90" fill="#A87E2E" opacity="0.10">
+              <animate attributeName="r" values="80;100;80" dur="2.2s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.10;0;0.10" dur="2.2s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="1040" cy="190" r="72" fill="#A87E2E" opacity="0.22">
+              <animate attributeName="r" values="62;82;62" dur="2.2s" begin="-0.5s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.22;0.06;0.22" dur="2.2s" begin="-0.5s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="1040" cy="190" r="54" fill="#A87E2E"/>
+            <text x="1040" y="200" text-anchor="middle" fill="#fff" font-size="22" font-weight="700" font-family="var(--font-display)">卖信任</text>
+          </g>
+          <text x="1040" y="92" text-anchor="middle" fill="#A87E2E" font-size="15" font-weight="700" letter-spacing="2">第三阶段</text>
+          <text x="1040" y="272" text-anchor="middle" fill="#A87E2E" opacity="0.78" font-size="13">站客户角度 · 长期关系</text>
+          <text x="1040" y="296" text-anchor="middle" fill="#A87E2E" opacity="0.78" font-size="13">真诚</text>
+          <!-- 光点永久行走 -->
+          <circle r="11" fill="#fff" stroke="#A87E2E" stroke-width="2.5" filter="url(#up-glow)">
+            <animateMotion dur="8s" repeatCount="indefinite" path="M 160 190 L 1040 190"/>
+          </circle>
+          <circle r="7" fill="#A87E2E" opacity="0.8" filter="url(#up-glow)">
+            <animateMotion dur="8s" begin="-4s" repeatCount="indefinite" path="M 160 190 L 1040 190"/>
+          </circle>
+        </svg>
       </div>
       <div class="callout rv" style="margin-top:22px"><div class="lbl">销售升级金句</div><div class="q">"从卖保险变成卖人、卖人设——第一卖专业度,第二卖信任和感情。"</div></div>
     </div>

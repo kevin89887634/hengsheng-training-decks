@@ -11,9 +11,25 @@
 <div class="bar" id="bar"></div>
 <div class="deck">
 
-  <!-- 1 封面 -->
+  <!-- 1 封面 — 慢速光球漂移背景 -->
   <section class="slide center">
-    <div class="wrap">
+    <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"
+         style="position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:0.55">
+      <defs><filter id="cv-blur-love" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="70"/></filter></defs>
+      <circle cx="220" cy="180" r="200" fill="#B14E39" opacity="0.55" filter="url(#cv-blur-love)">
+        <animate attributeName="cx" values="220;1380;220" dur="68s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="180;720;180" dur="84s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="1380" cy="720" r="220" fill="#2A4A8C" opacity="0.50" filter="url(#cv-blur-love)">
+        <animate attributeName="cx" values="1380;220;1380" dur="76s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="720;180;720" dur="92s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="800" cy="450" r="160" fill="#A87E2E" opacity="0.30" filter="url(#cv-blur-love)">
+        <animate attributeName="cx" values="800;500;1100;800" dur="100s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="160;220;160" dur="48s" repeatCount="indefinite"/>
+      </circle>
+    </svg>
+    <div class="wrap" style="position:relative;z-index:1">
       <div class="hs-lottie rv" data-lottie="../../assets/lottie/heart-beat.json" data-loop="true" style="width:140px;height:140px;margin:0 auto 12px;display:block"></div>
       <div class="tag rv" style="margin-bottom:24px">成交演练 · 真实客户场景拆解</div>
       <h1 class="rv">突破保险销售瓶颈</h1>
@@ -29,12 +45,92 @@
       <div class="toprow"><div class="tag rv">课程地图</div></div>
       <h2 class="rv">这套逻辑，我们这样走</h2>
       <p class="lead rv" style="margin:10px 0 28px;font-size:clamp(15px,1.8vw,22px)">从一个痛点出发，走到成为「爱的传递者」。</p>
-      <div class="path rv">
-        <div class="node"><div class="nt">痛点</div><div class="ne">PAIN</div><div class="nd">怕拒绝，把自己当推销员</div></div>
-        <div class="node"><div class="nt">转念</div><div class="ne">SHIFT</div><div class="nd">从「索取」转为「给予」</div></div>
-        <div class="node"><div class="nt">方法</div><div class="ne">METHOD</div><div class="nd">聊牵挂 → 谈承诺 → 确认爱</div></div>
-        <div class="node"><div class="nt">实战</div><div class="ne">DRILL</div><div class="nd">练眼神、练心态、100% 还原</div></div>
-        <div class="node last"><div class="nt">升华</div><div class="ne">ASCENSION</div><div class="nd">成为爱的传递者</div></div>
+      <!-- 大型永久流动时间轴 SVG -->
+      <div class="rv" style="margin:14px 0;width:100%">
+        <svg viewBox="0 0 1200 340" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto;max-height:50vh;display:block">
+          <defs>
+            <filter id="love2-glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="5" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <linearGradient id="love2-line" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#B14E39"/>
+              <stop offset="0.5" stop-color="#2A4A8C"/>
+              <stop offset="1" stop-color="#A87E2E"/>
+            </linearGradient>
+          </defs>
+          <!-- 时间轴 -->
+          <line x1="100" y1="180" x2="1100" y2="180" stroke="rgba(168,126,46,0.18)" stroke-width="4" stroke-linecap="round"/>
+          <line x1="100" y1="180" x2="1100" y2="180" stroke="url(#love2-line)" stroke-width="4" stroke-linecap="round" stroke-dasharray="14 16">
+            <animate attributeName="stroke-dashoffset" from="0" to="-60" dur="1.8s" repeatCount="indefinite"/>
+          </line>
+          <!-- 痛点 红 -->
+          <g>
+            <circle cx="100" cy="180" r="52" fill="#B14E39" opacity="0.18">
+              <animate attributeName="r" values="48;60;48" dur="3.2s" begin="0s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.18;0.04;0.18" dur="3.2s" begin="0s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="100" cy="180" r="36" fill="#B14E39"/>
+            <text x="100" y="188" text-anchor="middle" fill="#fff" font-size="16" font-weight="700" font-family="var(--font-display)">痛点</text>
+            <text x="100" y="108" text-anchor="middle" fill="#B14E39" font-size="13" font-weight="700" letter-spacing="2">PAIN</text>
+            <text x="100" y="252" text-anchor="middle" fill="currentColor" opacity="0.6" font-size="12">怕拒绝 · 当推销员</text>
+          </g>
+          <!-- 转念 蓝 -->
+          <g>
+            <circle cx="350" cy="180" r="52" fill="#2A4A8C" opacity="0.18">
+              <animate attributeName="r" values="48;60;48" dur="3.2s" begin="0.5s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.18;0.04;0.18" dur="3.2s" begin="0.5s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="350" cy="180" r="36" fill="#2A4A8C"/>
+            <text x="350" y="188" text-anchor="middle" fill="#fff" font-size="16" font-weight="700" font-family="var(--font-display)">转念</text>
+            <text x="350" y="108" text-anchor="middle" fill="#2A4A8C" font-size="13" font-weight="700" letter-spacing="2">SHIFT</text>
+            <text x="350" y="252" text-anchor="middle" fill="currentColor" opacity="0.6" font-size="12">索取 → 给予</text>
+          </g>
+          <!-- 方法 金 -->
+          <g>
+            <circle cx="600" cy="180" r="52" fill="#A87E2E" opacity="0.18">
+              <animate attributeName="r" values="48;60;48" dur="3.2s" begin="1.0s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.18;0.04;0.18" dur="3.2s" begin="1.0s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="600" cy="180" r="36" fill="#A87E2E"/>
+            <text x="600" y="188" text-anchor="middle" fill="#fff" font-size="16" font-weight="700" font-family="var(--font-display)">方法</text>
+            <text x="600" y="108" text-anchor="middle" fill="#A87E2E" font-size="13" font-weight="700" letter-spacing="2">METHOD</text>
+            <text x="600" y="252" text-anchor="middle" fill="currentColor" opacity="0.6" font-size="12">聊牵挂 → 谈承诺 → 确认爱</text>
+          </g>
+          <!-- 实战 绿 -->
+          <g>
+            <circle cx="850" cy="180" r="52" fill="#2C8A60" opacity="0.18">
+              <animate attributeName="r" values="48;60;48" dur="3.2s" begin="1.5s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.18;0.04;0.18" dur="3.2s" begin="1.5s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="850" cy="180" r="36" fill="#2C8A60"/>
+            <text x="850" y="188" text-anchor="middle" fill="#fff" font-size="16" font-weight="700" font-family="var(--font-display)">实战</text>
+            <text x="850" y="108" text-anchor="middle" fill="#2C8A60" font-size="13" font-weight="700" letter-spacing="2">DRILL</text>
+            <text x="850" y="252" text-anchor="middle" fill="currentColor" opacity="0.6" font-size="12">练眼神 · 练心态</text>
+          </g>
+          <!-- 升华 金 主角辉光 -->
+          <g filter="url(#love2-glow)">
+            <circle cx="1100" cy="180" r="80" fill="#A87E2E" opacity="0.10">
+              <animate attributeName="r" values="70;92;70" dur="2.2s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.10;0;0.10" dur="2.2s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="1100" cy="180" r="62" fill="#A87E2E" opacity="0.22">
+              <animate attributeName="r" values="55;72;55" dur="2.2s" begin="-0.5s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.22;0.06;0.22" dur="2.2s" begin="-0.5s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="1100" cy="180" r="46" fill="#A87E2E"/>
+            <text x="1100" y="188" text-anchor="middle" fill="#fff" font-size="16" font-weight="700" font-family="var(--font-display)">升华</text>
+          </g>
+          <text x="1100" y="100" text-anchor="middle" fill="#A87E2E" font-size="14" font-weight="700" letter-spacing="2">ASCENSION</text>
+          <text x="1100" y="252" text-anchor="middle" fill="#A87E2E" opacity="0.75" font-size="13">成为爱的传递者</text>
+          <!-- 光点永久行走 -->
+          <circle r="10" fill="#fff" stroke="#A87E2E" stroke-width="2.5" filter="url(#love2-glow)">
+            <animateMotion dur="9s" repeatCount="indefinite" path="M 100 180 L 1100 180"/>
+          </circle>
+          <circle r="7" fill="#A87E2E" opacity="0.8" filter="url(#love2-glow)">
+            <animateMotion dur="9s" begin="-4.5s" repeatCount="indefinite" path="M 100 180 L 1100 180"/>
+          </circle>
+        </svg>
       </div>
     </div>
   </section>
