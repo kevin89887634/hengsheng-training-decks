@@ -32,10 +32,10 @@
       </div>
       <p class="lead rv" style="margin:14px 0 22px;font-size:clamp(15px,1.8vw,22px)">美国专业营销协会真实数据揭示:绝大多数销售员在关键时刻选择放弃,而真正的成交机会就在前方等待。</p>
       <div class="rv" style="display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.4vw,18px)">
-        <div class="card" style="text-align:center"><div class="stepbig" style="font-size:clamp(32px,4.6vw,64px);color:var(--danger)">2%</div><div class="ctitle">第 1 次接洽</div><div class="body">成交率极低,这只是起点</div></div>
-        <div class="card" style="text-align:center"><div class="stepbig" style="font-size:clamp(32px,4.6vw,64px);color:var(--danger)">5%</div><div class="ctitle">第 3 次跟进</div><div class="body">大多数销售在此放弃</div></div>
-        <div class="card" style="text-align:center"><div class="stepbig" style="font-size:clamp(32px,4.6vw,64px);color:var(--key)">10%</div><div class="ctitle">第 4 次跟进</div><div class="body">坚持者开始看到回报</div></div>
-        <div class="card" style="text-align:center;background:var(--key-bg);border-color:var(--key-bd)"><div class="stepbig" style="font-size:clamp(32px,4.6vw,64px);color:var(--key)">80%</div><div class="ctitle" style="color:var(--key)">第 5–11 次跟进</div><div class="body">真正的金矿在此</div></div>
+        <div class="card" style="text-align:center"><div class="stepbig" style="font-size:clamp(32px,4.6vw,64px);color:var(--danger)"><span data-countup="2" data-suffix="%" data-duration="900">0</span></div><div class="ctitle">第 1 次接洽</div><div class="body">成交率极低,这只是起点</div></div>
+        <div class="card" style="text-align:center"><div class="stepbig" style="font-size:clamp(32px,4.6vw,64px);color:var(--danger)"><span data-countup="5" data-suffix="%" data-duration="1100">0</span></div><div class="ctitle">第 3 次跟进</div><div class="body">大多数销售在此放弃</div></div>
+        <div class="card" style="text-align:center"><div class="stepbig" style="font-size:clamp(32px,4.6vw,64px);color:var(--key)"><span data-countup="10" data-suffix="%" data-duration="1300">0</span></div><div class="ctitle">第 4 次跟进</div><div class="body">坚持者开始看到回报</div></div>
+        <div class="card" style="text-align:center;background:var(--key-bg);border-color:var(--key-bd)"><div class="stepbig" style="font-size:clamp(32px,4.6vw,64px);color:var(--key)"><span data-countup="80" data-suffix="%" data-duration="1900">0</span></div><div class="ctitle" style="color:var(--key)">第 5–11 次跟进</div><div class="body">真正的金矿在此</div></div>
       </div>
       <div class="tipbox rv" style="margin-top:22px"><div class="lbl">关键认知</div><div class="txt">80% 的销售在第 4 至 11 次跟进后完成,但 80% 的销售员跟进一次就放弃。<b style="color:var(--ink)">销售不是「说服」,是「陪跑」。</b></div></div>
     </div>
@@ -190,25 +190,89 @@
     </div>
   </section>
 
-  <!-- 7 销售八步 -->
+  <!-- 7 销售八步:环形 SVG 渐绘 + 节点依次浮现 -->
   <section class="slide">
+    <style>
+      .closed-loop .ring-draw{stroke-dasharray:1068;stroke-dashoffset:1068}
+      .closed-loop .nd-g,.closed-loop .center-g{opacity:0}
+      .slide.active .closed-loop .ring-draw{animation:cl-ring 3s cubic-bezier(.22,1,.36,1) .2s forwards}
+      @keyframes cl-ring{to{stroke-dashoffset:0}}
+      .slide.active .closed-loop .nd-g{animation:cl-pop .55s cubic-bezier(.22,1,.36,1) forwards}
+      .slide.active .closed-loop .nd-1{animation-delay:.5s}
+      .slide.active .closed-loop .nd-2{animation-delay:.7s}
+      .slide.active .closed-loop .nd-3{animation-delay:.9s}
+      .slide.active .closed-loop .nd-4{animation-delay:1.1s}
+      .slide.active .closed-loop .nd-5{animation-delay:1.3s}
+      .slide.active .closed-loop .nd-6{animation-delay:1.5s}
+      .slide.active .closed-loop .nd-7{animation-delay:1.7s}
+      .slide.active .closed-loop .nd-8{animation-delay:1.9s}
+      .slide.active .closed-loop .center-g{animation:cl-pop .6s ease-out 2.4s forwards}
+      @keyframes cl-pop{from{opacity:0}to{opacity:1}}
+      .closed-loop .nd-6-pulse{transform-box:fill-box;transform-origin:center;animation:cl-pulse 2.4s ease-in-out infinite}
+      @keyframes cl-pulse{0%,100%{transform:scale(1);opacity:.18}50%{transform:scale(1.2);opacity:.06}}
+    </style>
     <div class="wrap">
       <div class="toprow"><div class="tag rv">第三部分 · 成功八步精要</div><div class="stepno rv">07 / 15</div></div>
-      <div class="rv" style="display:flex;align-items:center;gap:18px;flex-wrap:wrap">
-        <div class="hs-lottie" data-lottie="../../assets/lottie/check-circle.json" style="width:72px;height:72px;flex:none"></div>
-        <h2 style="margin:0">销售八步闭环 — 从陌生到成交</h2>
-      </div>
-      <div class="rv" style="margin-top:22px;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.4vw,16px)">
-        <div class="card"><div class="stepbig" style="font-size:clamp(22px,3.2vw,44px);color:var(--key)">01</div><div class="ctitle">梦想</div><div class="body">5 年目标量化,首年完成 2%</div></div>
-        <div class="card"><div class="stepbig" style="font-size:clamp(22px,3.2vw,44px);color:var(--key)">02</div><div class="ctitle">承诺</div><div class="body">全力以赴,不是试试看</div></div>
-        <div class="card"><div class="stepbig" style="font-size:clamp(22px,3.2vw,44px);color:var(--key)">03</div><div class="ctitle">列名单</div><div class="body">100–300 人名单库,向上推荐</div></div>
-        <div class="card"><div class="stepbig" style="font-size:clamp(22px,3.2vw,44px);color:var(--key)">04</div><div class="ctitle">邀约</div><div class="body">高姿态三不谈:产品 / 制度 / 公司</div></div>
-      </div>
-      <div class="rv" style="margin-top:14px;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.4vw,16px)">
-        <div class="card"><div class="stepbig" style="font-size:clamp(22px,3.2vw,44px);color:var(--key)">05</div><div class="ctitle">讲计划</div><div class="body">找需求 → 给机会 → 约下次</div></div>
-        <div class="card" style="background:var(--key-bg);border-color:var(--key-bd)"><div class="stepbig" style="font-size:clamp(22px,3.2vw,44px);color:var(--key)">06</div><div class="ctitle" style="color:var(--key)">跟进</div><div class="body">核心环节,80% 业绩在此燃烧</div></div>
-        <div class="card"><div class="stepbig" style="font-size:clamp(22px,3.2vw,44px);color:var(--key)">07</div><div class="ctitle">检查进度</div><div class="body">定期咨询线,不越级不干扰</div></div>
-        <div class="card"><div class="stepbig" style="font-size:clamp(22px,3.2vw,44px);color:var(--key)">08</div><div class="ctitle">复制</div><div class="body">简单重复经常化,传火给下一代</div></div>
+      <h2 class="rv">销售八步闭环 — 从陌生到成交</h2>
+      <p class="lead rv" style="margin:6px 0 0;font-size:clamp(14px,1.6vw,20px)">八步首尾相接形成闭环:跟进是核心环节,80% 的业绩在此燃烧。</p>
+
+      <!-- 大幅环形 SVG -->
+      <div class="rv closed-loop" style="margin:8px 0;width:100%">
+        <svg viewBox="0 0 1000 520" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto;max-height:62vh;display:block">
+          <!-- 底环(灰) + 渐绘环(金,从顶部顺时针展开) -->
+          <circle cx="500" cy="260" r="170" stroke="rgba(168,126,46,0.18)" stroke-width="3" fill="none"/>
+          <circle class="ring-draw" cx="500" cy="260" r="170" stroke="#A87E2E" stroke-width="3.5" fill="none" stroke-linecap="round" transform="rotate(-90 500 260)"/>
+
+          <!-- 中心 -->
+          <g class="center-g">
+            <text x="500" y="252" text-anchor="middle" fill="#A87E2E" font-size="38" font-weight="700" font-family="var(--font-display)">闭 环</text>
+            <text x="500" y="290" text-anchor="middle" fill="currentColor" opacity="0.55" font-size="14" letter-spacing="3">8 STEPS · 从梦想到成交</text>
+          </g>
+
+          <!-- 8 节点(顺时针,顶 → 右上 → 右 → 右下 → 底 → 左下 → 左 → 左上) -->
+          <g class="nd-g nd-1">
+            <text x="500" y="22" text-anchor="middle" fill="#A87E2E" font-size="19" font-weight="700" font-family="var(--font-display)">梦想</text>
+            <circle cx="500" cy="65" r="38" fill="#A87E2E"/>
+            <text x="500" y="74" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">01</text>
+          </g>
+          <g class="nd-g nd-2">
+            <text x="710" y="86" text-anchor="middle" fill="#A87E2E" font-size="19" font-weight="700" font-family="var(--font-display)">承诺</text>
+            <circle cx="638" cy="122" r="38" fill="#A87E2E"/>
+            <text x="638" y="131" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">02</text>
+          </g>
+          <g class="nd-g nd-3">
+            <text x="790" y="265" text-anchor="middle" fill="#A87E2E" font-size="19" font-weight="700" font-family="var(--font-display)">列名单</text>
+            <circle cx="695" cy="260" r="38" fill="#A87E2E"/>
+            <text x="695" y="269" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">03</text>
+          </g>
+          <g class="nd-g nd-4">
+            <text x="710" y="438" text-anchor="middle" fill="#A87E2E" font-size="19" font-weight="700" font-family="var(--font-display)">邀约</text>
+            <circle cx="638" cy="398" r="38" fill="#A87E2E"/>
+            <text x="638" y="407" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">04</text>
+          </g>
+          <g class="nd-g nd-5">
+            <text x="500" y="510" text-anchor="middle" fill="#A87E2E" font-size="19" font-weight="700" font-family="var(--font-display)">讲计划</text>
+            <circle cx="500" cy="455" r="38" fill="#A87E2E"/>
+            <text x="500" y="464" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">05</text>
+          </g>
+          <!-- 节点 6 跟进(主角:大圆 + 持续脉动) -->
+          <g class="nd-g nd-6">
+            <text x="290" y="438" text-anchor="middle" fill="#A87E2E" font-size="22" font-weight="700" font-family="var(--font-display)">跟进 ★</text>
+            <circle class="nd-6-pulse" cx="362" cy="398" r="56" fill="#A87E2E" opacity="0.18"/>
+            <circle cx="362" cy="398" r="44" fill="#A87E2E"/>
+            <text x="362" y="408" text-anchor="middle" fill="#fff" font-size="24" font-weight="700">06</text>
+          </g>
+          <g class="nd-g nd-7">
+            <text x="210" y="265" text-anchor="middle" fill="#A87E2E" font-size="19" font-weight="700" font-family="var(--font-display)">检查</text>
+            <circle cx="305" cy="260" r="38" fill="#A87E2E"/>
+            <text x="305" y="269" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">07</text>
+          </g>
+          <g class="nd-g nd-8">
+            <text x="290" y="86" text-anchor="middle" fill="#A87E2E" font-size="19" font-weight="700" font-family="var(--font-display)">复制</text>
+            <circle cx="362" cy="122" r="38" fill="#A87E2E"/>
+            <text x="362" y="131" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">08</text>
+          </g>
+        </svg>
       </div>
     </div>
   </section>
@@ -391,15 +455,15 @@
       </div>
       <p class="lead rv" style="margin:14px 0 22px;font-size:clamp(15px,1.8vw,22px)">美国专业营销协会真实统计揭示:<b style="color:var(--ink)">成交不是靠天赋,而是靠坚持。</b></p>
       <div class="rv" style="display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(8px,1.2vw,14px)">
-        <div class="card" style="text-align:center"><div class="stepbig" style="font-size:clamp(22px,3.5vw,46px);color:var(--danger)">2%</div><div class="ne" style="font-size:clamp(10px,1.1vw,13px);color:var(--ink-2)">第 1 次接洽</div></div>
-        <div class="card" style="text-align:center"><div class="stepbig" style="font-size:clamp(22px,3.5vw,46px);color:var(--danger)">3%</div><div class="ne" style="font-size:clamp(10px,1.1vw,13px);color:var(--ink-2)">第 2 次跟进</div></div>
-        <div class="card" style="text-align:center"><div class="stepbig" style="font-size:clamp(22px,3.5vw,46px);color:var(--danger)">5%</div><div class="ne" style="font-size:clamp(10px,1.1vw,13px);color:var(--ink-2)">第 3 次跟进</div></div>
-        <div class="card" style="text-align:center"><div class="stepbig" style="font-size:clamp(22px,3.5vw,46px);color:var(--key)">10%</div><div class="ne" style="font-size:clamp(10px,1.1vw,13px);color:var(--ink-2)">第 4 次跟进</div></div>
-        <div class="card" style="text-align:center;background:var(--key-bg);border-color:var(--key-bd)"><div class="stepbig" style="font-size:clamp(22px,3.5vw,46px);color:var(--key)">80%</div><div class="ne" style="font-size:clamp(10px,1.1vw,13px);color:var(--key)">第 5–11 次</div></div>
+        <div class="card" style="text-align:center"><div class="stepbig" style="font-size:clamp(22px,3.5vw,46px);color:var(--danger)"><span data-countup="2" data-suffix="%" data-duration="700">0</span></div><div class="ne" style="font-size:clamp(10px,1.1vw,13px);color:var(--ink-2)">第 1 次接洽</div></div>
+        <div class="card" style="text-align:center"><div class="stepbig" style="font-size:clamp(22px,3.5vw,46px);color:var(--danger)"><span data-countup="3" data-suffix="%" data-duration="800">0</span></div><div class="ne" style="font-size:clamp(10px,1.1vw,13px);color:var(--ink-2)">第 2 次跟进</div></div>
+        <div class="card" style="text-align:center"><div class="stepbig" style="font-size:clamp(22px,3.5vw,46px);color:var(--danger)"><span data-countup="5" data-suffix="%" data-duration="900">0</span></div><div class="ne" style="font-size:clamp(10px,1.1vw,13px);color:var(--ink-2)">第 3 次跟进</div></div>
+        <div class="card" style="text-align:center"><div class="stepbig" style="font-size:clamp(22px,3.5vw,46px);color:var(--key)"><span data-countup="10" data-suffix="%" data-duration="1100">0</span></div><div class="ne" style="font-size:clamp(10px,1.1vw,13px);color:var(--ink-2)">第 4 次跟进</div></div>
+        <div class="card" style="text-align:center;background:var(--key-bg);border-color:var(--key-bd)"><div class="stepbig" style="font-size:clamp(22px,3.5vw,46px);color:var(--key)"><span data-countup="80" data-suffix="%" data-duration="1800">0</span></div><div class="ne" style="font-size:clamp(10px,1.1vw,13px);color:var(--key)">第 5–11 次</div></div>
       </div>
       <div class="dual rv" style="margin-top:18px">
         <div class="pane bad"><div class="ph">放弃者的代价</div><div class="flow">80% 的销售员在第 1–3 次跟进后放弃,永远看不到那 80% 的成交机会</div></div>
-        <div class="pane good"><div class="ph">坚持者的奖励</div><div class="flow">坚持到第 5 次以上的销售员,成交率跃升至 80%,是放弃者的 <b style="color:var(--key)">40 倍</b></div></div>
+        <div class="pane good"><div class="ph">坚持者的奖励</div><div class="flow">坚持到第 5 次以上的销售员,成交率跃升至 80%,是放弃者的 <b style="color:var(--key);font-size:1.4em"><span data-countup="40" data-suffix="" data-duration="1600">0</span> 倍</b></div></div>
       </div>
     </div>
   </section>
@@ -450,6 +514,7 @@
 
 <script src="../../assets/vendor/lottie_light.min.js"></script>
 <script src="../../assets/lottie-player.js"></script>
+<script src="../../assets/count-up.js"></script>
 <script src="../../assets/deck.js"></script>
 </body>
 </html>
