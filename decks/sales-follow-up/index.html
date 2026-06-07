@@ -11,9 +11,30 @@
 <div class="bar" id="bar"></div>
 <div class="deck">
 
-  <!-- 1 封面 -->
+  <!-- 1 封面 — 慢速漂移的几何光晕背景 + 主内容 -->
   <section class="slide center">
-    <div class="wrap">
+    <!-- 背景:3 个超大模糊光球永久漂移(60-90 秒周期),营造"未来感" -->
+    <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"
+         style="position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:0.55">
+      <defs>
+        <filter id="cv-blur" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="70"/>
+        </filter>
+      </defs>
+      <circle cx="220" cy="180" r="200" fill="#A87E2E" opacity="0.55" filter="url(#cv-blur)">
+        <animate attributeName="cx" values="220;1380;220" dur="68s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="180;720;180" dur="84s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="1380" cy="720" r="220" fill="#2A4A8C" opacity="0.50" filter="url(#cv-blur)">
+        <animate attributeName="cx" values="1380;220;1380" dur="76s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="720;180;720" dur="92s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="800" cy="450" r="160" fill="#2C8A60" opacity="0.30" filter="url(#cv-blur)">
+        <animate attributeName="cx" values="800;500;1100;800" dur="100s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="160;220;160" dur="48s" repeatCount="indefinite"/>
+      </circle>
+    </svg>
+    <div class="wrap" style="position:relative;z-index:1">
       <div class="hs-lottie rv" data-lottie="../../assets/lottie/pulse-ring-gold.json" data-loop="true" style="width:120px;height:120px;margin:0 auto 14px;display:block"></div>
       <div class="tag rv" style="margin-bottom:20px">面向:CFT / 保险经纪人 / 销售团队</div>
       <h1 class="rv">恒晟保险销售跟进培训</h1>
@@ -168,25 +189,128 @@
     </div>
   </section>
 
-  <!-- 6 六类客户 -->
+  <!-- 6 六类客户 — 中心客户 + 6 花瓣放射(永久流动) -->
   <section class="slide">
     <div class="wrap">
       <div class="toprow"><div class="tag rv">第二部分 · 六类客户分类跟进</div><div class="stepno rv">06 / 15</div></div>
-      <div class="rv" style="display:flex;align-items:center;gap:18px;flex-wrap:wrap">
-        <div class="hs-lottie" data-lottie="../../assets/lottie/check-circle.json" style="width:72px;height:72px;flex:none"></div>
-        <h2 style="margin:0">因人施策 — 六类客户跟进模型</h2>
+      <h2 class="rv">因人施策 — 六类客户跟进模型</h2>
+
+      <!-- 大型放射图 SVG -->
+      <div class="rv" style="margin:8px 0;width:100%">
+        <svg viewBox="0 0 1100 540" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto;max-height:52vh;display:block">
+          <defs>
+            <filter id="cust-glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="5" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+
+          <!-- 6 条光柱(中心→花瓣,虚线流动) -->
+          <g opacity="0.55">
+            <line x1="550" y1="270" x2="550" y2="90" stroke="#B14E39" stroke-width="2.5" stroke-dasharray="8 12">
+              <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" repeatCount="indefinite"/>
+            </line>
+            <line x1="550" y1="270" x2="723" y2="170" stroke="#A87E2E" stroke-width="2.5" stroke-dasharray="8 12">
+              <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" begin="-0.3s" repeatCount="indefinite"/>
+            </line>
+            <line x1="550" y1="270" x2="723" y2="370" stroke="#2A4A8C" stroke-width="2.5" stroke-dasharray="8 12">
+              <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" begin="-0.6s" repeatCount="indefinite"/>
+            </line>
+            <line x1="550" y1="270" x2="550" y2="470" stroke="#5E6A82" stroke-width="2.5" stroke-dasharray="8 12">
+              <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" begin="-0.9s" repeatCount="indefinite"/>
+            </line>
+            <line x1="550" y1="270" x2="377" y2="370" stroke="#7B5E9E" stroke-width="2.5" stroke-dasharray="8 12">
+              <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" begin="-1.2s" repeatCount="indefinite"/>
+            </line>
+            <line x1="550" y1="270" x2="377" y2="170" stroke="#2C8A60" stroke-width="2.5" stroke-dasharray="8 12">
+              <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" begin="-1.5s" repeatCount="indefinite"/>
+            </line>
+          </g>
+
+          <!-- 花瓣 1 顶 立即跟进 红 -->
+          <g>
+            <circle cx="550" cy="90" r="68" fill="#B14E39" opacity="0.16">
+              <animate attributeName="r" values="62;78;62" dur="3.6s" begin="0s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.16;0.04;0.16" dur="3.6s" begin="0s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="550" cy="90" r="46" fill="#B14E39"/>
+            <text x="550" y="100" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">1</text>
+            <text x="550" y="32" text-anchor="middle" fill="#B14E39" font-size="18" font-weight="700" font-family="var(--font-display)">立即跟进 🔥</text>
+          </g>
+          <!-- 花瓣 2 右上 考虑犹豫 金 -->
+          <g>
+            <circle cx="723" cy="170" r="68" fill="#A87E2E" opacity="0.16">
+              <animate attributeName="r" values="62;78;62" dur="3.6s" begin="0.6s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.16;0.04;0.16" dur="3.6s" begin="0.6s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="723" cy="170" r="46" fill="#A87E2E"/>
+            <text x="723" y="180" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">2</text>
+            <text x="820" y="148" text-anchor="middle" fill="#A87E2E" font-size="18" font-weight="700" font-family="var(--font-display)">考虑犹豫 🤔</text>
+          </g>
+          <!-- 花瓣 3 右下 近期不买 蓝 -->
+          <g>
+            <circle cx="723" cy="370" r="68" fill="#2A4A8C" opacity="0.16">
+              <animate attributeName="r" values="62;78;62" dur="3.6s" begin="1.2s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.16;0.04;0.16" dur="3.6s" begin="1.2s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="723" cy="370" r="46" fill="#2A4A8C"/>
+            <text x="723" y="380" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">3</text>
+            <text x="820" y="395" text-anchor="middle" fill="#2A4A8C" font-size="18" font-weight="700" font-family="var(--font-display)">近期不买 ⏳</text>
+          </g>
+          <!-- 花瓣 4 底 肯定不买 灰 -->
+          <g>
+            <circle cx="550" cy="470" r="68" fill="#5E6A82" opacity="0.16">
+              <animate attributeName="r" values="62;78;62" dur="3.6s" begin="1.8s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.16;0.04;0.16" dur="3.6s" begin="1.8s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="550" cy="470" r="46" fill="#5E6A82"/>
+            <text x="550" y="480" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">4</text>
+            <text x="550" y="530" text-anchor="middle" fill="#5E6A82" font-size="18" font-weight="700" font-family="var(--font-display)">肯定不买 🚫</text>
+          </g>
+          <!-- 花瓣 5 左下 已报价无回馈 紫 -->
+          <g>
+            <circle cx="377" cy="370" r="68" fill="#7B5E9E" opacity="0.16">
+              <animate attributeName="r" values="62;78;62" dur="3.6s" begin="2.4s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.16;0.04;0.16" dur="3.6s" begin="2.4s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="377" cy="370" r="46" fill="#7B5E9E"/>
+            <text x="377" y="380" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">5</text>
+            <text x="277" y="395" text-anchor="middle" fill="#7B5E9E" font-size="18" font-weight="700" font-family="var(--font-display)">报价无回馈 💬</text>
+          </g>
+          <!-- 花瓣 6 左上 时机未熟 绿 -->
+          <g>
+            <circle cx="377" cy="170" r="68" fill="#2C8A60" opacity="0.16">
+              <animate attributeName="r" values="62;78;62" dur="3.6s" begin="3.0s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.16;0.04;0.16" dur="3.6s" begin="3.0s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="377" cy="170" r="46" fill="#2C8A60"/>
+            <text x="377" y="180" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">6</text>
+            <text x="277" y="148" text-anchor="middle" fill="#2C8A60" font-size="18" font-weight="700" font-family="var(--font-display)">时机未熟 🌱</text>
+          </g>
+
+          <!-- 中心 客户 (主角:辉光双层呼吸) -->
+          <g filter="url(#cust-glow)">
+            <circle cx="550" cy="270" r="100" fill="#A87E2E" opacity="0.08">
+              <animate attributeName="r" values="92;108;92" dur="3s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.08;0.02;0.08" dur="3s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="550" cy="270" r="78" fill="var(--surface)" stroke="#A87E2E" stroke-width="3.5"/>
+            <text x="550" y="265" text-anchor="middle" fill="#A87E2E" font-size="30" font-weight="700" font-family="var(--font-display)">客 户</text>
+            <text x="550" y="293" text-anchor="middle" fill="currentColor" opacity="0.55" font-size="12" letter-spacing="3">6 大分类</text>
+          </g>
+        </svg>
       </div>
-      <div class="grid3 rv" style="margin-top:20px">
-        <div class="card"><div class="ctitle">🔥 立即跟进型</div><div class="body">高度认可,有强烈兴趣<br><small style="color:var(--key)">动作:趁热打铁,加速推进 / 禁忌:拖延</small></div></div>
-        <div class="card"><div class="ctitle">🤔 考虑犹豫型</div><div class="body">想要但暂不急迫<br><small style="color:var(--key)">动作:以沟通为主,混脸熟 / 禁忌:强推产品</small></div></div>
-        <div class="card"><div class="ctitle">⏳ 近期不买型</div><div class="body">时机尚未成熟<br><small style="color:var(--key)">动作:保持温度,不提生意 / 禁忌:盯太紧</small></div></div>
+
+      <!-- 紧凑版动作要点(对照色) -->
+      <div class="rv" style="display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(6px,1vw,12px);margin-top:6px">
+        <div class="card" style="padding:8px 12px;border-left:3px solid #B14E39"><b style="color:#B14E39;font-size:clamp(13px,1.4vw,15px)">1 立即跟进</b><div style="font-size:clamp(11px,1.2vw,13px);color:var(--ink-2);margin-top:2px">趁热打铁 · 禁拖延</div></div>
+        <div class="card" style="padding:8px 12px;border-left:3px solid #A87E2E"><b style="color:#A87E2E;font-size:clamp(13px,1.4vw,15px)">2 考虑犹豫</b><div style="font-size:clamp(11px,1.2vw,13px);color:var(--ink-2);margin-top:2px">混脸熟 · 禁强推</div></div>
+        <div class="card" style="padding:8px 12px;border-left:3px solid #2A4A8C"><b style="color:#2A4A8C;font-size:clamp(13px,1.4vw,15px)">3 近期不买</b><div style="font-size:clamp(11px,1.2vw,13px);color:var(--ink-2);margin-top:2px">保持温度 · 禁盯紧</div></div>
+        <div class="card" style="padding:8px 12px;border-left:3px solid #5E6A82"><b style="color:#5E6A82;font-size:clamp(13px,1.4vw,15px)">4 肯定不买</b><div style="font-size:clamp(11px,1.2vw,13px);color:var(--ink-2);margin-top:2px">记录反馈 · 禁争辩</div></div>
+        <div class="card" style="padding:8px 12px;border-left:3px solid #7B5E9E"><b style="color:#7B5E9E;font-size:clamp(13px,1.4vw,15px)">5 报价无回馈</b><div style="font-size:clamp(11px,1.2vw,13px);color:var(--ink-2);margin-top:2px">强调差异 · 禁只谈价</div></div>
+        <div class="card" style="padding:8px 12px;border-left:3px solid #2C8A60"><b style="color:#2C8A60;font-size:clamp(13px,1.4vw,15px)">6 时机未熟</b><div style="font-size:clamp(11px,1.2vw,13px);color:var(--ink-2);margin-top:2px">6 月一次 · 禁频扰</div></div>
       </div>
-      <div class="grid3 rv" style="margin-top:14px">
-        <div class="card"><div class="ctitle">🚫 肯定不买型</div><div class="body">态度坚决,短期无望<br><small style="color:var(--key)">动作:记录反馈,改良话术 / 禁忌:争辩</small></div></div>
-        <div class="card"><div class="ctitle">💬 已报价无回馈型</div><div class="body">观望中,正在比较<br><small style="color:var(--key)">动作:强调差异化与优惠 / 禁忌:只谈价格</small></div></div>
-        <div class="card"><div class="ctitle">🌱 时机未熟型</div><div class="body">事业或生活变化期<br><small style="color:var(--key)">动作:每 6 个月跟进一次 / 禁忌:频繁打扰</small></div></div>
-      </div>
-      <div class="tipbox rv" style="margin-top:18px"><div class="lbl">6 个月法则</div><div class="txt">人生平均每 6 个月事业与生活会发生变化。<b style="color:var(--ink)">原来听不进去的人,现在可能正想听。</b></div></div>
+      <div class="tipbox rv" style="margin-top:8px"><div class="lbl">6 个月法则</div><div class="txt">人生平均每 6 个月事业与生活会发生变化。<b style="color:var(--ink)">原来听不进去的人,现在可能正想听。</b></div></div>
     </div>
   </section>
 
@@ -481,24 +605,117 @@
     </div>
   </section>
 
-  <!-- 12 真实案例 -->
+  <!-- 12 真实案例 — 大型时间轴 + 光点永久行走 -->
   <section class="slide">
     <div class="wrap">
       <div class="toprow"><div class="tag rv">真实案例</div><div class="stepno rv">12 / 15</div></div>
-      <div class="rv" style="display:flex;align-items:center;gap:18px;flex-wrap:wrap">
-        <div class="hs-lottie" data-lottie="../../assets/lottie/heart-beat.json" data-loop="true" style="width:80px;height:80px;flex:none"></div>
-        <h2 style="margin:0">张先生:从「再考虑考虑」到 Day 60 成交</h2>
+      <h2 class="rv">张先生:从「再考虑考虑」到 Day 60 成交</h2>
+      <p class="lead rv" style="margin:6px 0 0;font-size:clamp(14px,1.6vw,20px)">45 岁,对 IUL 持续观望——恒晟内部真实跟进案例。每个里程碑都有明确目的,不是闲聊。</p>
+
+      <!-- 大型时间轴 SVG(永久流动:虚线流动 + 光点永久行走 + 6 节点波浪呼吸 + 终点辉光) -->
+      <div class="rv" style="margin:14px 0;width:100%">
+        <svg viewBox="0 0 1200 340" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto;max-height:50vh;display:block">
+          <defs>
+            <filter id="d60-glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="5" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <linearGradient id="d60-line" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#2A4A8C"/>
+              <stop offset="0.5" stop-color="#2A4A8C"/>
+              <stop offset="1" stop-color="#A87E2E"/>
+            </linearGradient>
+          </defs>
+
+          <!-- 时间轴 -->
+          <line x1="100" y1="180" x2="1080" y2="180" stroke="rgba(42,74,140,0.18)" stroke-width="4" stroke-linecap="round"/>
+          <line x1="100" y1="180" x2="1080" y2="180" stroke="url(#d60-line)" stroke-width="4" stroke-linecap="round" stroke-dasharray="14 16">
+            <animate attributeName="stroke-dashoffset" from="0" to="-60" dur="1.8s" repeatCount="indefinite"/>
+          </line>
+
+          <!-- Day 1 初次面谈 -->
+          <g>
+            <circle cx="100" cy="180" r="52" fill="#2A4A8C" opacity="0.18">
+              <animate attributeName="r" values="48;58;48" dur="3.2s" begin="0s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.18;0.05;0.18" dur="3.2s" begin="0s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="100" cy="180" r="34" fill="#2A4A8C"/>
+            <text x="100" y="186" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">Day 1</text>
+            <text x="100" y="110" text-anchor="middle" fill="#2A4A8C" font-size="16" font-weight="700" font-family="var(--font-display)">初次面谈</text>
+            <text x="100" y="250" text-anchor="middle" fill="currentColor" opacity="0.6" font-size="11">不问产品 · 建关系</text>
+          </g>
+          <!-- Day 4 微信跟进 -->
+          <g>
+            <circle cx="245" cy="180" r="52" fill="#2A4A8C" opacity="0.18">
+              <animate attributeName="r" values="48;58;48" dur="3.2s" begin="0.45s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.18;0.05;0.18" dur="3.2s" begin="0.45s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="245" cy="180" r="34" fill="#2A4A8C"/>
+            <text x="245" y="186" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">Day 4</text>
+            <text x="245" y="110" text-anchor="middle" fill="#2A4A8C" font-size="16" font-weight="700" font-family="var(--font-display)">微信跟进</text>
+            <text x="245" y="250" text-anchor="middle" fill="currentColor" opacity="0.6" font-size="11">IUL 一页通</text>
+          </g>
+          <!-- Day 7 电话关心 -->
+          <g>
+            <circle cx="395" cy="180" r="52" fill="#2A4A8C" opacity="0.18">
+              <animate attributeName="r" values="48;58;48" dur="3.2s" begin="0.9s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.18;0.05;0.18" dur="3.2s" begin="0.9s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="395" cy="180" r="34" fill="#2A4A8C"/>
+            <text x="395" y="186" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">Day 7</text>
+            <text x="395" y="110" text-anchor="middle" fill="#2A4A8C" font-size="16" font-weight="700" font-family="var(--font-display)">电话关心</text>
+            <text x="395" y="250" text-anchor="middle" fill="currentColor" opacity="0.6" font-size="11">"孩子教育金..."</text>
+          </g>
+          <!-- Day 14 借出录音 -->
+          <g>
+            <circle cx="570" cy="180" r="52" fill="#7B5E9E" opacity="0.18">
+              <animate attributeName="r" values="48;58;48" dur="3.2s" begin="1.35s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.18;0.05;0.18" dur="3.2s" begin="1.35s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="570" cy="180" r="34" fill="#7B5E9E"/>
+            <text x="570" y="186" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">Day 14</text>
+            <text x="570" y="110" text-anchor="middle" fill="#7B5E9E" font-size="16" font-weight="700" font-family="var(--font-display)">借出录音</text>
+            <text x="570" y="250" text-anchor="middle" fill="currentColor" opacity="0.6" font-size="11">约归还时间</text>
+          </g>
+          <!-- Day 30 说明会 ABC -->
+          <g>
+            <circle cx="800" cy="180" r="56" fill="#A87E2E" opacity="0.20">
+              <animate attributeName="r" values="50;64;50" dur="3.2s" begin="1.8s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.20;0.05;0.20" dur="3.2s" begin="1.8s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="800" cy="180" r="36" fill="#A87E2E"/>
+            <text x="800" y="186" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">Day 30</text>
+            <text x="800" y="108" text-anchor="middle" fill="#A87E2E" font-size="17" font-weight="700" font-family="var(--font-display)">说明会 ABC</text>
+            <text x="800" y="252" text-anchor="middle" fill="currentColor" opacity="0.6" font-size="11">ABC 推崇 · 建权威</text>
+          </g>
+          <!-- Day 60 成交 ✓ (终点,辉光主角) -->
+          <g filter="url(#d60-glow)">
+            <circle cx="1080" cy="180" r="80" fill="#A87E2E" opacity="0.10">
+              <animate attributeName="r" values="70;92;70" dur="2.2s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.10;0;0.10" dur="2.2s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="1080" cy="180" r="62" fill="#A87E2E" opacity="0.22">
+              <animate attributeName="r" values="55;72;55" dur="2.2s" begin="-0.5s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.22;0.06;0.22" dur="2.2s" begin="-0.5s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="1080" cy="180" r="48" fill="#A87E2E"/>
+            <text x="1080" y="172" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">Day 60</text>
+            <text x="1080" y="200" text-anchor="middle" fill="#fff" font-size="24" font-weight="700">✓</text>
+          </g>
+          <text x="1080" y="105" text-anchor="middle" fill="#A87E2E" font-size="20" font-weight="700" font-family="var(--font-display)">成 交</text>
+          <text x="1080" y="252" text-anchor="middle" fill="#A87E2E" opacity="0.75" font-size="12">工具 + 节奏 + 时机</text>
+
+          <!-- 光点永久沿时间轴行走(2 颗,错开 4.5s) -->
+          <circle r="10" fill="#fff" stroke="#A87E2E" stroke-width="2.5" filter="url(#d60-glow)">
+            <animateMotion dur="9s" repeatCount="indefinite" path="M 100 180 L 1080 180"/>
+          </circle>
+          <circle r="7" fill="#A87E2E" opacity="0.8" filter="url(#d60-glow)">
+            <animateMotion dur="9s" begin="-4.5s" repeatCount="indefinite" path="M 100 180 L 1080 180"/>
+          </circle>
+        </svg>
       </div>
-      <p class="lead rv" style="margin:12px 0 18px;font-size:clamp(15px,1.8vw,22px)">45 岁,对 IUL 感兴趣但持续观望——恒晟内部真实跟进案例。</p>
-      <div class="path rv">
-        <div class="node"><div class="nt">Day 1</div><div class="ne">初次面谈</div><div class="nd">不问产品,先了解家庭需求,建立真实关系</div></div>
-        <div class="node"><div class="nt">Day 4</div><div class="ne">微信跟进</div><div class="nd">发送 IUL 产品一页通,轻触式跟进</div></div>
-        <div class="node"><div class="nt">Day 7</div><div class="ne">电话关心</div><div class="nd">"上次孩子教育金的问题想清楚了吗？"</div></div>
-        <div class="node"><div class="nt">Day 14</div><div class="ne">借出录音</div><div class="nd">借出培训录音带,约定归还时间</div></div>
-        <div class="node"><div class="nt">Day 30</div><div class="ne">说明会 ABC</div><div class="nd">邀请参加产品说明会,ABC 推崇讲师,建立权威</div></div>
-        <div class="node last"><div class="nt">Day 60</div><div class="ne">成交 ✓</div><div class="nd">工具 + 节奏 + 时机 = 最终结果</div></div>
-      </div>
-      <div class="tipbox rv" style="margin-top:18px"><div class="lbl">关键教训</div><div class="txt">没有"考虑考虑",只有"跟进不够"。<b style="color:var(--ink)">每次跟进都有明确目的,不是闲聊。</b></div></div>
+
+      <div class="tipbox rv" style="margin-top:6px"><div class="lbl">关键教训</div><div class="txt">没有"考虑考虑",只有"跟进不够"。<b style="color:var(--ink)">每次跟进都有明确目的,不是闲聊。</b></div></div>
     </div>
   </section>
 
