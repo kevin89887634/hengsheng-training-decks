@@ -4,7 +4,10 @@
    - 默认 loop=false（演讲场景一次播完，停在末帧）；data-loop="true" 持续循环
    - 翻页时 deck.js 会调用 HSLottie.refresh(slide)，让新页里的所有 .hs-lottie 从头播 */
 (function(){
-  if (typeof lottie === 'undefined') { window.HSLottie = { refresh: function(){}, mount: function(){} }; return; }
+  // lottie-web 的全局名取决于 bundle:完整版是 window.lottie,
+  // lottie_light 老版本是 window.bodymovin。两个都兼容。
+  var L = window.lottie || window.bodymovin;
+  if (!L) { window.HSLottie = { refresh: function(){}, mount: function(){} }; return; }
   var instances = new WeakMap();
 
   function mount(el){
@@ -13,11 +16,11 @@
     if (!src) return null;
     var loop = el.getAttribute('data-loop') === 'true';
     var speed = parseFloat(el.getAttribute('data-speed') || '1') || 1;
-    var anim = lottie.loadAnimation({
+    var anim = L.loadAnimation({
       container: el,
       renderer: 'svg',
       loop: loop,
-      autoplay: false,
+      autoplay: true,
       path: src
     });
     anim.setSpeed(speed);
