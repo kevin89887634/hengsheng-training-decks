@@ -4,7 +4,7 @@ html,body{height:100%}
 body{background:var(--bg);color:var(--ink);font-family:var(--font-body);overflow:hidden;transition:background .4s,color .4s}
 .deck{position:fixed;inset:0}
 .slide{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;
-  padding:clamp(28px,5vw,84px);opacity:0;pointer-events:none;transition:opacity .45s ease}
+  padding:clamp(28px,5vw,84px);opacity:0;pointer-events:none;transition:opacity .7s cubic-bezier(.65,0,.35,1)}
 .slide.active{opacity:1;pointer-events:auto}
 .wrap{width:100%;max-width:1140px;margin:0 auto}
 .bar{position:fixed;top:0;left:0;height:3px;background:var(--key);width:0;transition:width .4s;z-index:30}
@@ -100,3 +100,20 @@ details.q .ans{font-size:clamp(13px,1.5vw,19px);color:var(--ink-2);line-height:1
 .count{font-size:14px;color:var(--ink-2);min-width:54px;text-align:center;font-variant-numeric:tabular-nums}
 .divid{width:1px;height:22px;background:var(--border)}
 @media(max-width:680px){.grid3{grid-template-columns:1fr}.dual{grid-template-columns:1fr}}
+
+/* ─── 共享动画效果 (所有 deck 通用) ─── */
+/* hover 卡片浮起 — 鼠标悬停时上浮 + 阴影加深 */
+.card{transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s cubic-bezier(.22,1,.36,1)}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(26,39,66,.10)}
+
+/* 横向传送带 — 用于金句/卡片循环漂过
+   用法:
+   <div class="marquee"><div class="marquee-track"><内容 ×2></div></div>
+   左右边缘 fade 处理,鼠标悬停暂停 */
+.marquee{overflow:hidden;width:100%;position:relative;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+          mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.marquee-track{display:flex;gap:clamp(16px,2vw,28px);width:max-content;animation:marquee 36s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.marquee-item{flex:none;width:clamp(280px,28vw,420px)}
