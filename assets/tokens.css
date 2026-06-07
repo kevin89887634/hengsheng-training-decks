@@ -1,0 +1,37 @@
+/* 恒盛培训演示集 · 设计令牌
+   默认 = 学院(academy)配色:浅色为默认，html[data-theme="dark"] 切夜间。
+   另附两套投资配色 class(scheme-blue / scheme-gold)，以后做投资 deck 页时给 body 加 class 即可。 */
+
+:root{                       /* 学院 · 白天(默认) */
+  --bg:#F6F4EE; --surface:#FFFFFF; --border:#E5E0D5;
+  --ink:#1A2742; --ink-2:#5E6A82; --muted:#DAD4C7;
+  --accent:#2A4A8C; --accent-bg:#E7ECF6;
+  --key:#A87E2E; --key-bg:#FBF4E6; --key-bd:#EAD9B0;
+  --ok:#2C8A60; --ok-bg:#E7F4ED; --ok-bd:#BFE3D0;
+  --danger:#B14E39; --danger-bg:#F8EAE5; --danger-bd:#EAC8BD;
+  --tip:#2E6BC7; --tip-bg:#E7EFFA; --tip-bd:#C4DAF2;
+  --font-display:"Songti SC","STSong","SimSun","Noto Serif SC","Source Han Serif SC",serif;
+  --font-body:-apple-system,BlinkMacSystemFont,"PingFang SC","SF Pro Text","Microsoft YaHei",system-ui,sans-serif;
+}
+html[data-theme="dark"]{     /* 学院 · 夜间 */
+  --bg:#161B2B; --surface:rgba(255,255,255,.05); --border:rgba(255,255,255,.09);
+  --ink:#ECEAE2; --ink-2:rgba(236,234,226,.62); --muted:rgba(255,255,255,.13);
+  --accent:#E2B45E; --accent-bg:rgba(226,180,94,.16);
+  --key:#E6BB66; --key-bg:rgba(226,180,94,.10); --key-bd:rgba(226,180,94,.30);
+  --ok:#5FC498; --ok-bg:rgba(79,185,140,.13); --ok-bd:rgba(79,185,140,.32);
+  --danger:#E78A70; --danger-bg:rgba(224,122,95,.13); --danger-bd:rgba(224,122,95,.33);
+  --tip:#6FA8E6; --tip-bg:rgba(111,168,230,.13); --tip-bd:rgba(111,168,230,.32);
+}
+
+/* —— 以下两套用于「投资 deck」页：给 body 加 class="scheme-blue" 或 "scheme-gold" —— */
+.scheme-blue{
+  --bg:#08080C; --surface:rgba(255,255,255,.06); --border:rgba(255,255,255,.14);
+  --ink:#FFFFFF; --ink-2:rgba(236,237,246,.64);
+  --accent:#4D8DFF; --accent-2:#34E0E8; --accent-grad:linear-gradient(135deg,#4D8DFF,#34E0E8);
+}
+.scheme-gold{
+  --bg:#0E1B38; --surface:rgba(255,255,255,.07); --border:rgba(201,164,92,.22);
+  --ink:#F2EEE2; --ink-2:rgba(238,233,219,.62);
+  --accent:#C9A45C; --accent-2:#3A568C;
+  --accent-grad:linear-gradient(180deg,#F4E6BC,#DBB872,#B98E40,#EAD299,#C49A52);
+}

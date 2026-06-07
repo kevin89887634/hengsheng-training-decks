@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>恒盛集团 · 培训演示集</title>
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/hub.css">
+</head>
+<body>
+<button class="tgl" id="theme" aria-label="切换深色"><svg id="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button>
+
+<header class="hero">
+  <div class="logo"><span class="mk">恒</span>恒盛集团</div>
+  <h1>培训演示集</h1>
+  <p>一套配色、一个入口。每一份课程都是一个独立页面，点开即可全屏放映，支持白天 / 夜间。新课程随时加进来。</p>
+</header>
+
+<main class="grid" id="grid"></main>
+
+<script>
+/* ★ 加新课程：复制下面一项，改好内容，并把对应 HTML 放进 decks/你的目录/index.html 即可 ★
+   accent 可选：'#2A4A8C'(蓝) / '#A87E2E'(金) / '#2C8A60'(绿) / '#B14E39'(红) */
+var DECKS = [
+  {
+    title: "爱与守护 · 保险销售新范式",
+    desc: "成交演练：用「分享爱」的模式去分享保险。痛点→转念→方法→实战→升华。",
+    tag: "成交演练",
+    mark: "爱",
+    accent: "#2A4A8C",
+    href: "decks/ai-love-protection/index.html"
+  }
+  // { title:"…", desc:"…", tag:"…", mark:"新", accent:"#2C8A60", href:"decks/xxx/index.html" },
+];
+
+var grid = document.getElementById('grid');
+if (!DECKS.length) {
+  grid.innerHTML = '<div class="empty">还没有课程，往 index.html 的 DECKS 数组里加第一个吧。</div>';
+} else {
+  grid.innerHTML = DECKS.map(function(d){
+    return '<a class="deckcard" href="'+d.href+'">'
+      + '<div class="cover" style="background:'+d.accent+'"><span class="mark">'+(d.mark||'')+'</span></div>'
+      + '<div class="meta"><span class="tg">'+d.tag+'</span>'
+      + '<div class="tt">'+d.title+'</div>'
+      + '<div class="ds">'+d.desc+'</div>'
+      + '<div class="go">进入放映 →</div></div></a>';
+  }).join('');
+}
+
+/* 白天 / 夜间 */
+(function(){
+  var root=document.documentElement, ti=document.getElementById('ti');
+  var sun='<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>';
+  var moon='<path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z"/>';
+  function setTheme(t){root.setAttribute('data-theme',t);ti.innerHTML=(t==='dark'?sun:moon);try{localStorage.setItem('hs-theme',t);}catch(e){}}
+  document.getElementById('theme').onclick=function(){setTheme(root.getAttribute('data-theme')==='dark'?'light':'dark');};
+  try{var s=localStorage.getItem('hs-theme'); if(s) setTheme(s); else ti.innerHTML=moon;}catch(e){ti.innerHTML=moon;}
+})();
+</script>
+</body>
+</html>
