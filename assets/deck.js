@@ -10,6 +10,7 @@
     slides.forEach(function(s,k){s.classList.toggle('active',k===i);});
     if(count) count.textContent=(i+1)+' / '+n;
     if(bar) bar.style.width=(n>1?(i/(n-1)*100):100)+'%';
+    if(window.HSLottie && window.HSLottie.refresh) window.HSLottie.refresh(slides[i]);
   }
   var next=function(){show(i+1);}, prev=function(){show(i-1);};
   var nb=document.getElementById('next'), pb=document.getElementById('prev');

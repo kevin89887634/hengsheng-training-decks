@@ -68,3 +68,31 @@ git push -u origin main
 
 金 = 要点 / 话术｜绿 = 该练 / 答对｜红 = 避开 / 答错｜蓝 = 解析 / 提示。
 学员扫一眼颜色就知道该「记」还是该「练」。
+
+## Lottie 接入（已预埋管道）
+
+每门课都能直接用 Lottie 动画。播放器自托管在 `assets/vendor/lottie_light.min.js`，不依赖 CDN。
+
+**3 步接一个动画：**
+
+1. 把 LottieFiles 下载的 JSON 扔进 `assets/lottie/your-file.json`
+2. 在目标 slide 里加一个容器：
+   ```html
+   <div class="hs-lottie"
+        data-lottie="../../assets/lottie/your-file.json"
+        data-loop="true"></div>
+   ```
+3. deck 末尾按这个顺序引入脚本（《爱与守护》模板已含 deck.js，再补两行）：
+   ```html
+   <script src="../../assets/vendor/lottie_light.min.js"></script>
+   <script src="../../assets/lottie-player.js"></script>
+   <script src="../../assets/deck.js"></script>
+   ```
+
+**参数：**
+- `data-loop` —— `"true"` 持续循环 / 不写或 `"false"` 一次播完停末帧（演讲场景默认）
+- `data-speed` —— 倍速，默认 `"1"`
+
+**翻页自动重播：** 翻到新页时，`deck.js` 会调用 `HSLottie.refresh(currentSlide)`，让那一页里所有 `.hs-lottie` 从第 0 帧重新播一次（对齐 `.rv` 的规矩）。
+
+**自测页：** `decks/_lottie-demo/` —— 直接访问 `https://你的域名/hengsheng-training-decks/decks/_lottie-demo/` 验证管道。这页不在首页 hub 列出，是给你 / 我自测的。
