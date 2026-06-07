@@ -45,21 +45,87 @@
   <section class="slide">
     <div class="wrap">
       <div class="toprow"><div class="tag rv">核心方法论</div><div class="stepno rv">03 / 15</div></div>
-      <div class="rv" style="display:flex;align-items:center;gap:18px;flex-wrap:wrap">
-        <div class="hs-lottie" data-lottie="../../assets/lottie/pulse-ring-blue.json" data-loop="true" style="width:72px;height:72px;flex:none"></div>
-        <h2 style="margin:0">1:4:7 法则 — 跟进的黄金时间窗口</h2>
+      <h2 class="rv">1:4:7 法则 — 跟进的黄金时间窗口</h2>
+      <p class="lead rv" style="margin:8px 0 0;font-size:clamp(14px,1.6vw,20px)">三个节点、三种动作,节奏清晰,客户感受到的是关心而非催促。</p>
+
+      <!-- 大幅 SVG:水平时间轴 + 三里程碑 + 图标 + 流动光 -->
+      <div class="rv timeline-scene" style="margin:14px 0;width:100%">
+        <svg viewBox="0 0 1200 360" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto;max-height:42vh;display:block">
+          <defs>
+            <linearGradient id="dayGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#2A4A8C"/>
+              <stop offset="0.5" stop-color="#2A4A8C"/>
+              <stop offset="1" stop-color="#2A4A8C"/>
+            </linearGradient>
+          </defs>
+
+          <!-- 时间轴底线 -->
+          <line x1="160" y1="220" x2="1040" y2="220" stroke="rgba(42,74,140,0.18)" stroke-width="4" stroke-linecap="round"/>
+          <line x1="160" y1="220" x2="1040" y2="220" stroke="#2A4A8C" stroke-width="4" stroke-linecap="round" stroke-dasharray="14 16">
+            <animate attributeName="stroke-dashoffset" from="0" to="-60" dur="2s" repeatCount="indefinite"/>
+          </line>
+
+          <!-- Day 1: 资料 -->
+          <g>
+            <circle cx="200" cy="220" r="90" fill="#2A4A8C" opacity="0.08">
+              <animate attributeName="r" values="80;98;80" dur="2.6s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="200" cy="220" r="58" fill="#2A4A8C"/>
+            <text x="200" y="232" text-anchor="middle" fill="#fff" font-size="28" font-weight="700">Day 1</text>
+            <!-- 资料图标:文件 -->
+            <g transform="translate(174,108)">
+              <rect width="52" height="64" rx="6" fill="none" stroke="#2A4A8C" stroke-width="3"/>
+              <line x1="10" y1="20" x2="42" y2="20" stroke="#2A4A8C" stroke-width="3" stroke-linecap="round"/>
+              <line x1="10" y1="32" x2="42" y2="32" stroke="#2A4A8C" stroke-width="3" stroke-linecap="round"/>
+              <line x1="10" y1="44" x2="32" y2="44" stroke="#2A4A8C" stroke-width="3" stroke-linecap="round"/>
+            </g>
+          </g>
+          <text x="200" y="310" text-anchor="middle" fill="#2A4A8C" font-size="20" font-weight="700">首次联系</text>
+          <text x="200" y="338" text-anchor="middle" fill="currentColor" opacity="0.65" font-size="14">发送资料 · 第一印象</text>
+
+          <!-- Day 4: 微信 -->
+          <g>
+            <circle cx="600" cy="220" r="90" fill="#2A4A8C" opacity="0.08">
+              <animate attributeName="r" values="80;98;80" dur="2.6s" begin="0.35s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="600" cy="220" r="58" fill="#2A4A8C"/>
+            <text x="600" y="232" text-anchor="middle" fill="#fff" font-size="28" font-weight="700">Day 4</text>
+            <!-- 对话气泡 -->
+            <g transform="translate(572,108)">
+              <path d="M 6 8 Q 6 4 10 4 L 50 4 Q 56 4 56 10 L 56 38 Q 56 44 50 44 L 34 44 L 26 56 L 24 44 L 12 44 Q 6 44 6 38 Z" fill="none" stroke="#2A4A8C" stroke-width="3" stroke-linejoin="round"/>
+              <circle cx="20" cy="24" r="2.5" fill="#2A4A8C"/>
+              <circle cx="31" cy="24" r="2.5" fill="#2A4A8C"/>
+              <circle cx="42" cy="24" r="2.5" fill="#2A4A8C"/>
+            </g>
+          </g>
+          <text x="600" y="310" text-anchor="middle" fill="#2A4A8C" font-size="20" font-weight="700">建立联系</text>
+          <text x="600" y="338" text-anchor="middle" fill="currentColor" opacity="0.65" font-size="14">微信问候 · 轻触跟进</text>
+
+          <!-- Day 7: 电话 -->
+          <g>
+            <circle cx="1000" cy="220" r="100" fill="#A87E2E" opacity="0.10">
+              <animate attributeName="r" values="90;108;90" dur="2.6s" begin="0.7s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="1000" cy="220" r="62" fill="#A87E2E"/>
+            <text x="1000" y="232" text-anchor="middle" fill="#fff" font-size="28" font-weight="700">Day 7</text>
+            <!-- 电话 -->
+            <g transform="translate(976,108)">
+              <path d="M 8 14 Q 8 6 16 6 L 22 6 L 26 18 L 20 22 Q 22 32 30 38 L 36 32 L 48 36 L 48 42 Q 48 50 40 50 Q 14 48 8 14 Z" fill="none" stroke="#A87E2E" stroke-width="3" stroke-linejoin="round"/>
+            </g>
+          </g>
+          <text x="1000" y="312" text-anchor="middle" fill="#A87E2E" font-size="20" font-weight="700">创造机会</text>
+          <text x="1000" y="340" text-anchor="middle" fill="currentColor" opacity="0.65" font-size="14">电话约见 · 推进面谈</text>
+
+          <!-- 流动光点:沿时间轴飞行 -->
+          <circle r="8" fill="#fff" stroke="#A87E2E" stroke-width="2.5">
+            <animateMotion dur="3.2s" repeatCount="indefinite" path="M 160 220 L 1040 220"/>
+            <animate attributeName="opacity" values="0;1;1;1;0" dur="3.2s" repeatCount="indefinite"/>
+          </circle>
+        </svg>
       </div>
-      <div class="path rv" style="margin-top:22px">
-        <div class="node"><div class="nt">Day 1</div><div class="ne">首次联系</div><div class="nd">发送资料,留下专业第一印象</div></div>
-        <div class="node"><div class="nt">Day 4</div><div class="ne">建立联系</div><div class="nd">微信问候,轻触式跟进</div></div>
-        <div class="node last"><div class="nt">Day 7</div><div class="ne">创造机会</div><div class="nd">电话约见,推进面谈</div></div>
-      </div>
-      <h2 class="rv" style="margin-top:26px;font-size:clamp(20px,2.8vw,32px)">核心原则:欲擒故纵</h2>
-      <div class="grid3 rv" style="margin-top:14px">
-        <div class="card"><div class="ctitle">一周 1 次电话</div><div class="body">混个耳熟,保持存在感</div></div>
-        <div class="card"><div class="ctitle">两三周 1 次拜访</div><div class="body">混个眼熟,建立信任感</div></div>
-        <div class="card"><div class="ctitle">不是催单,是刷存在</div><div class="body">急于求成只会让印象恶化、交易流产</div></div>
-      </div>
+
+      <!-- 核心原则:欲擒故纵 -->
+      <div class="callout rv" style="margin-top:6px"><div class="lbl">核心原则</div><div class="q" style="font-size:clamp(15px,2vw,24px)">欲擒故纵 — 不是催单,是刷存在。急于求成只会让印象恶化、交易流产。</div></div>
     </div>
   </section>
 
@@ -170,16 +236,93 @@
   <section class="slide">
     <div class="wrap">
       <div class="toprow"><div class="tag rv">借力法则</div><div class="stepno rv">09 / 15</div></div>
-      <div class="rv" style="display:flex;align-items:center;gap:18px;flex-wrap:wrap">
-        <div class="hs-lottie" data-lottie="../../assets/lottie/pulse-ring-gold.json" data-loop="true" style="width:72px;height:72px;flex:none"></div>
-        <h2 style="margin:0">ABC 黄金法则 — 为什么不能单枪匹马</h2>
+      <h2 class="rv">ABC 黄金法则 — 为什么不能单枪匹马</h2>
+      <p class="lead rv" style="margin:8px 0 6px;font-size:clamp(14px,1.6vw,20px)">多对一讲,胜券在握;孤军深入,难度极大。</p>
+
+      <!-- 大幅 SVG 插画:三节点 + 桥弧 + 流动光 -->
+      <div class="rv abc-scene" style="margin:6px 0;width:100%">
+        <svg viewBox="0 0 1200 380" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto;max-height:46vh;display:block">
+          <defs>
+            <linearGradient id="bridgeGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#2A4A8C"/>
+              <stop offset="0.5" stop-color="#A87E2E"/>
+              <stop offset="1" stop-color="#2C8A60"/>
+            </linearGradient>
+          </defs>
+
+          <!-- 桥弧(底部淡色 + 上层流动虚线) -->
+          <path d="M 200 200 Q 600 50 1000 200" stroke="rgba(168,126,46,0.22)" stroke-width="3" fill="none"/>
+          <path d="M 200 200 Q 600 50 1000 200" stroke="url(#bridgeGrad)" stroke-width="3" fill="none" stroke-dasharray="10 14" stroke-linecap="round">
+            <animate attributeName="stroke-dashoffset" from="0" to="-48" dur="1.6s" repeatCount="indefinite"/>
+          </path>
+
+          <!-- A:Adviser 顾问 -->
+          <g>
+            <circle cx="200" cy="200" r="110" fill="#2A4A8C" opacity="0.08">
+              <animate attributeName="r" values="100;118;100" dur="2.6s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.08;0.02;0.08" dur="2.6s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="200" cy="200" r="75" fill="#2A4A8C" opacity="0.18">
+              <animate attributeName="r" values="70;82;70" dur="2.6s" begin="0.25s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.18;0.06;0.18" dur="2.6s" begin="0.25s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="200" cy="200" r="50" fill="#2A4A8C"/>
+            <text x="200" y="216" text-anchor="middle" fill="#fff" font-size="44" font-weight="700" font-family="ui-rounded,Georgia,serif">A</text>
+          </g>
+          <text x="200" y="318" text-anchor="middle" fill="#2A4A8C" font-size="20" font-weight="700">Adviser · 顾问</text>
+          <text x="200" y="345" text-anchor="middle" fill="currentColor" opacity="0.6" font-size="14">权威背书</text>
+
+          <!-- B:Bridge 桥梁(主角) -->
+          <g>
+            <circle cx="600" cy="200" r="135" fill="#A87E2E" opacity="0.08">
+              <animate attributeName="r" values="125;145;125" dur="2.4s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.08;0.02;0.08" dur="2.4s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="600" cy="200" r="95" fill="#A87E2E" opacity="0.20">
+              <animate attributeName="r" values="88;102;88" dur="2.4s" begin="0.2s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.20;0.08;0.20" dur="2.4s" begin="0.2s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="600" cy="200" r="68" fill="#A87E2E"/>
+            <text x="600" y="220" text-anchor="middle" fill="#fff" font-size="56" font-weight="700" font-family="ui-rounded,Georgia,serif">B</text>
+          </g>
+          <text x="600" y="332" text-anchor="middle" fill="#A87E2E" font-size="22" font-weight="700">Bridge · 桥梁 (你)</text>
+          <text x="600" y="358" text-anchor="middle" fill="currentColor" opacity="0.6" font-size="14">50% 成功率 · 细节决定成败</text>
+
+          <!-- C:Customer 客户 -->
+          <g>
+            <circle cx="1000" cy="200" r="110" fill="#2C8A60" opacity="0.08">
+              <animate attributeName="r" values="100;118;100" dur="2.6s" begin="0.5s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.08;0.02;0.08" dur="2.6s" begin="0.5s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="1000" cy="200" r="75" fill="#2C8A60" opacity="0.18">
+              <animate attributeName="r" values="70;82;70" dur="2.6s" begin="0.75s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.18;0.06;0.18" dur="2.6s" begin="0.75s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="1000" cy="200" r="50" fill="#2C8A60"/>
+            <text x="1000" y="216" text-anchor="middle" fill="#fff" font-size="44" font-weight="700" font-family="ui-rounded,Georgia,serif">C</text>
+          </g>
+          <text x="1000" y="318" text-anchor="middle" fill="#2C8A60" font-size="20" font-weight="700">Customer · 客户</text>
+          <text x="1000" y="345" text-anchor="middle" fill="currentColor" opacity="0.6" font-size="14">朋友 / 顾客</text>
+
+          <!-- 流动光点 1:沿桥弧从 A 飞到 C -->
+          <circle r="8" fill="#fff" stroke="#A87E2E" stroke-width="2.5">
+            <animateMotion dur="3s" repeatCount="indefinite" rotate="auto" path="M 200 200 Q 600 50 1000 200"/>
+            <animate attributeName="opacity" values="0;1;1;1;0" dur="3s" repeatCount="indefinite"/>
+          </circle>
+          <!-- 流动光点 2:错开 1.5s 后跟随 -->
+          <circle r="6" fill="#fff" stroke="#A87E2E" stroke-width="2" opacity="0.8">
+            <animateMotion dur="3s" begin="1.5s" repeatCount="indefinite" rotate="auto" path="M 200 200 Q 600 50 1000 200"/>
+            <animate attributeName="opacity" values="0;0.8;0.8;0.8;0" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+          </circle>
+        </svg>
       </div>
-      <div class="grid3 rv" style="margin-top:22px">
-        <div class="card"><div class="stepbig" style="font-size:clamp(32px,5vw,64px);color:var(--key)">A</div><div class="ctitle">Adviser · 顾问</div><div class="body">上级 CFT / 公司资料 / 培训权威,提供可借力的专业背书</div></div>
-        <div class="card" style="background:var(--key-bg);border-color:var(--key-bd)"><div class="stepbig" style="font-size:clamp(32px,5vw,64px);color:var(--key)">B</div><div class="ctitle" style="color:var(--key)">Bridge · 桥梁</div><div class="body"><b>你自己</b>,细节决定成败,贡献 50% 成功率</div></div>
-        <div class="card"><div class="stepbig" style="font-size:clamp(32px,5vw,64px);color:var(--key)">C</div><div class="ctitle">Customer · 客户</div><div class="body">愿意了解保险或创业机会的朋友与顾客</div></div>
+
+      <!-- 简洁的角色说明卡片(SVG 下方) -->
+      <div class="grid3 rv" style="margin-top:8px">
+        <div class="card" style="padding:14px 18px"><div class="ctitle" style="color:#2A4A8C;font-size:clamp(15px,1.7vw,20px)">A 顾问</div><div class="body" style="font-size:clamp(13px,1.4vw,16px)">上级 CFT / 培训权威 — 借力</div></div>
+        <div class="card" style="padding:14px 18px;background:var(--key-bg);border-color:var(--key-bd)"><div class="ctitle" style="color:var(--key);font-size:clamp(15px,1.7vw,20px)">B 桥梁</div><div class="body" style="font-size:clamp(13px,1.4vw,16px)">你自己 — 连接两端</div></div>
+        <div class="card" style="padding:14px 18px"><div class="ctitle" style="color:#2C8A60;font-size:clamp(15px,1.7vw,20px)">C 客户</div><div class="body" style="font-size:clamp(13px,1.4vw,16px)">想了解的朋友 — 接受方</div></div>
       </div>
-      <div class="callout rv" style="margin-top:22px"><div class="q" style="font-size:clamp(15px,2vw,26px);font-style:italic">"多对一讲则胜券在握,孤军深入难度极大。"</div></div>
     </div>
   </section>
 
