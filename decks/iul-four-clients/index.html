@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IUL 退休规划 4 类客户 — 恒晟金融</title>
+<link rel="stylesheet" href="../../assets/tokens.css">
+<link rel="stylesheet" href="../../assets/deck.css">
+</head>
+<body>
+<div class="bar" id="bar"></div>
+<div class="deck">
+
+  <!-- ============================================ -->
+  <!-- 1 封面 — 模板 01 慢速光球漂移背景 -->
+  <!-- ============================================ -->
+  <section class="slide center">
+    <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"
+         style="position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:0.55">
+      <defs><filter id="iul-blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="70"/></filter></defs>
+      <circle cx="220" cy="180" r="200" fill="#A87E2E" opacity="0.55" filter="url(#iul-blur)">
+        <animate attributeName="cx" values="220;1380;220" dur="68s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="180;720;180" dur="84s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="1380" cy="720" r="220" fill="#2A4A8C" opacity="0.50" filter="url(#iul-blur)">
+        <animate attributeName="cx" values="1380;220;1380" dur="76s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="720;180;720" dur="92s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="800" cy="450" r="160" fill="#2C8A60" opacity="0.30" filter="url(#iul-blur)">
+        <animate attributeName="cx" values="800;500;1100;800" dur="100s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="160;220;160" dur="48s" repeatCount="indefinite"/>
+      </circle>
+    </svg>
+    <div class="wrap" style="position:relative;z-index:1">
+      <div class="tag rv" style="margin-bottom:20px">产品规划 · 实战手册</div>
+      <h1 class="rv">IUL 退休规划 · 4 类客户</h1>
+      <p class="lead rv" style="margin-top:14px">从产品出发,讲清楚哪类人该选哪张保单</p>
+      <div class="logo rv" style="margin-top:36px"><span class="mk"><img src="../../assets/img/logo.png" alt=""></span>恒晟金融 · 内部培训</div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 2 内容地图 — 4 张卡片总览(grid2 改 4 卡片) -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow"><div class="tag rv">内容地图</div><div class="stepno rv">02 / 08</div></div>
+      <h2 class="rv">4 类客户,4 个产品组合</h2>
+      <p class="lead rv" style="margin:10px 0 22px;font-size:clamp(15px,1.8vw,22px)">先看哪类人适合哪张保单,再讲产品细节。</p>
+
+      <div class="grid2 rv">
+        <div class="card" style="border-left:6px solid #A87E2E">
+          <div class="ctitle" style="color:#A87E2E">① 35-55 岁 · 退休金规划型</div>
+          <div class="body">现金价值积累最强,退休后每年领 $93,127(45岁/20年付/年付$25,000)。</div>
+          <div class="ctitle" style="margin-top:8px;font-size:14px;color:var(--ink-2)">推荐:<b style="color:var(--ink)">Living Life Defender 2025</b></div>
+        </div>
+        <div class="card" style="border-left:6px solid #2C8A60">
+          <div class="ctitle" style="color:#2C8A60">② 0-12 岁 · 教育金规划型</div>
+          <div class="body">父母投保,0 岁男孩 100 万保额,大学 4 年每年提取 $120,000,退休后还有 $76,000/年。</div>
+          <div class="ctitle" style="margin-top:8px;font-size:14px;color:var(--ink-2)">推荐:<b style="color:var(--ink)">LLD 2025 + 教育金设计</b></div>
+        </div>
+        <div class="card" style="border-left:6px solid #2A4A8C">
+          <div class="ctitle" style="color:#2A4A8C">③ 50-70 岁 · 财富传承型</div>
+          <div class="body">价格便宜,可保证到 90 岁;担心不划算可选 ROP(Return of Premium)。</div>
+          <div class="ctitle" style="margin-top:8px;font-size:14px;color:var(--ink-2)">推荐:<b style="color:var(--ink)">Value Plus Protector 3</b></div>
+        </div>
+        <div class="card" style="border-left:6px solid #B14E39">
+          <div class="ctitle" style="color:#B14E39">④ 高净值 · 资产保障型</div>
+          <div class="body">终身保障,不在乎现金价值积累;遗产税、资产隔离优先。</div>
+          <div class="ctitle" style="margin-top:8px;font-size:14px;color:var(--ink-2)">推荐:<b style="color:var(--ink)">Whole Life + Guaranteed Flex Rider</b></div>
+        </div>
+      </div>
+
+      <div class="tipbox rv" style="margin-top:24px">
+        <div class="lbl">关键认知</div>
+        <div class="txt"><b style="color:var(--ink)">"产品和客户要配对"</b> — Coverage 和 NLG 的 IUL 互相模仿,选哪个不取决于产品本身,而是<b style="color:var(--ink)">客户在哪个生命周期</b>。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 3 第 1 类 — 退休金规划型(模板 03 花瓣) -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow"><div class="tag rv" style="background:#A87E2E;color:#fff">① 35-55 岁 · 退休金</div><div class="stepno rv">03 / 08</div></div>
+      <h2 class="rv">现金价值积累最强 · LLD 2025</h2>
+
+      <div class="rv" style="margin:8px 0;width:100%">
+        <svg viewBox="0 0 1100 540" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto;max-height:48vh;display:block">
+          <defs>
+            <filter id="iul-g1" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="5" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+
+          <!-- 4 条光柱(中心 550,280 → 顶/右/底/左) -->
+          <g opacity="0.55">
+            <line x1="550" y1="280" x2="550" y2="100" stroke="#A87E2E" stroke-width="3" stroke-dasharray="8 12">
+              <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" repeatCount="indefinite"/>
+            </line>
+            <line x1="550" y1="280" x2="800" y2="280" stroke="#A87E2E" stroke-width="3" stroke-dasharray="8 12">
+              <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" begin="-0.5s" repeatCount="indefinite"/>
+            </line>
+            <line x1="550" y1="280" x2="550" y2="460" stroke="#A87E2E" stroke-width="3" stroke-dasharray="8 12">
+              <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" begin="-1.0s" repeatCount="indefinite"/>
+            </line>
+            <line x1="550" y1="280" x2="300" y2="280" stroke="#A87E2E" stroke-width="3" stroke-dasharray="8 12">
+              <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" begin="-1.5s" repeatCount="indefinite"/>
+            </line>
+          </g>
+
+          <!-- 4 花瓣(全是金 — 关键价值) -->
+          <g>
+            <circle cx="550" cy="100" r="68" fill="#A87E2E" opacity="0.16">
+              <animate attributeName="r" values="62;78;62" dur="3.6s" begin="0s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.16;0.04;0.16" dur="3.6s" begin="0s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="550" cy="100" r="46" fill="#A87E2E"/>
+            <text x="550" y="108" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">$</text>
+            <text x="550" y="40" text-anchor="middle" fill="#A87E2E" font-size="16" font-weight="700">现金价值</text>
+          </g>
+          <g>
+            <circle cx="800" cy="280" r="68" fill="#A87E2E" opacity="0.16">
+              <animate attributeName="r" values="62;78;62" dur="3.6s" begin="0.9s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="800" cy="280" r="46" fill="#A87E2E"/>
+            <text x="800" y="288" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">93K</text>
+            <text x="800" y="220" text-anchor="middle" fill="#A87E2E" font-size="16" font-weight="700">退休年收入</text>
+          </g>
+          <g>
+            <circle cx="550" cy="460" r="68" fill="#A87E2E" opacity="0.16">
+              <animate attributeName="r" values="62;78;62" dur="3.6s" begin="1.8s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="550" cy="460" r="46" fill="#A87E2E"/>
+            <text x="550" y="468" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">7702</text>
+            <text x="550" y="520" text-anchor="middle" fill="#A87E2E" font-size="16" font-weight="700">IRC 税优</text>
+          </g>
+          <g>
+            <circle cx="300" cy="280" r="68" fill="#A87E2E" opacity="0.16">
+              <animate attributeName="r" values="62;78;62" dur="3.6s" begin="2.7s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="300" cy="280" r="46" fill="#A87E2E"/>
+            <text x="300" y="288" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">20y</text>
+            <text x="300" y="220" text-anchor="middle" fill="#A87E2E" font-size="16" font-weight="700">缴费期</text>
+          </g>
+
+          <!-- 中心 -->
+          <g filter="url(#iul-g1)">
+            <circle cx="550" cy="280" r="100" fill="#A87E2E" opacity="0.08">
+              <animate attributeName="r" values="92;108;92" dur="3s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="550" cy="280" r="78" fill="var(--surface)" stroke="#A87E2E" stroke-width="3.5"/>
+            <text x="550" y="275" text-anchor="middle" fill="#A87E2E" font-size="20" font-weight="700">LLD 2025</text>
+            <text x="550" y="303" text-anchor="middle" fill="currentColor" opacity="0.55" font-size="11" letter-spacing="2">现金价值型</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="grid3 rv" style="margin-top:8px">
+        <div class="card">
+          <div class="ctitle">客户画像</div>
+          <div class="body">35-55 岁中产,关注退休生活质量胜过遗产传承。手里有闲钱,但担心"钱变毛"。</div>
+        </div>
+        <div class="card">
+          <div class="ctitle">核心卖点</div>
+          <div class="body">退休后每年领 <b style="color:#A87E2E">$93,127</b>,等于月入 7.7 万人民币的现金流,3 重税务优惠。</div>
+        </div>
+        <div class="card">
+          <div class="ctitle">异议克星</div>
+          <div class="body">"回报不如股票" — 答:标普 500 12%上限 + 0%下限,有保底。"不灵活" — 答:可以保单贷款,流动性强。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 4 第 2 类 — 教育金规划型(0-12 岁) -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow"><div class="tag rv" style="background:#2C8A60;color:#fff">② 0-12 岁 · 教育金</div><div class="stepno rv">04 / 08</div></div>
+      <h2 class="rv">父母的爱 · 跨越 18 年的复利</h2>
+
+      <div class="rv" style="margin:8px 0;width:100%">
+        <svg viewBox="0 0 1100 540" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto;max-height:48vh;display:block">
+          <defs>
+            <filter id="iul-g2" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="5" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+
+          <g opacity="0.55">
+            <line x1="550" y1="280" x2="550" y2="100" stroke="#2C8A60" stroke-width="3" stroke-dasharray="8 12">
+              <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" repeatCount="indefinite"/>
+            </line>
+            <line x1="550" y1="280" x2="800" y2="280" stroke="#2C8A60" stroke-width="3" stroke-dasharray="8 12">
+              <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" begin="-0.5s" repeatCount="indefinite"/>
+            </line>
+            <line x1="550" y1="280" x2="550" y2="460" stroke="#2C8A60" stroke-width="3" stroke-dasharray="8 12">
+              <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" begin="-1.0s" repeatCount="indefinite"/>
+            </line>
+            <line x1="550" y1="280" x2="300" y2="280" stroke="#2C8A60" stroke-width="3" stroke-dasharray="8 12">
+              <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" begin="-1.5s" repeatCount="indefinite"/>
+            </line>
+          </g>
+
+          <g>
+            <circle cx="550" cy="100" r="68" fill="#2C8A60" opacity="0.16">
+              <animate attributeName="r" values="62;78;62" dur="3.6s" begin="0s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="550" cy="100" r="46" fill="#2C8A60"/>
+            <text x="550" y="108" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">$120K</text>
+            <text x="550" y="40" text-anchor="middle" fill="#2C8A60" font-size="16" font-weight="700">大学 4 年提取</text>
+          </g>
+          <g>
+            <circle cx="800" cy="280" r="68" fill="#2C8A60" opacity="0.16">
+              <animate attributeName="r" values="62;78;62" dur="3.6s" begin="0.9s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="800" cy="280" r="46" fill="#2C8A60"/>
+            <text x="800" y="288" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">0→18</text>
+            <text x="800" y="220" text-anchor="middle" fill="#2C8A60" font-size="16" font-weight="700">复利 18 年</text>
+          </g>
+          <g>
+            <circle cx="550" cy="460" r="68" fill="#2C8A60" opacity="0.16">
+              <animate attributeName="r" values="62;78;62" dur="3.6s" begin="1.8s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="550" cy="460" r="46" fill="#2C8A60"/>
+            <text x="550" y="468" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">76K/年</text>
+            <text x="550" y="520" text-anchor="middle" fill="#2C8A60" font-size="16" font-weight="700">退休后现金流</text>
+          </g>
+          <g>
+            <circle cx="300" cy="280" r="68" fill="#2C8A60" opacity="0.16">
+              <animate attributeName="r" values="62;78;62" dur="3.6s" begin="2.7s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="300" cy="280" r="46" fill="#2C8A60"/>
+            <text x="300" y="288" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">$1M</text>
+            <text x="300" y="220" text-anchor="middle" fill="#2C8A60" font-size="16" font-weight="700">初始保额</text>
+          </g>
+
+          <g filter="url(#iul-g2)">
+            <circle cx="550" cy="280" r="100" fill="#2C8A60" opacity="0.08">
+              <animate attributeName="r" values="92;108;92" dur="3s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="550" cy="280" r="78" fill="var(--surface)" stroke="#2C8A60" stroke-width="3.5"/>
+            <text x="550" y="275" text-anchor="middle" fill="#2C8A60" font-size="20" font-weight="700">儿童 IUL</text>
+            <text x="550" y="303" text-anchor="middle" fill="currentColor" opacity="0.55" font-size="11" letter-spacing="2">教育+退休两不误</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="grid3 rv" style="margin-top:8px">
+        <div class="card">
+          <div class="ctitle">客户画像</div>
+          <div class="body">30-45 岁父母,新生 0-12 岁孩子。"我想给孩子最好的一切"但自己存不下钱。</div>
+        </div>
+        <div class="card">
+          <div class="ctitle">核心卖点</div>
+          <div class="body">一份保单 <b style="color:#2C8A60">两份规划</b>:18 岁后读大学提取 4 年,60 岁退休还有持续现金流。</div>
+        </div>
+        <div class="card">
+          <div class="ctitle">异议克星</div>
+          <div class="body">"教育金账户收益太低" — 答:IUL 复利 18 年收益可期,还能兼顾保险保障。"孩子不需要寿险" — 答:不是卖寿险,是给孩子锁定终身财务规划。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 5 第 3 类 — 财富传承型(50-70 岁) -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow"><div class="tag rv" style="background:#2A4A8C;color:#fff">③ 50-70 岁 · 传承</div><div class="stepno rv">05 / 08</div></div>
+      <h2 class="rv">价格便宜 · 保证到 90 · 可 ROP</h2>
+
+      <div class="rv" style="margin:8px 0;width:100%">
+        <svg viewBox="0 0 1100 540" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto;max-height:48vh;display:block">
+          <defs>
+            <filter id="iul-g3" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="5" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+
+          <g opacity="0.55">
+            <line x1="550" y1="280" x2="550" y2="100" stroke="#2A4A8C" stroke-width="3" stroke-dasharray="8 12">
+              <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" repeatCount="indefinite"/>
+            </line>
+            <line x1="550" y1="280" x2="800" y2="280" stroke="#2A4A8C" stroke-width="3" stroke-dasharray="8 12">
+              <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" begin="-0.5s" repeatCount="indefinite"/>
+            </line>
+            <line x1="550" y1="280" x2="550" y2="460" stroke="#2A4A8C" stroke-width="3" stroke-dasharray="8 12">
+              <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" begin="-1.0s" repeatCount="indefinite"/>
+            </line>
+            <line x1="550" y1="280" x2="300" y2="280" stroke="#2A4A8C" stroke-width="3" stroke-dasharray="8 12">
+              <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" begin="-1.5s" repeatCount="indefinite"/>
+            </line>
+          </g>
+
+          <g>
+            <circle cx="550" cy="100" r="68" fill="#2A4A8C" opacity="0.16">
+              <animate attributeName="r" values="62;78;62" dur="3.6s" begin="0s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="550" cy="100" r="46" fill="#2A4A8C"/>
+            <text x="550" y="108" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">→90</text>
+            <text x="550" y="40" text-anchor="middle" fill="#2A4A8C" font-size="16" font-weight="700">保证到 90 岁</text>
+          </g>
+          <g>
+            <circle cx="800" cy="280" r="68" fill="#2A4A8C" opacity="0.16">
+              <animate attributeName="r" values="62;78;62" dur="3.6s" begin="0.9s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="800" cy="280" r="46" fill="#2A4A8C"/>
+            <text x="800" y="288" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">ROP</text>
+            <text x="800" y="220" text-anchor="middle" fill="#2A4A8C" font-size="16" font-weight="700">退还保费</text>
+          </g>
+          <g>
+            <circle cx="550" cy="460" r="68" fill="#2A4A8C" opacity="0.16">
+              <animate attributeName="r" values="62;78;62" dur="3.6s" begin="1.8s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="550" cy="460" r="46" fill="#2A4A8C"/>
+            <text x="550" y="468" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">$</text>
+            <text x="550" y="520" text-anchor="middle" fill="#2A4A8C" font-size="16" font-weight="700">价格便宜</text>
+          </g>
+          <g>
+            <circle cx="300" cy="280" r="68" fill="#2A4A8C" opacity="0.16">
+              <animate attributeName="r" values="62;78;62" dur="3.6s" begin="2.7s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="300" cy="280" r="46" fill="#2A4A8C"/>
+            <text x="300" y="288" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">传承</text>
+            <text x="300" y="220" text-anchor="middle" fill="#2A4A8C" font-size="16" font-weight="700">免税给子女</text>
+          </g>
+
+          <g filter="url(#iul-g3)">
+            <circle cx="550" cy="280" r="100" fill="#2A4A8C" opacity="0.08">
+              <animate attributeName="r" values="92;108;92" dur="3s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="550" cy="280" r="78" fill="var(--surface)" stroke="#2A4A8C" stroke-width="3.5"/>
+            <text x="550" y="275" text-anchor="middle" fill="#2A4A8C" font-size="20" font-weight="700">VPP 3</text>
+            <text x="550" y="303" text-anchor="middle" fill="currentColor" opacity="0.55" font-size="11" letter-spacing="2">传承保护型</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="grid3 rv" style="margin-top:8px">
+        <div class="card">
+          <div class="ctitle">客户画像</div>
+          <div class="body">50-70 岁,资产已积累,关注"钱给谁"胜过"钱怎么长"。担心遗产税,想给子女"干净的钱"。</div>
+        </div>
+        <div class="card">
+          <div class="ctitle">核心卖点</div>
+          <div class="body">身故赔偿金 <b style="color:#2A4A8C">100% 免税</b> 给受益人,加 ROP 后"不亏本金" — 心理踏实 + 实际传承。</div>
+        </div>
+        <div class="card">
+          <div class="ctitle">异议克星</div>
+          <div class="body">"我老了不需要寿险" — 答:不是给自己用,是给子女留遗产 + 资产隔离。"我直接给现金" — 答:现金要走遗产认证(Probate),可能 6-18 个月被冻结。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 6 第 4 类 — 高净值资产保障型 -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow"><div class="tag rv" style="background:#B14E39;color:#fff">④ 高净值 · 资产保障</div><div class="stepno rv">06 / 08</div></div>
+      <h2 class="rv">终身保障 · 资产隔离 · 不在乎积累</h2>
+
+      <div class="rv" style="margin:8px 0;width:100%">
+        <svg viewBox="0 0 1100 540" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto;max-height:48vh;display:block">
+          <defs>
+            <filter id="iul-g4" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="5" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+
+          <g opacity="0.55">
+            <line x1="550" y1="280" x2="550" y2="100" stroke="#B14E39" stroke-width="3" stroke-dasharray="8 12">
+              <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" repeatCount="indefinite"/>
+            </line>
+            <line x1="550" y1="280" x2="800" y2="280" stroke="#B14E39" stroke-width="3" stroke-dasharray="8 12">
+              <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" begin="-0.5s" repeatCount="indefinite"/>
+            </line>
+            <line x1="550" y1="280" x2="550" y2="460" stroke="#B14E39" stroke-width="3" stroke-dasharray="8 12">
+              <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" begin="-1.0s" repeatCount="indefinite"/>
+            </line>
+            <line x1="550" y1="280" x2="300" y2="280" stroke="#B14E39" stroke-width="3" stroke-dasharray="8 12">
+              <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" begin="-1.5s" repeatCount="indefinite"/>
+            </line>
+          </g>
+
+          <g>
+            <circle cx="550" cy="100" r="68" fill="#B14E39" opacity="0.16">
+              <animate attributeName="r" values="62;78;62" dur="3.6s" begin="0s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="550" cy="100" r="46" fill="#B14E39"/>
+            <text x="550" y="108" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">终身</text>
+            <text x="550" y="40" text-anchor="middle" fill="#B14E39" font-size="16" font-weight="700">保障到 100+</text>
+          </g>
+          <g>
+            <circle cx="800" cy="280" r="68" fill="#B14E39" opacity="0.16">
+              <animate attributeName="r" values="62;78;62" dur="3.6s" begin="0.9s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="800" cy="280" r="46" fill="#B14E39"/>
+            <text x="800" y="288" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">隔离</text>
+            <text x="800" y="220" text-anchor="middle" fill="#B14E39" font-size="16" font-weight="700">资产隔离</text>
+          </g>
+          <g>
+            <circle cx="550" cy="460" r="68" fill="#B14E39" opacity="0.16">
+              <animate attributeName="r" values="62;78;62" dur="3.6s" begin="1.8s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="550" cy="460" r="46" fill="#B14E39"/>
+            <text x="550" y="468" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">信托</text>
+            <text x="550" y="520" text-anchor="middle" fill="#B14E39" font-size="16" font-weight="700">家族信托</text>
+          </g>
+          <g>
+            <circle cx="300" cy="280" r="68" fill="#B14E39" opacity="0.16">
+              <animate attributeName="r" values="62;78;62" dur="3.6s" begin="2.7s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="300" cy="280" r="46" fill="#B14E39"/>
+            <text x="300" y="288" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">分金</text>
+            <text x="300" y="220" text-anchor="middle" fill="#B14E39" font-size="16" font-weight="700">遗产税筹划</text>
+          </g>
+
+          <g filter="url(#iul-g4)">
+            <circle cx="550" cy="280" r="100" fill="#B14E39" opacity="0.08">
+              <animate attributeName="r" values="92;108;92" dur="3s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="550" cy="280" r="78" fill="var(--surface)" stroke="#B14E39" stroke-width="3.5"/>
+            <text x="550" y="275" text-anchor="middle" fill="#B14E39" font-size="20" font-weight="700">WL + GFlex</text>
+            <text x="550" y="303" text-anchor="middle" fill="currentColor" opacity="0.55" font-size="11" letter-spacing="2">资产保障型</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="grid3 rv" style="margin-top:8px">
+        <div class="card">
+          <div class="ctitle">客户画像</div>
+          <div class="body">企业主 / 高净值(净资产 $500万+),有公司股权,担心经营风险波及家庭资产。</div>
+        </div>
+        <div class="card">
+          <div class="ctitle">核心卖点</div>
+          <div class="body"><b style="color:#B14E39">终身保障 + 资产隔离 + 遗产税筹划</b> 三件套,WL 的"现金价值复利 + Guaranteed Flex Rider" 灵活性最高。</div>
+        </div>
+        <div class="card">
+          <div class="ctitle">异议克星</div>
+          <div class="body">"WL 太贵" — 答:不是卖 WL 本身,是用 WL + Irrevocable Trust 做资产防火墙。"我有律师" — 答:我们是顾问团队,需要律师协作而不是替代。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 7 桥弧总览(模板 05)— 4 类客户连接"顾问" -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow"><div class="tag rv">总览 · 4 类客户统一打法</div><div class="stepno rv">07 / 08</div></div>
+      <h2 class="rv">客户的桥 · 顾问的桥</h2>
+
+      <div class="rv" style="margin:8px 0;width:100%">
+        <svg viewBox="0 0 1200 540" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto;max-height:50vh;display:block">
+          <defs>
+            <filter id="iul-bridge-blur" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="6" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <linearGradient id="iul-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#A87E2E" stop-opacity="0.4"/>
+              <stop offset="50%" stop-color="#A87E2E" stop-opacity="1"/>
+              <stop offset="100%" stop-color="#A87E2E" stop-opacity="0.4"/>
+            </linearGradient>
+          </defs>
+
+          <!-- 左侧:4 类客户 -->
+          <g font-family="var(--font-display)">
+            <circle cx="140" cy="80"  r="22" fill="#A87E2E"/>
+            <text x="180" y="86" font-size="18" font-weight="700" fill="currentColor">35-55 退休金</text>
+
+            <circle cx="140" cy="190" r="22" fill="#2C8A60"/>
+            <text x="180" y="196" font-size="18" font-weight="700" fill="currentColor">0-12 教育金</text>
+
+            <circle cx="140" cy="300" r="22" fill="#2A4A8C"/>
+            <text x="180" y="306" font-size="18" font-weight="700" fill="currentColor">50-70 传承</text>
+
+            <circle cx="140" cy="410" r="22" fill="#B14E39"/>
+            <text x="180" y="416" font-size="18" font-weight="700" fill="currentColor">高净值 资产</text>
+          </g>
+
+          <!-- 右侧:顾问 / 团队 -->
+          <g>
+            <circle cx="1060" cy="270" r="60" fill="var(--surface)" stroke="#A87E2E" stroke-width="3.5"/>
+            <text x="1060" y="265" text-anchor="middle" font-size="20" font-weight="700" fill="#A87E2E" font-family="var(--font-display)">恒晟顾问</text>
+            <text x="1060" y="290" text-anchor="middle" font-size="11" letter-spacing="2" fill="currentColor" opacity="0.55" font-family="var(--font-display)">HENGSHENG</text>
+          </g>
+
+          <!-- 4 条桥弧(从左到右,流动光点 6s 循环) -->
+          <g fill="none" stroke="url(#iul-grad)" stroke-width="2.5" opacity="0.7">
+            <path d="M 220 80 Q 640 -40 1000 270">
+              <animate attributeName="stroke-dashoffset" from="0" to="-80" dur="3.5s" repeatCount="indefinite"/>
+            </path>
+            <path d="M 220 190 Q 640 100 1000 270">
+              <animate attributeName="stroke-dashoffset" from="0" to="-80" dur="3.5s" begin="-0.8s" repeatCount="indefinite"/>
+            </path>
+            <path d="M 220 300 Q 640 400 1000 270">
+              <animate attributeName="stroke-dashoffset" from="0" to="-80" dur="3.5s" begin="-1.6s" repeatCount="indefinite"/>
+            </path>
+            <path d="M 220 410 Q 640 540 1000 270">
+              <animate attributeName="stroke-dashoffset" from="0" to="-80" dur="3.5s" begin="-2.4s" repeatCount="indefinite"/>
+            </path>
+          </g>
+
+          <!-- 桥上流动光点 -->
+          <g filter="url(#iul-bridge-blur)">
+            <circle r="6" fill="#A87E2E">
+              <animateMotion dur="6s" repeatCount="indefinite" path="M 220 80 Q 640 -40 1000 270"/>
+            </circle>
+            <circle r="6" fill="#2C8A60">
+              <animateMotion dur="6s" begin="-1.5s" repeatCount="indefinite" path="M 220 190 Q 640 100 1000 270"/>
+            </circle>
+            <circle r="6" fill="#2A4A8C">
+              <animateMotion dur="6s" begin="-3s" repeatCount="indefinite" path="M 220 300 Q 640 400 1000 270"/>
+            </circle>
+            <circle r="6" fill="#B14E39">
+              <animateMotion dur="6s" begin="-4.5s" repeatCount="indefinite" path="M 220 410 Q 640 540 1000 270"/>
+            </circle>
+          </g>
+
+          <!-- 中心标签 -->
+          <text x="600" y="270" text-anchor="middle" font-size="18" fill="currentColor" opacity="0.55" font-family="var(--font-display)" letter-spacing="6">诊断 · 设计 · 落地 · 复盘</text>
+        </svg>
+      </div>
+
+      <div class="tipbox rv" style="margin-top:18px">
+        <div class="lbl">统一打法</div>
+        <div class="txt">无论哪类客户,销售流程都是: <b style="color:var(--ink)">诊断需求 → 设计保单 → 落地服务 → 复盘跟进</b>。差异在第 2 步选哪张保单。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 8 实战话术(双栏对比)+ AI 教练入口 -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow"><div class="tag rv">实战 · 6 大异议</div><div class="stepno rv">08 / 08</div></div>
+      <h2 class="rv">客户最常说的 6 句话 · 怎么接</h2>
+
+      <div class="grid2 rv">
+        <div class="card" style="border-left:6px solid #B14E39">
+          <div class="ctitle" style="color:#B14E39">客户反对</div>
+          <div class="body" style="font-style:italic;margin-top:8px">"回报不如股票基金。"</div>
+          <div class="ctitle" style="color:#B14E39;margin-top:6px;font-size:14px">销售回应</div>
+          <div class="body" style="margin-top:4px">"标普 500 12% 上限 + 0% 下限,保底机制让您熊市不亏、牛市跟涨。基金的'回报'是不确定的'可能性',保单是'确定的底线'。"</div>
+        </div>
+        <div class="card" style="border-left:6px solid #2C8A60">
+          <div class="ctitle" style="color:#2C8A60">客户反对</div>
+          <div class="body" style="font-style:italic;margin-top:8px">"我现在还年轻,50 岁再说。"</div>
+          <div class="ctitle" style="color:#2C8A60;margin-top:6px;font-size:14px">销售回应</div>
+          <div class="body" style="margin-top:4px">"35 岁 vs 45 岁买同样保额,保费差 30-40%。30-50 岁是'保费最低的窗口',越年轻越便宜,还锁住健康评级。"</div>
+        </div>
+        <div class="card" style="border-left:6px solid #A87E2E">
+          <div class="ctitle" style="color:#A87E2E">客户反对</div>
+          <div class="body" style="font-style:italic;margin-top:8px">"公司会不会倒闭?"</div>
+          <div class="ctitle" style="color:#A87E2E;margin-top:6px;font-size:14px">销售回应</div>
+          <div class="body" style="margin-top:4px">"NLG 1848 年成立,经历过 1873、1929、2008 三次大萧条。州保险厅 + 联邦再保险,保单有'铁三角'兜底。"</div>
+        </div>
+        <div class="card" style="border-left:6px solid #2A4A8C">
+          <div class="ctitle" style="color:#2A4A8C">客户反对</div>
+          <div class="body" style="font-style:italic;margin-top:8px">"钱锁那么久不灵活。"</div>
+          <div class="ctitle" style="color:#2A4A8C;margin-top:6px;font-size:14px">销售回应</div>
+          <div class="body" style="margin-top:4px">"保单贷款功能:现金价值的 90% 可随时借,不影响保单增长,利率 <b>5-7%</b>,比信用卡 18% 划算。"</div>
+        </div>
+        <div class="card" style="border-left:6px solid #7B5E9E">
+          <div class="ctitle" style="color:#7B5E9E">客户反对</div>
+          <div class="body" style="font-style:italic;margin-top:8px">"我已经买过定期寿险了。"</div>
+          <div class="ctitle" style="color:#7B5E9E;margin-top:6px;font-size:14px">销售回应</div>
+          <div class="body" style="margin-top:4px">"Term 是'租房子',到期可能不续;Whole Life / IUL 是'买房子',有现金价值积累。两者不冲突,各管各的阶段。"</div>
+        </div>
+        <div class="card" style="border-left:6px solid #B14E39">
+          <div class="ctitle" style="color:#B14E39">客户反对</div>
+          <div class="body" style="font-style:italic;margin-top:8px">"我再考虑考虑。"</div>
+          <div class="ctitle" style="color:#B14E39;margin-top:6px;font-size:14px">销售回应</div>
+          <div class="body" style="margin-top:4px">"完全理解。我把适合您这个年龄段的方案 + 1 张对比图发您微信,有问题随时问。3 天后我跟进一次,行吗?"</div>
+        </div>
+      </div>
+
+      <div class="tipbox rv" style="margin-top:18px;background:linear-gradient(135deg,#A87E2E 0%,#2A4A8C 100%);color:#fff">
+        <div class="lbl" style="color:#fff;opacity:0.9">💡 AI 教练</div>
+        <div class="txt" style="color:#fff">按右下角 <b>?</b> 按钮,直接问"客户说'回报不如股票'怎么接?"实时给话术,带本页上下文。</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="ctl">
+  <a class="home" href="../../index.html" title="返回目录" aria-label="返回目录"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px"><path d="M3 9.5L12 3l9 6.5V21H3z"/></svg></a>
+  <span class="divid"></span>
+  <button class="btn" id="prev" aria-label="上一页"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+  <span class="count" id="count">1 / 8</span>
+  <button class="btn" id="next" aria-label="下一页"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+  <span class="divid"></span>
+  <button class="btn" id="theme" aria-label="切换深色"><svg id="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button>
+</div>
+
+<script src="../../assets/vendor/lottie_light.min.js"></script>
+<script src="../../assets/lottie-player.js"></script>
+<script src="../../assets/count-up.js"></script>
+<script src="../../assets/deck.js"></script>
+<!-- AI 教练:本地 127.0.0.1:8643 在公网不可达,生产版暂禁用。改回解开注释即可 -->
+</body>
+</html>
