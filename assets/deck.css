@@ -4,7 +4,7 @@ html,body{height:100%}
 body{background:var(--bg);color:var(--ink);font-family:var(--font-body);overflow:hidden;transition:background .4s,color .4s}
 .deck{position:fixed;inset:0}
 .slide{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;
-  padding:clamp(28px,5vw,84px);opacity:0;pointer-events:none;transition:opacity .7s cubic-bezier(.65,0,.35,1)}
+  padding:clamp(28px,5vw,84px) clamp(28px,5vw,84px) clamp(100px,10vh,140px) clamp(28px,5vw,84px);opacity:0;pointer-events:none;transition:opacity .7s cubic-bezier(.65,0,.35,1)}
 .slide.active{opacity:1;pointer-events:auto}
 .wrap{width:100%;max-width:1140px;margin:0 auto}
 .bar{position:fixed;top:0;left:0;height:3px;background:var(--key);width:0;transition:width .4s;z-index:30}
