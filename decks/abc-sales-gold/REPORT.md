@@ -75,3 +75,31 @@ file:///Users/hsgp/Documents/Obsidian%20Vault/02_保险知识/培训工具/train
 | 1 IUL 退休 | CFT 经理张姐 | IUL $1500 万保额 |
 | 2 老客户加保 | 产品专家 Tony | $8,400 保费 / $5,800 佣金 |
 | 3 转介绍成交 | 首席讲师王老师 | $36,000 保费 / $25,000 佣金 |
+
+---
+
+## 部署与下载 · 2026-06-20
+
+**生产部署**:已 push 到 kevin89887634/hengsheng-training-decks,GH Pages 18s 完成。
+**iCloud 镜像**:已同步到 ~/Library/Mobile Documents/com~apple~CloudDocs/Documents/Claude/training-deck-toolkit/
+
+### 用户访问入口
+
+| 入口 | URL | 用途 |
+|------|-----|------|
+| 🌐 在线版 | https://ai.hsprosper.com/training/decks/abc-sales-gold/ | 完整动效,最佳体验 |
+| 📦 Release 主页 | https://github.com/kevin89887634/hengsheng-training-decks/releases/tag/v1.0.0-abc-sales-gold | 3 个下载文件入口 |
+
+### 可下载文件(3 个版本)
+
+| 文件 | 大小 | 适用场景 |
+|------|------|---------|
+| **abc-sales-gold.pdf** | 905 KB | 打印/邮件分享,16 页 A4(布局被压扁,仅作打印用) |
+| **abc-sales-gold_offline.html** | 244 KB | 单文件,双击离线打开(完整动效保留) |
+| **abc-sales-gold_offline.zip** | 125 KB | 完整 deck + assets,解压后用浏览器打开 |
+
+### 已知限制
+
+- **PDF 视觉评分 3★**:LibreOffice 转 HTML 时 grid/flex 布局被压扁为单列,左半空白。仅作打印版本。
+- **HTML 单文件版本**包含所有 CSS/JS 内联,logo 用 data URL,完全离线可用。
+- **ZIP 包**包含完整 deck + assets(解压后浏览器打开 index.html)。
