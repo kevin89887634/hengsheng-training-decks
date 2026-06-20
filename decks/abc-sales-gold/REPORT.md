@@ -103,3 +103,30 @@ file:///Users/hsgp/Documents/Obsidian%20Vault/02_保险知识/培训工具/train
 - **PDF 视觉评分 3★**:LibreOffice 转 HTML 时 grid/flex 布局被压扁为单列,左半空白。仅作打印版本。
 - **HTML 单文件版本**包含所有 CSS/JS 内联,logo 用 data URL,完全离线可用。
 - **ZIP 包**包含完整 deck + assets(解压后浏览器打开 index.html)。
+
+
+## 可编辑 PPTX 版本 (2026-06-20 新增)
+
+**用途**:Kevin 需要在 PowerPoint 里直接改字 / 重新排版 → 已用 python-pptx 生成 12 页 16:9 PPTX,所有文字 + 色块 + 布局可在 PowerPoint 直接编辑
+
+| 文件 | 大小 | 说明 |
+|------|------|------|
+| `abc-sales-gold_editable.pptx` | 48.8 KB | 12 页 16:9,所有文字可编辑,4 套语义色保留 |
+
+**下载**:
+- GH Release:https://github.com/kevin89887634/hengsheng-training-decks/releases/download/v1.0.0-abc-sales-gold/abc-sales-gold_editable.pptx
+- 本地:`~/Library/Mobile Documents/com~apple~CloudDocs/Documents/Claude/training-deck-toolkit/decks/abc-sales-gold/abc-sales-gold_editable.pptx`
+
+**改动反馈流程**(Kevin 改完后):
+1. Kevin 在本地改完 PPTX
+2. 发给我修改后的 PPTX (path 或附件)
+3. 我用 python-pptx 把改后的内容写回 deck HTML (保持 SVG 动效版同步)
+4. 重新部署到 GH Pages
+
+**已知限制**(python-pptx 转 HTML deck 时不保留的):
+- ❌ 永久流动 SVG 动画 (--key 装饰、桥弧路径、count-up 数字滚动)
+- ❌ Lottie 动画
+- ❌ 双主题切换 (light/dark)
+- ❌ 永久流动的光点 / 渐变光球
+- ✓ 4 套语义色 (金/红/绿/蓝)
+- ✓ 文字内容 + 卡片布局 + 关键数据 100% 保留
