@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>销售沟通 ABC 黄金法则 — 恒晟集团</title>
+<link rel="stylesheet" href="../../assets/tokens.css">
+<link rel="stylesheet" href="../../assets/deck.css">
+<style>
+/* ABC deck 局部样式(不动全局 deck.css) */
+.abc-card { padding:18px 22px; border-radius:10px; background:rgba(255,255,255,0.6); border:1px solid rgba(42,74,140,0.15); transition:all .25s ease; }
+.abc-card:hover { transform:translateY(-3px); box-shadow:0 8px 22px rgba(42,74,140,0.12); }
+.abc-role-A { border-top:4px solid var(--accent); }
+.abc-role-B { border-top:4px solid var(--key); }
+.abc-role-C { border-top:4px solid var(--ok); }
+.abc-scenarionum { font-family:var(--font-display); font-size:clamp(46px,7vw,86px); color:var(--key); font-weight:800; line-height:1; }
+.abc-step-mini { font-size:clamp(13px,1.4vw,17px); color:var(--ink-2); margin-top:6px; }
+.abc-quote { font-size:clamp(15px,1.7vw,21px); color:var(--ink); font-weight:500; line-height:1.55; padding:14px 18px; border-left:4px solid var(--key); background:linear-gradient(90deg,rgba(168,126,46,0.08) 0%,rgba(255,255,255,0.5) 100%); border-radius:0 8px 8px 0; }
+</style>
+</head>
+<body>
+<div class="bar" id="bar"></div>
+<div class="deck">
+
+  <!-- ============================================ -->
+  <!-- 1 封面 — 慢速光球漂移                          -->
+  <!-- ============================================ -->
+  <section class="slide center">
+    <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"
+         style="position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:0.55">
+      <defs><filter id="abc-cover-blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="70"/></filter></defs>
+      <circle cx="220" cy="180" r="200" fill="#2A4A8C" opacity="0.55" filter="url(#abc-cover-blur)">
+        <animate attributeName="cx" values="220;1380;220" dur="68s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="180;720;180" dur="84s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="1380" cy="720" r="220" fill="#A87E2E" opacity="0.50" filter="url(#abc-cover-blur)">
+        <animate attributeName="cx" values="1380;220;1380" dur="76s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="720;180;720" dur="92s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="800" cy="450" r="160" fill="#2C8A60" opacity="0.32" filter="url(#abc-cover-blur)">
+        <animate attributeName="cx" values="800;500;1100;800" dur="100s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="160;220;160" dur="48s" repeatCount="indefinite"/>
+      </circle>
+    </svg>
+    <div class="wrap" style="position:relative;z-index:1">
+      <div class="tag rv" style="margin-bottom:20px">销售方法论 · 黄金法则</div>
+      <h1 class="rv">销售沟通的 <span style="color:var(--key)">ABC</span> 黄金法则</h1>
+      <p class="lead rv" style="margin-top:14px">借力 <b>A</b> 的专业 · 做好 <b>B</b> 的桥梁 · 服务 <b>C</b> 的需求</p>
+      <div style="display:flex;gap:14px;justify-content:center;margin-top:28px" class="rv">
+        <div class="card" style="padding:12px 18px;text-align:center">
+          <div class="ctitle" style="color:var(--key)">A · 顾问</div>
+          <div class="body">Adviser</div>
+        </div>
+        <div class="card" style="padding:12px 18px;text-align:center">
+          <div class="ctitle" style="color:var(--accent)">B · 桥梁</div>
+          <div class="body">Bridge(你)</div>
+        </div>
+        <div class="card" style="padding:12px 18px;text-align:center">
+          <div class="ctitle" style="color:var(--ok)">C · 客户</div>
+          <div class="body">Customer</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:14px;justify-content:center;margin-top:14px" class="rv">
+        <div class="card" style="padding:10px 16px;text-align:center">
+          <div class="ctitle" style="color:var(--accent)">3 大模块</div>
+          <div class="body">认知 / SOP / 实战</div>
+        </div>
+        <div class="card" style="padding:10px 16px;text-align:center">
+          <div class="ctitle" style="color:var(--key)">60 分钟</div>
+          <div class="body">新人入职第一课</div>
+        </div>
+        <div class="card" style="padding:10px 16px;text-align:center">
+          <div class="ctitle" style="color:var(--ok)">12 张幻灯片</div>
+          <div class="body">12 实战场景</div>
+        </div>
+      </div>
+      <div class="logo rv" style="margin-top:30px"><span class="mk" style="background:linear-gradient(135deg,#A87E2E,#2A4A8C);color:#fff;font-weight:700;width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;border-radius:6px;font-size:14px">HS</span>恒晟集团 · Hengsheng Group</div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 2 一句话结论:三角平衡本质                       -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow"><div class="tag rv">模块 1 · 认知篇</div><div class="stepno rv">02 / 12</div></div>
+      <h2 class="rv"><b style="color:var(--key)">A 专业 + B 关系 + C 需求</b> = 三角平衡</h2>
+      <p class="lead rv" style="margin:10px 0 22px;font-size:clamp(15px,1.8vw,22px)">ABC 法则的本质 — 角色功能分离,效率倍增</p>
+
+      <!-- 主结论 callout -->
+      <div class="callout rv" style="background:linear-gradient(135deg,#A87E2E 0%,#2A4A8C 100%);color:#fff;padding:24px 30px;border-radius:12px">
+        <div class="lbl" style="color:#fff;opacity:0.85">核心结论</div>
+        <div class="q" style="font-size:clamp(18px,2.2vw,28px);font-weight:600;line-height:1.5">成功的关键不在 A 的专业高度,而在 <b style="color:#fff;text-decoration:underline">B 对 A 的「价值锚定」与「信任平移」</b>。把专业输出和情感连接分离,效率指数级提升。</div>
+      </div>
+
+      <!-- 3 栏对比:单打独斗 vs 借力 ABC -->
+      <div class="grid3 rv" style="margin-top:24px">
+        <div class="abc-card abc-role-A">
+          <div class="ctitle" style="color:var(--accent);font-size:clamp(20px,2.2vw,26px)">单打独斗</div>
+          <div class="body" style="margin-top:8px">
+            <p><b>1 个人扛 3 角色</b></p>
+            <p style="margin-top:6px;color:var(--ink-2);font-size:clamp(13px,1.4vw,16px)">专业度不够 + 关系过度消耗 + 转化率低</p>
+            <div style="margin-top:10px;font-size:clamp(22px,2.6vw,32px);font-weight:700;color:var(--danger)">线性增长</div>
+          </div>
+        </div>
+        <div class="abc-card abc-role-B" style="border-top-width:6px">
+          <div class="ctitle" style="color:var(--key);font-size:clamp(20px,2.2vw,26px)">借力 ABC ⭐</div>
+          <div class="body" style="margin-top:8px">
+            <p><b>3 角色各司其职</b></p>
+            <p style="margin-top:6px;color:var(--ink-2);font-size:clamp(13px,1.4vw,16px)">权威背书 + 关系纽带 + 需求对接</p>
+            <div style="margin-top:10px;font-size:clamp(22px,2.6vw,32px);font-weight:700;color:var(--key)">几何级增长</div>
+          </div>
+        </div>
+        <div class="abc-card abc-role-C">
+          <div class="ctitle" style="color:var(--ok);font-size:clamp(20px,2.2vw,26px)">心理学基础</div>
+          <div class="body" style="margin-top:8px">
+            <p><b>权威效应 + 社会认同</b></p>
+            <p style="margin-top:6px;color:var(--ink-2);font-size:clamp(13px,1.4vw,16px)">权威 + 熟人背书同时出现时,决策阻力最小</p>
+            <div style="margin-top:10px;font-size:clamp(22px,2.6vw,32px);font-weight:700;color:var(--ok)">阻力最小</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tipbox rv" style="margin-top:18px">
+        <div class="lbl">⚠️ 关键认知</div>
+        <div class="txt">新人专业度不足?<b style="color:var(--ink)">不是问题</b> — ABC 法则把"个人短板"转化为"团队协作优势"。B 不用成为全才,只需做好<b style="color:var(--key)">资源调度员</b>。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 3 三角色定义 — 桥弧模板                         -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow"><div class="tag rv">模块 1 · 认知篇</div><div class="stepno rv">03 / 12</div></div>
+      <h2 class="rv">三角色定义 — <b style="color:var(--key)">B 是主角</b></h2>
+      <p class="lead rv" style="margin:8px 0 6px;font-size:clamp(14px,1.6vw,20px)">A 主导专业输出,B 做桥梁承接,C 是决策终点</p>
+
+      <div class="rv" style="margin:6px 0;width:100%">
+        <svg viewBox="0 0 1200 380" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto;max-height:42vh;display:block">
+          <defs>
+            <linearGradient id="abc-bridge" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#2A4A8C"/>
+              <stop offset="0.5" stop-color="#A87E2E"/>
+              <stop offset="1" stop-color="#2C8A60"/>
+            </linearGradient>
+          </defs>
+
+          <!-- 桥弧(底色 + 渐变虚线流动) -->
+          <path d="M 200 200 Q 600 50 1000 200" stroke="rgba(168,126,46,0.22)" stroke-width="3" fill="none"/>
+          <path d="M 200 200 Q 600 50 1000 200" stroke="url(#abc-bridge)" stroke-width="3" fill="none" stroke-dasharray="10 14" stroke-linecap="round">
+            <animate attributeName="stroke-dashoffset" from="0" to="-48" dur="1.6s" repeatCount="indefinite"/>
+          </path>
+
+          <!-- A 节点(左,蓝) -->
+          <g>
+            <circle cx="200" cy="200" r="110" fill="#2A4A8C" opacity="0.08">
+              <animate attributeName="r" values="100;118;100" dur="2.6s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.08;0.02;0.08" dur="2.6s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="200" cy="200" r="75" fill="#2A4A8C" opacity="0.18">
+              <animate attributeName="r" values="70;82;70" dur="2.6s" begin="0.25s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.18;0.06;0.18" dur="2.6s" begin="0.25s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="200" cy="200" r="50" fill="#2A4A8C"/>
+            <text x="200" y="216" text-anchor="middle" fill="#fff" font-size="44" font-weight="700" font-family="var(--font-display)">A</text>
+          </g>
+          <text x="200" y="318" text-anchor="middle" fill="#2A4A8C" font-size="20" font-weight="700">Adviser · 顾问</text>
+          <text x="200" y="345" text-anchor="middle" fill="currentColor" opacity="0.6" font-size="14">权威 / 专业 / 客观</text>
+
+          <!-- B 节点(中央主角,金,放大 36%) -->
+          <g>
+            <circle cx="600" cy="200" r="135" fill="#A87E2E" opacity="0.08">
+              <animate attributeName="r" values="125;145;125" dur="2.4s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.08;0.02;0.08" dur="2.4s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="600" cy="200" r="95" fill="#A87E2E" opacity="0.20">
+              <animate attributeName="r" values="88;102;88" dur="2.4s" begin="0.2s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.20;0.08;0.20" dur="2.4s" begin="0.2s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="600" cy="200" r="68" fill="#A87E2E"/>
+            <text x="600" y="220" text-anchor="middle" fill="#fff" font-size="56" font-weight="700" font-family="var(--font-display)">B</text>
+          </g>
+          <text x="600" y="332" text-anchor="middle" fill="#A87E2E" font-size="22" font-weight="700">Bridge · 桥梁(你)</text>
+          <text x="600" y="358" text-anchor="middle" fill="currentColor" opacity="0.6" font-size="14">连接 / 传递 / 维护</text>
+
+          <!-- C 节点(右,绿) -->
+          <g>
+            <circle cx="1000" cy="200" r="110" fill="#2C8A60" opacity="0.08">
+              <animate attributeName="r" values="100;118;100" dur="2.6s" begin="0.5s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.08;0.02;0.08" dur="2.6s" begin="0.5s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="1000" cy="200" r="75" fill="#2C8A60" opacity="0.18">
+              <animate attributeName="r" values="70;82;70" dur="2.6s" begin="0.75s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.18;0.06;0.18" dur="2.6s" begin="0.75s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="1000" cy="200" r="50" fill="#2C8A60"/>
+            <text x="1000" y="216" text-anchor="middle" fill="#fff" font-size="44" font-weight="700" font-family="var(--font-display)">C</text>
+          </g>
+          <text x="1000" y="318" text-anchor="middle" fill="#2C8A60" font-size="20" font-weight="700">Customer · 客户</text>
+          <text x="1000" y="345" text-anchor="middle" fill="currentColor" opacity="0.6" font-size="14">信息接收 / 决策者</text>
+
+          <!-- 2 颗光点沿桥弧永久飞 -->
+          <circle r="8" fill="#fff" stroke="#A87E2E" stroke-width="2.5">
+            <animateMotion dur="3s" repeatCount="indefinite" rotate="auto" path="M 200 200 Q 600 50 1000 200"/>
+            <animate attributeName="opacity" values="0;1;1;1;0" dur="3s" repeatCount="indefinite"/>
+          </circle>
+          <circle r="6" fill="#fff" stroke="#A87E2E" stroke-width="2" opacity="0.8">
+            <animateMotion dur="3s" begin="1.5s" repeatCount="indefinite" rotate="auto" path="M 200 200 Q 600 50 1000 200"/>
+            <animate attributeName="opacity" values="0;0.8;0.8;0.8;0" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+          </circle>
+        </svg>
+      </div>
+
+      <!-- 三角色职责卡片 -->
+      <div class="grid3 rv" style="margin-top:8px">
+        <div class="abc-card abc-role-A" style="padding:14px 18px">
+          <div class="ctitle" style="color:var(--accent);font-size:clamp(16px,1.7vw,20px)">A 顾问 · 做什么</div>
+          <ul style="margin:8px 0 0;padding-left:18px;font-size:clamp(12px,1.3vw,15px);line-height:1.55">
+            <li>方案设计 / 逻辑推演</li>
+            <li>解决复杂问题</li>
+            <li>风险提示 / 客观判断</li>
+          </ul>
+        </div>
+        <div class="abc-card abc-role-B" style="padding:14px 18px">
+          <div class="ctitle" style="color:var(--key);font-size:clamp(16px,1.7vw,20px)">B 桥梁 · 做什么 ⭐</div>
+          <ul style="margin:8px 0 0;padding-left:18px;font-size:clamp(12px,1.3vw,15px);line-height:1.55">
+            <li>会前情报收集</li>
+            <li>推崇 A / 介绍铺垫</li>
+            <li>会中服务补位 / 情绪观察</li>
+            <li>会后复盘 / 情感维护</li>
+          </ul>
+        </div>
+        <div class="abc-card abc-role-C" style="padding:14px 18px">
+          <div class="ctitle" style="color:var(--ok);font-size:clamp(16px,1.7vw,20px)">C 客户 · 角色</div>
+          <ul style="margin:8px 0 0;padding-left:18px;font-size:clamp(12px,1.3vw,15px);line-height:1.55">
+            <li>信息接收者</li>
+            <li>最终决策者</li>
+            <li>需求 / 顾虑 / 痛点</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 4 B 角色核心价值 — 决定 50%+ 成交                -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow"><div class="tag rv">模块 1 · 认知篇</div><div class="stepno rv">04 / 12</div></div>
+      <h2 class="rv">B 是发动机 — 决定 <span style="color:var(--key)"><span data-countup="50" data-suffix="%+">0</span></span> 成交概率</h2>
+      <p class="lead rv" style="margin:8px 0 16px;font-size:clamp(14px,1.6vw,20px)">为什么 B 比 A 更重要 — 来自实践的金字塔公式</p>
+
+      <!-- 成功率分配金字塔(数字可视化) -->
+      <div class="rv" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:18px">
+        <div class="abc-card abc-role-B" style="padding:18px 22px;text-align:center">
+          <div class="abc-scenarionum">50%</div>
+          <div class="ctitle" style="margin-top:6px;color:var(--key)">B 的执行力</div>
+          <div class="body" style="font-size:clamp(12px,1.3vw,15px);color:var(--ink-2);margin-top:6px">情报 / 推崇 / 配合 / 跟进</div>
+        </div>
+        <div class="abc-card abc-role-A" style="padding:18px 22px;text-align:center">
+          <div class="abc-scenarionum" style="color:var(--accent)">30%</div>
+          <div class="ctitle" style="margin-top:6px;color:var(--accent)">座位 + 环境</div>
+          <div class="body" style="font-size:clamp(12px,1.3vw,15px);color:var(--ink-2);margin-top:6px">A 主导 + B/C 同侧</div>
+        </div>
+        <div class="abc-card abc-role-C" style="padding:18px 22px;text-align:center">
+          <div class="abc-scenarionum" style="color:var(--ok)">20%</div>
+          <div class="ctitle" style="margin-top:6px;color:var(--ok)">A 的讲解</div>
+          <div class="body" style="font-size:clamp(12px,1.3vw,15px);color:var(--ink-2);margin-top:6px">专业 / 逻辑 / 答疑</div>
+        </div>
+      </div>
+
+      <!-- 4 大职责(完整版) -->
+      <h3 class="rv" style="font-size:clamp(18px,2vw,24px);color:var(--ink);margin-bottom:10px">B 角色 4 大核心职责</h3>
+      <div class="grid3 rv" style="grid-template-columns:1fr 1fr;gap:12px">
+        <div class="abc-card" style="padding:14px 18px">
+          <div style="display:flex;align-items:center;gap:10px">
+            <div style="background:var(--key);color:#fff;width:32px;height:32px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:700">1</div>
+            <div class="ctitle" style="color:var(--ink);font-size:clamp(16px,1.7vw,20px)">情报收集</div>
+          </div>
+          <div class="body" style="margin-top:6px;font-size:clamp(12px,1.3vw,15px);color:var(--ink-2)">C 的财务 / 家庭 / 性格 / 痛点 — 提前给 A 做精准对接</div>
+        </div>
+        <div class="abc-card" style="padding:14px 18px">
+          <div style="display:flex;align-items:center;gap:10px">
+            <div style="background:var(--key);color:#fff;width:32px;height:32px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:700">2</div>
+            <div class="ctitle" style="color:var(--ink);font-size:clamp(16px,1.7vw,20px)">推崇 A</div>
+          </div>
+          <div class="body" style="margin-top:6px;font-size:clamp(12px,1.3vw,15px);color:var(--ink-2)">"这是我们专家,处理过 N 个类似案例" — 完成信任平移</div>
+        </div>
+        <div class="abc-card" style="padding:14px 18px">
+          <div style="display:flex;align-items:center;gap:10px">
+            <div style="background:var(--key);color:#fff;width:32px;height:32px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:700">3</div>
+            <div class="ctitle" style="color:var(--ink);font-size:clamp(16px,1.7vw,20px)">服务补位</div>
+          </div>
+          <div class="body" style="margin-top:6px;font-size:clamp(12px,1.3vw,15px);color:var(--ink-2)">记录 / 递资料 / 观察情绪 — 不抢 A 戏,但绝不掉链</div>
+        </div>
+        <div class="abc-card" style="padding:14px 18px">
+          <div style="display:flex;align-items:center;gap:10px">
+            <div style="background:var(--key);color:#fff;width:32px;height:32px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:700">4</div>
+            <div class="ctitle" style="color:var(--ink);font-size:clamp(16px,1.7vw,20px)">复盘跟进</div>
+          </div>
+          <div class="body" style="margin-top:6px;font-size:clamp(12px,1.3vw,15px);color:var(--ink-2)">总结成交点 + 泼冷水 + 长期情感维护 — 把单次成交变长期客户</div>
+        </div>
+      </div>
+
+      <div class="tipbox rv" style="margin-top:14px">
+        <div class="lbl">💡 为什么 B 决定成败?</div>
+        <div class="txt">A 是"外来者",C 对 A 天然有审视防御。B 的作用是 <b style="color:var(--ink)">把社交资本转化为对 A 的信用背书</b> — 推崇到位 = 熟人→专业信任升维;推崇不到位 = "甩锅"或"低级销售"。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 5 会前准备 — 4 步 SOP(时间轴)                    -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow"><div class="tag rv">模块 2 · SOP</div><div class="stepno rv">05 / 12</div></div>
+      <h2 class="rv">会前准备 — <b style="color:var(--key)">4 步走</b>,事半功倍</h2>
+      <p class="lead rv" style="margin:8px 0 14px;font-size:clamp(14px,1.6vw,20px)">精准匹配 + 价值预热 = 把"大炮打蚊子"变"绣花针穿线"</p>
+
+      <!-- 4 步时间轴(横向 SVG + 节点) -->
+      <div class="rv" style="width:100%">
+        <svg viewBox="0 0 1200 240" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto;max-height:36vh;display:block">
+          <defs>
+            <linearGradient id="abc-tl" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#2A4A8C"/>
+              <stop offset="0.5" stop-color="#A87E2E"/>
+              <stop offset="1" stop-color="#2C8A60"/>
+            </linearGradient>
+            <filter id="abc-glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="4" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+
+          <!-- 主线(背景粗 + 渐变流动实线,不模糊,确保静态截图可见) -->
+          <line x1="120" y1="120" x2="1080" y2="120" stroke="url(#abc-tl)" stroke-width="14" stroke-linecap="round" opacity="0.12"/>
+          <line x1="120" y1="120" x2="1080" y2="120" stroke="url(#abc-tl)" stroke-width="5" stroke-linecap="round" opacity="0.85"/>
+          <line x1="120" y1="120" x2="1080" y2="120" stroke="url(#abc-tl)" stroke-width="3" stroke-dasharray="8 14" opacity="1">
+            <animate attributeName="stroke-dashoffset" from="0" to="-44" dur="1.8s" repeatCount="indefinite"/>
+          </line>
+
+          <!-- 节点 1:邀约确定 -->
+          <g>
+            <circle cx="200" cy="120" r="32" fill="#2A4A8C" filter="url(#abc-glow)">
+              <animate attributeName="r" values="30;36;30" dur="3.2s" repeatCount="indefinite"/>
+            </circle>
+            <text x="200" y="128" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">1</text>
+            <text x="200" y="180" text-anchor="middle" fill="#2A4A8C" font-size="16" font-weight="700">邀约确定</text>
+            <text x="200" y="200" text-anchor="middle" fill="currentColor" opacity="0.65" font-size="12">对象 / 时间 / 地点</text>
+          </g>
+
+          <!-- 节点 2:收集资料 -->
+          <g>
+            <circle cx="440" cy="120" r="32" fill="#A87E2E" filter="url(#abc-glow)">
+              <animate attributeName="r" values="30;36;30" dur="3.2s" begin="0.45s" repeatCount="indefinite"/>
+            </circle>
+            <text x="440" y="128" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">2</text>
+            <text x="440" y="180" text-anchor="middle" fill="#A87E2E" font-size="16" font-weight="700">收集资料</text>
+            <text x="440" y="200" text-anchor="middle" fill="currentColor" opacity="0.65" font-size="12">爱好 / 家庭 / 经济 / 健康</text>
+          </g>
+
+          <!-- 节点 3:同步 A -->
+          <g>
+            <circle cx="680" cy="120" r="32" fill="#A87E2E" filter="url(#abc-glow)">
+              <animate attributeName="r" values="30;36;30" dur="3.2s" begin="0.9s" repeatCount="indefinite"/>
+            </circle>
+            <text x="680" y="128" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">3</text>
+            <text x="680" y="180" text-anchor="middle" fill="#A87E2E" font-size="16" font-weight="700">同步 A</text>
+            <text x="680" y="200" text-anchor="middle" fill="currentColor" opacity="0.65" font-size="12">C 资料 → A 准备方案</text>
+          </g>
+
+          <!-- 节点 4:推崇 A ⭐(放大 50%,加外发光,作为终章) -->
+          <g>
+            <circle cx="920" cy="120" r="62" fill="#2C8A60" opacity="0.12" filter="url(#abc-glow)">
+              <animate attributeName="r" values="56;70;56" dur="2.6s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.12;0.02;0.12" dur="2.6s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="920" cy="120" r="50" fill="#2C8A60" opacity="0.22">
+              <animate attributeName="r" values="46;54;46" dur="2.6s" begin="0.2s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.22;0.08;0.22" dur="2.6s" begin="0.2s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="920" cy="120" r="48" fill="#2C8A60" filter="url(#abc-glow)">
+              <animate attributeName="r" values="46;52;46" dur="2.6s" begin="1.35s" repeatCount="indefinite"/>
+            </circle>
+            <text x="920" y="134" text-anchor="middle" fill="#fff" font-size="32" font-weight="700">4</text>
+            <text x="920" y="186" text-anchor="middle" fill="#2C8A60" font-size="16" font-weight="700">推崇 A ⭐</text>
+            <text x="920" y="206" text-anchor="middle" fill="currentColor" opacity="0.65" font-size="12">价值预热 / 信任平移</text>
+          </g>
+
+          <!-- 光点流动(从 1 流向 4,加大发光,保证静态截图也可见) -->
+          <circle r="11" fill="#fff" stroke="#A87E2E" stroke-width="3" filter="url(#abc-glow)">
+            <animateMotion dur="4.5s" repeatCount="indefinite" path="M 200 120 L 920 120"/>
+            <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.85;1" dur="4.5s" repeatCount="indefinite"/>
+          </circle>
+          <!-- 静态指示:在路径上均匀洒 4 颗半透明金色光点,静态截图也能看到运动痕迹 -->
+          <circle cx="320" cy="120" r="7" fill="#A87E2E" opacity="0.55"/>
+          <circle cx="560" cy="120" r="7" fill="#A87E2E" opacity="0.55"/>
+          <circle cx="800" cy="120" r="7" fill="#A87E2E" opacity="0.55"/>
+        </svg>
+      </div>
+
+      <!-- 4 步详细说明(并排) -->
+      <div class="grid3 rv" style="grid-template-columns:repeat(4,1fr);gap:10px;margin-top:6px">
+        <div class="abc-card" style="padding:12px 14px">
+          <div class="ctitle" style="color:var(--accent);font-size:clamp(13px,1.4vw,15px)">① 邀约</div>
+          <div class="body" style="font-size:clamp(11px,1.2vw,13px);color:var(--ink-2);margin-top:4px">提前 3 天约;咖啡馆/安静餐厅;白天优先</div>
+        </div>
+        <div class="abc-card" style="padding:12px 14px">
+          <div class="ctitle" style="color:var(--key);font-size:clamp(13px,1.4vw,15px)">② 资料</div>
+          <div class="body" style="font-size:clamp(11px,1.2vw,13px);color:var(--ink-2);margin-top:4px">爱好 / 家庭结构 / 财务 / 健康 / 痛点</div>
+        </div>
+        <div class="abc-card" style="padding:12px 14px">
+          <div class="ctitle" style="color:var(--key);font-size:clamp(13px,1.4vw,15px)">③ 同步 A</div>
+          <div class="body" style="font-size:clamp(11px,1.2vw,13px);color:var(--ink-2);margin-top:4px">提前 24h 发给 A,留出准备时间</div>
+        </div>
+        <div class="abc-card" style="padding:12px 14px">
+          <div class="ctitle" style="color:var(--ok);font-size:clamp(13px,1.4vw,15px)">④ 推崇 A ⭐</div>
+          <div class="body" style="font-size:clamp(11px,1.2vw,13px);color:var(--ink-2);margin-top:4px">"我们专家处理过类似案例" — 不夸张</div>
+        </div>
+      </div>
+
+      <div class="tipbox rv" style="margin-top:14px">
+        <div class="lbl">💬 推崇话术模板(B 用)</div>
+        <div class="txt" style="font-style:italic">"张总,关于您上次提到的资产传承问题,我特意请到了在<b style="color:var(--ink)">法律与税务</b>领域的专家 [A 姓名],他处理过<b style="color:var(--ink)">非常复杂的案例</b>,今天特意为您做深度拆解。"</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 6 会中配合 — 座位 + 服务补位(对错对比)         -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow"><div class="tag rv">模块 2 · SOP</div><div class="stepno rv">06 / 12</div></div>
+      <h2 class="rv">会中配合 — <b style="color:var(--key)">A 主导 + B/C 同侧</b></h2>
+      <p class="lead rv" style="margin:8px 0 14px;font-size:clamp(14px,1.6vw,20px)">座位定调性,B 退后一步观察全局</p>
+
+      <div class="dual rv" style="margin-bottom:14px">
+        <!-- 错 -->
+        <div class="pane bad" style="padding:18px 22px">
+          <div class="ph" style="font-size:clamp(18px,2vw,24px);color:var(--danger)">❌ 错误布局</div>
+          <div style="display:flex;align-items:center;justify-content:center;height:120px;margin:12px 0">
+            <svg viewBox="0 0 280 120" style="width:80%;height:auto">
+              <rect x="40" y="20" width="200" height="80" rx="8" fill="rgba(177,78,57,0.15)" stroke="#B14E39" stroke-width="2"/>
+              <circle cx="80" cy="60" r="14" fill="#2A4A8C"/><text x="80" y="65" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">A</text>
+              <circle cx="140" cy="60" r="14" fill="#A87E2E"/><text x="140" y="65" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">B</text>
+              <circle cx="200" cy="60" r="14" fill="#2C8A60"/><text x="200" y="65" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">C</text>
+              <text x="140" y="115" text-anchor="middle" fill="#B14E39" font-size="11" font-weight="600">直线排列 = 距离感 + 监督</text>
+            </svg>
+          </div>
+          <ul style="list-style:none;padding:0;font-size:clamp(12px,1.3vw,14px);line-height:1.6">
+            <li>• A B C 直线 — 像审讯席,C 有压迫感</li>
+            <li>• B 抢话 — 打断 A 专业输出</li>
+            <li>• B 玩手机 — 信任崩塌</li>
+          </ul>
+        </div>
+        <!-- 对 -->
+        <div class="pane good" style="padding:18px 22px">
+          <div class="ph" style="font-size:clamp(18px,2vw,24px);color:var(--ok)">✓ 正确布局</div>
+          <div style="display:flex;align-items:center;justify-content:center;height:120px;margin:12px 0">
+            <svg viewBox="0 0 280 120" style="width:80%;height:auto">
+              <rect x="40" y="20" width="200" height="80" rx="8" fill="rgba(44,138,96,0.15)" stroke="#2C8A60" stroke-width="2"/>
+              <circle cx="60" cy="60" r="14" fill="#2A4A8C"/><text x="60" y="65" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">A</text>
+              <circle cx="140" cy="60" r="14" fill="#A87E2E"/><text x="140" y="65" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">B</text>
+              <circle cx="220" cy="60" r="14" fill="#2C8A60"/><text x="220" y="65" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">C</text>
+              <text x="140" y="115" text-anchor="middle" fill="#2C8A60" font-size="11" font-weight="600">A 主导 + B/C 同侧 = 团队感</text>
+            </svg>
+          </div>
+          <ul style="list-style:none;padding:0;font-size:clamp(12px,1.3vw,14px);line-height:1.6">
+            <li>• A 主导位 — 体现权威</li>
+            <li>• B 与 C 同侧 — 像朋友,无压迫</li>
+            <li>• B 记录 / 观察 — 隐性补位</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- B 角色 3 件事(并排) -->
+      <div class="grid3 rv">
+        <div class="abc-card" style="padding:14px 16px">
+          <div class="ctitle" style="color:var(--key);font-size:clamp(15px,1.6vw,18px)">📝 记录需求</div>
+          <div class="body" style="font-size:clamp(12px,1.3vw,14px);color:var(--ink-2);margin-top:4px">客户原话 + 关键数字 + 反对意见 — A 后续跟进的依据</div>
+        </div>
+        <div class="abc-card" style="padding:14px 16px">
+          <div class="ctitle" style="color:var(--key);font-size:clamp(15px,1.6vw,18px)">👀 观察情绪</div>
+          <div class="body" style="font-size:clamp(12px,1.3vw,14px);color:var(--ink-2);margin-top:4px">C 表情/动作 — A 输出过快/不足时,用眼神给 A 信号</div>
+        </div>
+        <div class="abc-card" style="padding:14px 16px">
+          <div class="ctitle" style="color:var(--key);font-size:clamp(15px,1.6vw,18px)">🤝 引导介入</div>
+          <div class="body" style="font-size:clamp(12px,1.3vw,14px);color:var(--ink-2);margin-top:4px">"关于这个细节,我觉得 [A] 的见解对您可能更有启发"</div>
+        </div>
+      </div>
+
+      <div class="tipbox rv" style="margin-top:12px">
+        <div class="lbl">🎯 一句话原则</div>
+        <div class="txt">A 负责<b style="color:var(--ink)">攻坚(逻辑)</b>,B 负责<b style="color:var(--ink)">守城(情感 + 细节)</b>。分工确保不因专业而冰冷,不因亲近而失严肃。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 7 会后复盘 + 泼冷水                              -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow"><div class="tag rv">模块 2 · SOP</div><div class="stepno rv">07 / 12</div></div>
+      <h2 class="rv">会后复盘 + <b style="color:var(--key)">泼冷水的艺术</b></h2>
+      <p class="lead rv" style="margin:8px 0 14px;font-size:clamp(14px,1.6vw,20px)">闭环管理 + 风险对冲,把单次成功变长期客户</p>
+
+      <div class="dual rv">
+        <!-- 复盘 -->
+        <div class="abc-card" style="padding:18px 22px;border-left:5px solid var(--accent)">
+          <div class="ctitle" style="color:var(--accent);font-size:clamp(18px,2vw,22px)">📋 会后 24h 复盘</div>
+          <ul style="margin-top:10px;padding-left:18px;font-size:clamp(13px,1.4vw,16px);line-height:1.7">
+            <li><b>成交点</b> — 哪句话打动了 C?</li>
+            <li><b>未达标项</b> — 哪些顾虑未解决?</li>
+            <li><b>A 的反馈</b> — A 觉得哪些环节有改进空间?</li>
+            <li><b>下次切入点</b> — 下次见 C 聊什么?</li>
+          </ul>
+          <div style="margin-top:10px;padding:8px 12px;background:rgba(42,74,140,0.08);border-radius:6px;font-size:clamp(11px,1.2vw,13px);color:var(--accent)">
+            <b>目的:</b>把单次成功转化为标准化经验,下次更精准
+          </div>
+        </div>
+
+        <!-- 泼冷水 -->
+        <div class="abc-card" style="padding:18px 22px;border-left:5px solid var(--danger)">
+          <div class="ctitle" style="color:var(--danger);font-size:clamp(18px,2vw,22px)">💧 泼冷水 — 风险控制</div>
+          <ul style="margin-top:10px;padding-left:18px;font-size:clamp(13px,1.4vw,16px);line-height:1.7">
+            <li><b>何时用:</b>成交关键期 / C 冲动时</li>
+            <li><b>谁来做:</b>B 做情感平衡 + A 做风险提示</li>
+            <li><b>怎么泼:</b>引入客观、略带批判性的视角</li>
+            <li><b>为什么不否定:</b>防止"被销售"的抵触心理</li>
+          </ul>
+          <div style="margin-top:10px;padding:8px 12px;background:rgba(177,78,57,0.08);border-radius:6px;font-size:clamp(11px,1.2vw,13px);color:var(--danger)">
+            <b>本质:</b>"泼冷水" = <b>风险对冲</b>,不是否定方案
+          </div>
+        </div>
+      </div>
+
+      <!-- A 风险提示话术模板 -->
+      <div class="callout rv" style="margin-top:14px;background:linear-gradient(135deg,#2A4A8C 0%,#A87E2E 100%);color:#fff;padding:18px 24px;border-radius:10px">
+        <div class="lbl" style="color:#fff;opacity:0.85">💬 A 风险提示话术模板(成交前必说)</div>
+        <div class="q" style="font-size:clamp(15px,1.7vw,20px);font-weight:500;line-height:1.5;font-style:italic">"基于目前的市场波动,我必须从<b style="color:#fff">专业角度</b>提醒您一个潜在风险……这个方案不是完美的,但在我们能提供的方案里,这是<b style="color:#fff">最适合您当下情况</b>的。"</div>
+      </div>
+
+      <div class="tipbox rv" style="margin-top:12px;background:linear-gradient(90deg,#A87E2E 0%,#2C8A60 100%);color:#fff">
+        <div class="lbl" style="color:#fff;opacity:0.9">🎯 一句话原则</div>
+        <div class="txt" style="color:#fff">复盘是为了 <b>下次更准</b>;泼冷水是为了 <b>客户不后悔</b>。两者合一 = 长期口碑。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 8 实战场景 1 — IUL 客户 + 借力 CFT 经理         -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow"><div class="tag rv">模块 3 · 实战场景</div><div class="stepno rv">08 / 12</div></div>
+      <h2 class="rv">场景 1: <b style="color:var(--key)">IUL 退休规划</b> — 借力 CFT 经理</h2>
+      <p class="lead rv" style="margin:8px 0 12px;font-size:clamp(14px,1.6vw,18px)">客户:王总 45 岁,科技公司高管,想用保险做退休金补充</p>
+
+      <div class="dual rv">
+        <!-- 场景前 -->
+        <div class="abc-card abc-role-A" style="padding:14px 18px">
+          <div class="ctitle" style="color:var(--accent);font-size:clamp(15px,1.6vw,18px)">📍 会前(你做什么)</div>
+          <ul style="margin:8px 0 0;padding-left:18px;font-size:clamp(12px,1.3vw,14px);line-height:1.65">
+            <li><b>情报收集:</b>年收入 30W+ / 已有 401(k) / 2 个孩子 / 关注退休生活质量</li>
+            <li><b>匹配 A:</b>CFT 经理张姐(NLG IUL 讲师 + 退休规划专长)</li>
+            <li><b>场地:</b>CBD 安静咖啡厅包间,白天</li>
+            <li><b>资料同步:</b>提前 24h 把王总财务画像发给张姐</li>
+            <li><b>推崇话术:</b>"张姐专门做高净值客户的退休规划"</li>
+          </ul>
+        </div>
+        <!-- 场景中 -->
+        <div class="abc-card abc-role-B" style="padding:14px 18px;border-top-width:6px">
+          <div class="ctitle" style="color:var(--key);font-size:clamp(15px,1.6vw,18px)">📍 会中(你的位置)</div>
+          <ul style="margin:8px 0 0;padding-left:18px;font-size:clamp(12px,1.3vw,14px);line-height:1.65">
+            <li><b>座位:</b>张姐正对王总,你坐王总旁边(同侧)</li>
+            <li><b>引入:</b>介绍完王总需求后,自然过渡到"张姐"</li>
+            <li><b>记录:</b>王总对 S&P 500 指数 / 退休金缺口 / 税收延展 的反馈</li>
+            <li><b>情绪观察:</b>王总皱眉时,递水 + 拍肩("张姐您详细说说")</li>
+            <li><b>引导深入:</b>技术细节自然转给张姐</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 场景后/结果 -->
+      <div class="abc-card abc-role-C rv" style="margin-top:10px;padding:14px 18px;border-left:5px solid var(--ok);background:rgba(44,138,96,0.06)">
+        <div class="ctitle" style="color:var(--ok);font-size:clamp(15px,1.6vw,18px)">✅ 场景后结果(实战验证)</div>
+        <div class="body" style="margin-top:8px;font-size:clamp(12px,1.3vw,15px);line-height:1.65">
+          张姐专业输出 IUL Living Life Defender <b>1500 万保额</b>方案 → 王总当场签意向 → 你后续 1 周跟进签单。<br>
+          <b style="color:var(--ok)">关键转化点:</b>张姐讲"退休金 30 年复利 + Living Benefits 退休后免费领"时,王总眼睛亮了 — 你观察到后顺势推:"张姐把这个给您详细算一下"。
+        </div>
+      </div>
+
+      <div class="tipbox rv" style="margin-top:10px">
+        <div class="lbl">💡 场景要点</div>
+        <div class="txt">高净值客户对<b style="color:var(--ink)">专业深度</b>要求高,新人很难 hold 住。<b style="color:var(--key)">借力 CFT 经理 = 让 R 层级帮你背书</b>,你只需做好 "B 的桥梁" 角色。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 9 实战场景 2 — 老客户加保 + 借力产品专家         -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow"><div class="tag rv">模块 3 · 实战场景</div><div class="stepno rv">09 / 12</div></div>
+      <h2 class="rv">场景 2: <b style="color:var(--key)">老客户加保</b> — 借力产品专家</h2>
+      <p class="lead rv" style="margin:8px 0 12px;font-size:clamp(14px,1.6vw,18px)">客户:李姐 52 岁,3 年前买了 Term,今年想加保 + 转 IUL</p>
+
+      <div class="dual rv">
+        <div class="abc-card abc-role-A" style="padding:14px 18px">
+          <div class="ctitle" style="color:var(--accent);font-size:clamp(15px,1.6vw,18px)">📍 难点(为什么要借力)</div>
+          <ul style="margin:8px 0 0;padding-left:18px;font-size:clamp(12px,1.3vw,14px);line-height:1.65">
+            <li>李姐 3 年前买的是 NLG Term 500K,你熟</li>
+            <li>但她现在想 <b>加保 200K Term + 转 IUL 300K</b></li>
+            <li>涉及 <b>保单转换 / 健康告知重审 / 财务核保</b></li>
+            <li>你的 IUL 知识不深,讲不清 Max Funding / MEC / Loan</li>
+            <li>李姐已经信任你,但要她听你讲 IUL — 她会犹豫</li>
+          </ul>
+        </div>
+        <div class="abc-card abc-role-B" style="padding:14px 18px;border-top-width:6px">
+          <div class="ctitle" style="color:var(--key);font-size:clamp(15px,1.6vw,18px)">📍 解法(借力谁)</div>
+          <ul style="margin:8px 0 0;padding-left:18px;font-size:clamp(12px,1.3vw,14px);line-height:1.65">
+            <li><b>匹配 A:</b>产品专家 Tony(IUL 产品线讲师)</li>
+            <li><b>约法:</b>三方会议,Tony 用 20 分钟讲 IUL</li>
+            <li><b>你的角色:</b>"我先帮您把 Tony 老师约好,他对这块最专业"</li>
+            <li><b>推崇:</b>"李姐,Tony 老师是 IUL 产品的首席顾问,我自己也是听他讲课才明白的"</li>
+            <li><b>情感承接:</b>Tony 讲完后,你接"李姐,这个对您孙子教育金正好"</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="abc-card abc-role-C rv" style="margin-top:10px;padding:14px 18px;border-left:5px solid var(--ok);background:rgba(44,138,96,0.06)">
+        <div class="ctitle" style="color:var(--ok);font-size:clamp(15px,1.6vw,18px)">✅ 场景后结果</div>
+        <div class="body" style="margin-top:8px;font-size:clamp(12px,1.3vw,15px);line-height:1.65">
+          Tony 现场演示 IUL 跑分 + Living Benefits 触发条件 → 李姐说"我就找你买" → Tony 推荐回给你签单。<br>
+          <b style="color:var(--ok)">关键转化点:</b>Tony 讲到 "Critical Illness 提前给付" 时,李姐想起自己母亲癌症经历 — 你观察到后,接话:"李姐阿姨身体现在怎么样?"(情感共鸣)<br>
+          <b>加保 200K Term + IUL 300K = 首年保费 $8,400,佣金 $5,800+</b>
+        </div>
+      </div>
+
+      <div class="tipbox rv" style="margin-top:10px">
+        <div class="lbl">💡 场景要点</div>
+        <div class="txt">老客户加保,信任已经在你身上,但 <b style="color:var(--ink)">新产品需要新背书</b>。<b style="color:var(--key)">借力不是"自己不专业",而是"给客户最专业的体验"</b>。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 10 实战场景 3 — 转介绍 + 借力 A 老师             -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow"><div class="tag rv">模块 3 · 实战场景</div><div class="stepno rv">10 / 12</div></div>
+      <h2 class="rv">场景 3: <b style="color:var(--key)">转介绍成交</b> — 借力 A 老师</h2>
+      <p class="lead rv" style="margin:8px 0 12px;font-size:clamp(14px,1.6vw,18px)">客户:陈总 50 岁,通过老客户张哥介绍,素未谋面</p>
+
+      <div class="dual rv">
+        <div class="abc-card abc-role-A" style="padding:14px 18px">
+          <div class="ctitle" style="color:var(--accent);font-size:clamp(15px,1.6vw,18px)">📍 难点(为什么必须借力)</div>
+          <ul style="margin:8px 0 0;padding-left:18px;font-size:clamp(12px,1.3vw,14px);line-height:1.65">
+            <li>陈总 <b>不认识你</b>,只听张哥说过"有个小兄弟"</li>
+            <li>见面 = 第一次建立关系,失败成本极高</li>
+            <li>陈总是企业主,时间值钱,不愿听"小兄弟"慢慢讲</li>
+            <li>如果单独见,你讲 1 小时可能就被赶走</li>
+            <li>借力 <b>A 老师</b>(资深讲师) = 把"拜访"升级成"听课"</li>
+          </ul>
+        </div>
+        <div class="abc-card abc-role-B" style="padding:14px 18px;border-top-width:6px">
+          <div class="ctitle" style="color:var(--key);font-size:clamp(15px,1.6vw,18px)">📍 解法(借力怎么做)</div>
+          <ul style="margin:8px 0 0;padding-left:18px;font-size:clamp(12px,1.3vw,14px);line-height:1.65">
+            <li><b>约法:</b>"陈总,刚好王老师本周在洛杉矶,专做企业主资产传承,张哥也认识他"</li>
+            <li><b>匹配 A:</b>王老师(20 年经验,首席讲师)</li>
+            <li><b>场地:</b>陈总公司附近的私房菜包间(他熟悉)</li>
+            <li><b>推崇话术:</b>"王老师刚从纽约过来,陈总您难得有空"</li>
+            <li><b>你的角色:</b>做东道主,负责介绍 + 倒茶 + 后续跟进</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="abc-card abc-role-C rv" style="margin-top:10px;padding:14px 18px;border-left:5px solid var(--ok);background:rgba(44,138,96,0.06)">
+        <div class="ctitle" style="color:var(--ok);font-size:clamp(15px,1.6vw,18px)">✅ 场景后结果(转介绍黄金案例)</div>
+        <div class="body" style="margin-top:8px;font-size:clamp(12px,1.3vw,15px);line-height:1.65">
+          王老师用 30 分钟讲"企业主资产传承 3 大雷区" → 陈总主动问"那我该怎么处理?" → 王老师给方案 → 陈总当场签。<br>
+          <b style="color:var(--ok)">关键转化点:</b>陈总说"你直接给我算算,我现在就决定" — 你顺势递合同。<br>
+          <b>成交:IUL 500 万 + Annuity 100 万 = 首年保费 $36,000,佣金 $25,000+</b>
+        </div>
+      </div>
+
+      <div class="tipbox rv" style="margin-top:10px;background:linear-gradient(90deg,#A87E2E 0%,#2A4A8C 100%);color:#fff">
+        <div class="lbl" style="color:#fff;opacity:0.9">⭐ 关键认知</div>
+        <div class="txt" style="color:#fff">转介绍客户 = <b style="color:#fff">高意向但零信任</b>。你一个人搞不定,但 <b style="color:#fff">A 老师 + 半小时</b> 就能破冰。这就是 ABC 法则的威力 — 把"陌生拜访"变成"专业咨询"。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 11 风险与禁忌 — 对错对比                         -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow"><div class="tag rv">模块 3 · 避坑指南</div><div class="stepno rv">11 / 12</div></div>
+      <h2 class="rv">风险与禁忌 — <b style="color:var(--danger)">4 大死亡陷阱</b></h2>
+      <p class="lead rv" style="margin:8px 0 14px;font-size:clamp(14px,1.6vw,20px)">做错一次,客户就再也不信你</p>
+
+      <div class="dual rv">
+        <!-- 错 1 -->
+        <div class="pane bad" style="padding:14px 18px">
+          <div class="ph" style="font-size:clamp(15px,1.7vw,19px);color:var(--danger)">❌ 角色错位</div>
+          <div class="body" style="font-size:clamp(12px,1.3vw,14px);margin-top:6px">
+            <p><b>表现:</b>B 在现场抢戏 / A 过于强势让 C 受压迫</p>
+            <p><b>后果:</b>信任崩塌,客户感到"被销售"</p>
+            <p><b>正解:</b>A 主导输出,B 退后观察;B 必要时引导,绝不抢话</p>
+          </div>
+        </div>
+        <!-- 错 2 -->
+        <div class="pane bad" style="padding:14px 18px">
+          <div class="ph" style="font-size:clamp(15px,1.7vw,19px);color:var(--danger)">❌ 情报断层</div>
+          <div class="body" style="font-size:clamp(12px,1.3vw,14px);margin-top:6px">
+            <p><b>表现:</b>B 未向 A 同步关键信息</p>
+            <p><b>后果:</b>方案与需求南辕北辙,资源浪费</p>
+            <p><b>正解:</b>会前 24h 必发资料;复杂客户加 1 次电话 sync</p>
+          </div>
+        </div>
+        <!-- 错 3 -->
+        <div class="pane bad" style="padding:14px 18px">
+          <div class="ph" style="font-size:clamp(15px,1.7vw,19px);color:var(--danger)">❌ 推崇过度</div>
+          <div class="body" style="font-size:clamp(12px,1.3vw,14px);margin-top:6px">
+            <p><b>表现:</b>"我们 A 是全国第一 / 处理过 XX 总统"</p>
+            <p><b>后果:</b>虚假吹捧,专业度现场"破产"</p>
+            <p><b>正解:</b>"A 处理过类似案例" — 具体不夸张</p>
+          </div>
+        </div>
+        <!-- 错 4 -->
+        <div class="pane bad" style="padding:14px 18px">
+          <div class="ph" style="font-size:clamp(15px,1.7vw,19px);color:var(--danger)">❌ 缺乏闭环</div>
+          <div class="body" style="font-size:clamp(12px,1.3vw,14px);margin-top:6px">
+            <p><b>表现:</b>会后不复盘,同样错误重复发生</p>
+            <p><b>后果:</b>效率停滞,新人成长慢</p>
+            <p><b>正解:</b>24h 内做书面复盘 + 团队周会分享</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 自检清单 -->
+      <div class="callout rv" style="margin-top:14px;background:linear-gradient(135deg,#A87E2E 0%,#B14E39 100%);color:#fff;padding:16px 22px;border-radius:10px">
+        <div class="lbl" style="color:#fff;opacity:0.85">✅ 会前 5 项自检清单(打印贴在桌上)</div>
+        <ul style="margin:8px 0 0;padding-left:20px;font-size:clamp(13px,1.4vw,16px);line-height:1.7">
+          <li>□ C 的 3 大需求 / 痛点 是否清楚?</li>
+          <li>□ A 的专长 是否与 C 需求匹配?</li>
+          <li>□ 推崇话术 是否具体不夸张?</li>
+          <li>□ 座位布局 是否 A 主导 + B/C 同侧?</li>
+          <li>□ 复盘机制 是否提前规划好?</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 12 学员带走版 — SOP 速查 + 金句库               -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow"><div class="tag rv">学员带走版</div><div class="stepno rv">12 / 12</div></div>
+      <h2 class="rv">ABC 一页纸 SOP — 贴在桌上</h2>
+      <p class="lead rv" style="margin:6px 0 12px;font-size:clamp(13px,1.5vw,18px)">下次见客户前,翻一遍</p>
+
+      <!-- 速查表 -->
+      <div class="grid3 rv" style="grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px">
+        <div class="abc-card" style="padding:12px 14px;border-top:3px solid var(--accent)">
+          <div class="ctitle" style="color:var(--accent);font-size:clamp(13px,1.4vw,16px)">会前(会前 24h)</div>
+          <ul style="margin:6px 0 0;padding-left:16px;font-size:clamp(11px,1.2vw,13px);line-height:1.55">
+            <li>收集 C 资料</li>
+            <li>匹配最合适 A</li>
+            <li>提前发 A 同步</li>
+            <li>准备好推崇话术</li>
+          </ul>
+        </div>
+        <div class="abc-card" style="padding:12px 14px;border-top:3px solid var(--key)">
+          <div class="ctitle" style="color:var(--key);font-size:clamp(13px,1.4vw,16px)">会中(60-90 分钟)</div>
+          <ul style="margin:6px 0 0;padding-left:16px;font-size:clamp(11px,1.2vw,13px);line-height:1.55">
+            <li>介绍 C + 推崇 A</li>
+            <li>A 主导 + B 记录</li>
+            <li>B 观察情绪 + 引导</li>
+            <li>不抢话 + 不掉链</li>
+          </ul>
+        </div>
+        <div class="abc-card" style="padding:12px 14px;border-top:3px solid var(--ok)">
+          <div class="ctitle" style="color:var(--ok);font-size:clamp(13px,1.4vw,16px)">会后(24h 内)</div>
+          <ul style="margin:6px 0 0;padding-left:16px;font-size:clamp(11px,1.2vw,13px);line-height:1.55">
+            <li>书面复盘</li>
+            <li>A 风险提示</li>
+            <li>B 情感维护</li>
+            <li>下次跟进 plan</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 金句传送带 -->
+      <h3 class="rv" style="font-size:clamp(16px,1.8vw,22px);color:var(--ink);margin:14px 0 6px">💎 金句库 — 背下来</h3>
+      <div class="rv marquee" style="margin-top:8px;padding:8px 0">
+        <div class="marquee-track">
+          <div class="callout marquee-item">
+            <div class="lbl">关于借力</div>
+            <div class="q">"多对一讲,胜券在握;孤军深入,难度极大。"</div>
+          </div>
+          <div class="callout marquee-item">
+            <div class="lbl">关于 B 角色</div>
+            <div class="q">"B 是发动机,不是旁观者。50% 的成交取决于 B 的执行力。"</div>
+          </div>
+          <div class="callout marquee-item">
+            <div class="lbl">关于推崇</div>
+            <div class="q">"推崇不到位 = 甩锅。推崇到位 = 信任平移。"</div>
+          </div>
+          <div class="callout marquee-item">
+            <div class="lbl">关于泼冷水</div>
+            <div class="q">"泼冷水不是否定方案,是为了让客户不后悔。"</div>
+          </div>
+          <div class="callout marquee-item">
+            <div class="lbl">关于借力 A</div>
+            <div class="q">"借力不是自己不行,是给客户最专业的体验。"</div>
+          </div>
+          <div class="callout marquee-item">
+            <div class="lbl">关于新人</div>
+            <div class="q">"新人不用成为全才,只需做好资源调度员。"</div>
+          </div>
+          <!-- 重复组(无缝循环) -->
+          <div class="callout marquee-item" aria-hidden="true">
+            <div class="lbl">关于借力</div>
+            <div class="q">"多对一讲,胜券在握;孤军深入,难度极大。"</div>
+          </div>
+          <div class="callout marquee-item" aria-hidden="true">
+            <div class="lbl">关于 B 角色</div>
+            <div class="q">"B 是发动机,不是旁观者。50% 的成交取决于 B 的执行力。"</div>
+          </div>
+          <div class="callout marquee-item" aria-hidden="true">
+            <div class="lbl">关于推崇</div>
+            <div class="q">"推崇不到位 = 甩锅。推崇到位 = 信任平移。"</div>
+          </div>
+          <div class="callout marquee-item" aria-hidden="true">
+            <div class="lbl">关于泼冷水</div>
+            <div class="q">"泼冷水不是否定方案,是为了让客户不后悔。"</div>
+          </div>
+          <div class="callout marquee-item" aria-hidden="true">
+            <div class="lbl">关于借力 A</div>
+            <div class="q">"借力不是自己不行,是给客户最专业的体验。"</div>
+          </div>
+          <div class="callout marquee-item" aria-hidden="true">
+            <div class="lbl">关于新人</div>
+            <div class="q">"新人不用成为全才,只需做好资源调度员。"</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA 收口 -->
+      <div class="tipbox rv" style="margin-top:14px;background:linear-gradient(135deg,#2A4A8C 0%,#2C8A60 100%);color:#fff">
+        <div class="lbl" style="color:#fff;opacity:0.9">📞 下一步</div>
+        <div class="txt" style="color:#fff;font-size:clamp(14px,1.5vw,18px)"><b style="color:#fff">下次见客户前 24h,把这页 SOP 翻一遍。</b> 实在没把握就借力 A — 你的 CFT 经理 / 产品专家 / 资深讲师随时stand by。</div>
+      </div>
+
+      <!-- 底部品牌 -->
+      <div class="logo rv" style="margin-top:14px;justify-content:center;display:flex"><span class="mk" style="background:linear-gradient(135deg,#A87E2E,#2A4A8C);color:#fff;font-weight:700;width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;border-radius:6px;font-size:14px">HS</span>恒晟集团 · Hengsheng Group</div>
+    </div>
+  </section>
+
+</div>
+
+<!-- 控制条 -->
+<div class="ctl">
+  <a class="home" href="../../index.html" title="返回目录" aria-label="返回目录"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px"><path d="M3 9.5L12 3l9 6.5V21H3z"/></svg></a>
+  <span class="divid"></span>
+  <button class="btn" id="prev" aria-label="上一页"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+  <span class="count" id="count">1 / 12</span>
+  <button class="btn" id="next" aria-label="下一页"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+  <span class="divid"></span>
+  <button class="btn" id="theme" aria-label="切换深色"><svg id="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button>
+</div>
+
+<script src="../../assets/vendor/lottie_light.min.js"></script>
+<script src="../../assets/lottie-player.js"></script>
+<script src="../../assets/count-up.js"></script>
+<script src="../../assets/deck.js"></script>
+</body>
+</html>
