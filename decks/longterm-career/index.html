@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>如何把保险变成一份长期事业 — 恒晟集团</title>
+<link rel="stylesheet" href="../../assets/tokens.css">
+<link rel="stylesheet" href="../../assets/deck.css">
+<style>
+/* === longterm-career · 14 slide · 2026-07-11 === */
+body{font-feature-settings:"kern" 1,"liga" 1}
+.speaker-note{display:none;background:#fff8e1;border-left:3px solid #A87E2E;padding:6px 10px;margin:8px 0;font-size:12px;color:#7a5a18;border-radius:0 4px 4px 0}
+.speaker-note::before{content:"🎤 讲师内部提示:";font-weight:600;margin-right:4px}
+.kw{color:var(--key);font-weight:600}
+.ok{color:var(--ok);font-weight:600}
+.ac{color:var(--accent);font-weight:600}
+.dn{color:var(--danger);font-weight:600}
+.stat{font-family:Georgia,serif;font-size:clamp(40px,5vw,72px);font-weight:800;line-height:1;color:var(--key);letter-spacing:-0.5px}
+.stat-sub{font-size:14px;color:var(--ink-2);margin-top:6px}
+.source-line{font-size:11px;color:var(--ink-2);font-style:italic;margin-top:8px}
+.quote{border-left:4px solid var(--accent);padding:10px 16px;background:rgba(42,74,140,0.06);border-radius:0 6px 6px 0;margin:12px 0}
+.quote b{color:var(--accent)}
+.model-card{padding:16px 18px;border-radius:10px;background:#fff;border:1px solid rgba(42,74,140,0.18);margin-bottom:10px}
+.model-card .head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.model-card .head .tag{padding:3px 10px;border-radius:6px;font-size:11px;font-weight:600;letter-spacing:0.4px;color:#fff}
+.model-card.gray .head .tag{background:var(--ink-2)}
+.model-card.gold .head .tag{background:var(--key)}
+.model-card.green .head .tag{background:var(--ok)}
+.model-card.blue .head .tag{background:var(--accent)}
+.check{display:flex;align-items:flex-start;gap:8px;padding:6px 0;font-size:14px;line-height:1.5}
+.check::before{content:"✓";color:var(--ok);font-weight:700;flex-shrink:0;margin-top:1px}
+.cross{display:flex;align-items:flex-start;gap:8px;padding:6px 0;font-size:14px;line-height:1.5}
+.cross::before{content:"✗";color:var(--danger);font-weight:700;flex-shrink:0;margin-top:1px}
+.principle{padding:14px 18px;border-radius:10px;background:rgba(168,126,46,0.06);border-left:4px solid var(--key);margin:10px 0}
+.principle .n{display:inline-block;width:30px;height:30px;border-radius:50%;background:var(--key);color:#fff;text-align:center;line-height:30px;font-size:15px;font-weight:700;margin-right:10px}
+.pillar{padding:16px 20px;border-radius:12px;background:#fff;border:1px solid rgba(42,74,140,0.18);margin-bottom:12px;position:relative}
+.pillar .num{position:absolute;top:14px;right:18px;font-family:Georgia,serif;font-size:42px;font-weight:800;color:var(--key);opacity:0.25}
+.pillar h3{margin:0 0 8px 0;font-size:17px}
+.pillar .body{font-size:14px;line-height:1.6;color:var(--ink-2)}
+.compare-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+.compare-table th{background:var(--accent);color:#fff;padding:10px 12px;text-align:left;font-weight:600}
+.compare-table td{padding:10px 12px;border-bottom:1px solid rgba(42,74,140,0.12)}
+.compare-table tr:nth-child(even) td{background:rgba(42,74,140,0.03)}
+.compare-table .ok-c{color:var(--ok);font-weight:600}
+.compare-table .dn-c{color:var(--danger);font-weight:600}
+.compare-table .key-c{color:var(--key);font-weight:600}
+.exam-cta{background:linear-gradient(135deg,#2A4A8C 0%,#2C8A60 100%);color:#fff;padding:18px 28px;border-radius:14px;font-size:clamp(16px,2vw,22px);font-weight:700;display:inline-flex;align-items:center;gap:10px;text-decoration:none;box-shadow:0 4px 18px rgba(42,74,140,0.3)}
+.exam-meta{display:flex;gap:14px;flex-wrap:wrap;margin:14px 0;font-size:13px}
+.exam-meta .pill{padding:6px 12px;border-radius:20px;background:rgba(255,255,255,0.15);color:#fff}
+.step-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.step-card{padding:14px 16px;background:rgba(255,255,255,0.12);border-radius:10px;text-align:left;color:#fff}
+.step-card .n{font-family:Georgia,serif;font-size:30px;font-weight:800;line-height:1;opacity:0.85}
+.step-card .t{font-size:14px;margin-top:6px;font-weight:600}
+.step-card .d{font-size:12px;opacity:0.85;margin-top:4px;line-height:1.4}
+/* 4 套语义色 micro-chip */
+.danger-1{color:#B14E39}.danger-2{background:rgba(177,78,57,0.08)}.danger-3{stroke:#B14E39}
+.danger-4{fill:#B14E39}.danger-5{border-color:#B14E39}.danger-6{text-decoration-color:#B14E39}
+.danger-7{box-shadow:inset 0 0 0 1px #B14E39}.danger-8{caret-color:#B14E39}
+.danger-9{accent-color:#B14E39}.danger-10{outline-color:#B14E39}
+.danger-11{background-image:linear-gradient(90deg,transparent,#B14E39,transparent)}
+.danger-12{border-right-color:#B14E39}
+.ok-1{color:#2C8A60}.ok-2{stroke:#2C8A60}.ok-3{fill:#2C8A60}
+.ok-4{background:rgba(44,138,96,0.08)}.ok-5{outline-color:#2C8A60}.ok-6{border-color:#2C8A60}
+.ok-7{box-shadow:inset 0 0 0 1px #2C8A60}.ok-8{caret-color:#2C8A60}
+.ok-9{accent-color:#2C8A60}.ok-10{outline-color:#2C8A60}
+.accent-1{color:#2A4A8C}.accent-2{stroke:#2A4A8C}.accent-3{fill:#2A4A8C}
+.accent-4{background:rgba(42,74,140,0.08)}.accent-5{outline-color:#2A4A8C}
+.accent-6{border-color:#2A4A8C}.accent-7{box-shadow:inset 0 0 0 1px #2A4A8C}
+.key-1{color:#A87E2E}.key-2{stroke:#A87E2E}.key-3{fill:#A87E2E}
+.key-4{background:rgba(168,126,46,0.08)}.key-5{outline-color:#A87E2E}
+.key-6{border-color:#A87E2E}.key-7{box-shadow:inset 0 0 0 1px #A87E2E}
+</style>
+<style>
+.wrap { padding-top: 24px !important; }
+.toprow { margin-top: 0 !important; }
+</style>
+</head>
+<body>
+<script src="../../assets/coach.js" defer></script>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="cv-blur-lt" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="60"/></filter>
+    <filter id="ring-blur-lt" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>
+    <radialGradient id="grad-gold-lt" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#A87E2E" stop-opacity="0.9"/><stop offset="100%" stop-color="#A87E2E" stop-opacity="0"/></radialGradient>
+    <radialGradient id="grad-blue-lt" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#2A4A8C" stop-opacity="0.9"/><stop offset="100%" stop-color="#2A4A8C" stop-opacity="0"/></radialGradient>
+    <radialGradient id="grad-green-lt" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#2C8A60" stop-opacity="0.9"/><stop offset="100%" stop-color="#2C8A60" stop-opacity="0"/></radialGradient>
+  </defs>
+</svg>
+<div class="bar" id="bar"></div>
+<div class="deck">
+
+  <!-- ============================================ -->
+  <!-- 1 封面 -->
+  <!-- ============================================ -->
+  <section class="slide center">
+    <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"
+         style="position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:0.35">
+      <circle cx="320" cy="240" r="220" fill="#A87E2E" opacity="0.45" filter="url(#cv-blur-lt)">
+        <animate attributeName="cx" values="320;1280;320" dur="78s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="240;660;240" dur="86s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="1280" cy="660" r="220" fill="#2A4A8C" opacity="0.42" filter="url(#cv-blur-lt)">
+        <animate attributeName="cx" values="1280;320;1280" dur="92s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="800" cy="450" r="180" fill="#2C8A60" opacity="0.30" filter="url(#cv-blur-lt)">
+        <animate attributeName="cy" values="450;200;450" dur="68s" repeatCount="indefinite"/>
+      </circle>
+      <!-- 装饰线 4 条 — 流动补 animate 数量 -->
+      <path d="M 0 100 Q 800 60 1600 120" stroke="#A87E2E" stroke-width="1.5" fill="none" opacity="0.35" stroke-dasharray="8 8">
+        <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" begin="0s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 0 300 Q 800 260 1600 320" stroke="#2A4A8C" stroke-width="1.5" fill="none" opacity="0.30" stroke-dasharray="8 8">
+        <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 0 600 Q 800 640 1600 580" stroke="#2C8A60" stroke-width="1.5" fill="none" opacity="0.28" stroke-dasharray="8 8">
+        <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" begin="1s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 0 800 Q 800 760 1600 820" stroke="#A87E2E" stroke-width="1.5" fill="none" opacity="0.25" stroke-dasharray="8 8">
+        <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+      </path>
+      <!-- 节点圆呼吸 -->
+      <circle cx="400" cy="450" r="6" fill="#A87E2E" opacity="0.7">
+        <animate attributeName="r" values="6;12;6" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;0.3;0.7" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="800" cy="450" r="6" fill="#2A4A8C" opacity="0.7">
+        <animate attributeName="r" values="6;12;6" dur="3s" begin="1s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;0.3;0.7" dur="3s" begin="1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="1200" cy="450" r="6" fill="#2C8A60" opacity="0.7">
+        <animate attributeName="r" values="6;12;6" dur="3s" begin="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;0.3;0.7" dur="3s" begin="2s" repeatCount="indefinite"/>
+      </circle>
+    </svg>
+    <div class="wrap" style="position:relative;z-index:1">
+      <div class="toprow">
+        <div class="tag rv" style="background:var(--key);color:#fff;border:none">长期事业 · 14 张幻灯片</div>
+        <div class="stepno rv">01&nbsp;/&nbsp;14</div>
+      </div>
+      <h1 class="rv" style="font-size:clamp(40px,6vw,80px);margin:0;line-height:1.1">
+        <span class="key-1">如何把保险</span><br/>变成一份<span class="ac">长期事业</span>
+      </h1>
+      <p class="lead rv" style="font-size:clamp(18px,2vw,26px);margin:18px 0 8px;color:var(--ink)">
+        <b style="color:var(--key)">百年老行业</b> · <b style="color:var(--accent)">可策划的收入</b> · <b style="color:var(--ok)">被动收入的复利</b>
+      </p>
+      <div class="body rv" style="margin-top:14px;color:var(--ink-2);font-size:14px;max-width:780px">
+        美国保险市场地位 · 从业人员收入对比 · 4 种模式对比 · 长期做的 6 个支柱
+      </div>
+      <div class="logo rv" style="margin-top:18px"><span class="mk" style="background:linear-gradient(135deg,#A87E2E,#2A4A8C);color:#fff;font-weight:700;width:60px;height:60px;display:inline-flex;align-items:center;justify-content:center;border-radius:10px;font-size:24px">HS</span>恒晟集团 · Hengsheng Group</div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 2 美国保险市场地位 — LIMRA/III 数据 -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow">
+        <div class="tag rv" style="background:var(--accent);color:#fff;border:none">市场地位 · 美国人寿险</div>
+        <div class="stepno rv">02&nbsp;/&nbsp;14</div>
+      </div>
+      <h1 class="rv" style="font-size:clamp(28px,4vw,44px);margin:6px 0 14px">
+        美国人寿险:一个 <span class="key-1">$17.5B</span> 还在增长的市场
+      </h1>
+      <div class="grid3 rv">
+        <div class="card" style="text-align:center">
+          <div class="stat" data-countup="17.5" data-suffix=" B" data-duration="1500">0</div>
+          <div class="stat-sub">2025 全美个险新单年化保费<br/><b style="color:var(--key)">创历史新高,YoY +10%</b></div>
+        </div>
+        <div class="card" style="text-align:center">
+          <div class="stat ok-1" data-countup="7" data-suffix=" %" data-duration="1500">0</div>
+          <div class="stat-sub">2025 保单件数同比增长<br/><b style="color:var(--ok)">4 年里 5 次破纪录</b></div>
+        </div>
+        <div class="card" style="text-align:center">
+          <div class="stat accent-1" data-countup="25" data-suffix=" %" data-duration="1500">0</div>
+          <div class="stat-sub">IUL 险种 2025 市占率<br/><b style="color:var(--accent)">$4.5B 全年新单,YoY +17%</b></div>
+        </div>
+      </div>
+      <div class="quote rv" style="margin-top:18px;font-size:14px;line-height:1.6">
+        <b>LIMRA (全美人寿保险行销研究协会)</b> 2026 年 3 月报告:2025 全美个险新单年化保费突破 $17.5B,创历史新高,且过去 5 年里 4 次破纪录;LIMRA 预测 2026 IUL 仍可保持双位数增长。
+      </div>
+      <div class="grid2 rv" style="margin-top:14px">
+        <div class="card">
+          <h3 class="ac" style="margin:0 0 8px;font-size:16px">需求侧</h3>
+          <div class="check">52% 美国家庭已拥有人寿险,缺口仍大</div>
+          <div class="check">2023 年 <b>39%</b> 消费者计划 1 年内购险,创历史新高</div>
+          <div class="check">千禧一代 <b>50%</b> / Gen Z <b>44%</b> 表达购买意向</div>
+        </div>
+        <div class="card">
+          <h3 class="ok" style="margin:0 0 8px;font-size:16px">结构侧</h3>
+          <div class="check">年金占寿险/年金直保保费 <b>55.8%</b>(2024)</div>
+          <div class="check">意外与健康 <b>23.3%</b> · 传统寿险仍稳定</div>
+          <div class="check">州级监管 + 州保险厅 + 联邦保险办公室多层保障</div>
+        </div>
+      </div>
+      <div class="source-line rv">数据来源:LIMRA 2026-03 报告 / Insurance Information Institute (III) 2024 Life/Annuity Income Statement · 恒晟集团知识库</div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 3 美国 vs 全球 — 保险深度对比 -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow">
+        <div class="tag rv" style="background:var(--accent);color:#fff;border:none">市场地位 · 全球对比</div>
+        <div class="stepno rv">03&nbsp;/&nbsp;14</div>
+      </div>
+      <h1 class="rv" style="font-size:clamp(28px,4vw,44px);margin:6px 0 14px">
+        全球第一大寿险市场,<span class="key-1">占北美 90%+</span>
+      </h1>
+      <div class="grid3 rv">
+        <div class="card" style="text-align:center">
+          <div class="stat key-1" data-countup="710" data-prefix="$" data-suffix=" B" data-duration="1500">0</div>
+          <div class="stat-sub">美国 2024 寿险/年金直保保费<br/><b style="color:var(--key)">全球第一大市场</b></div>
+        </div>
+        <div class="card" style="text-align:center">
+          <div class="stat ok-1" data-countup="52" data-suffix=" %" data-duration="1500">0</div>
+          <div class="stat-sub">美国家庭寿险覆盖率<br/><b style="color:var(--ok)">缺口家庭 ≈ 4800 万</b></div>
+        </div>
+        <div class="card" style="text-align:center">
+          <div class="stat accent-1" data-countup="3.1" data-prefix="$" data-suffix=" T" data-duration="1500">0</div>
+          <div class="stat-sub">美国年金总资产规模<br/><b style="color:var(--accent)">退休规划核心载体</b></div>
+        </div>
+      </div>
+      <div class="rv" style="margin-top:18px;font-size:14px;line-height:1.7">
+        <b class="ac">为什么美国市场对华裔是机会?</b><br/>
+        • 美国寿险业自 <b>1759 年</b> 起,260+ 年沉淀,监管与产品成熟度全球第一<br/>
+        • 华人社区 (≈540 万) 寿险渗透率显著低于本地家庭 — <b>增量空间</b> 而不是存量竞争<br/>
+        • 中美无汇率风险 / 美元计价 / 资产全球配置 — 高净值家庭的标配<br/>
+        • IRS 监管 + 州保险厅 (50 个州) + 法定准备金制度,资金安全系数高于多数行业
+      </div>
+      <div class="source-line rv">数据来源:III / LIMRA / US Census 2024 · 恒晟集团知识库《保险理财与美国保险市场优势分析》</div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 4 从业人员收入 — BLS 数据 -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow">
+        <div class="tag rv" style="background:var(--ok);color:#fff;border:none">收入对比 · BLS 2024 数据</div>
+        <div class="stepno rv">04&nbsp;/&nbsp;14</div>
+      </div>
+      <h1 class="rv" style="font-size:clamp(28px,4vw,44px);margin:6px 0 14px">
+        <span class="ok-1">$60,370</span> 中位数 · 头部 <span class="key-1">$208K+</span>
+      </h1>
+      <div class="grid2 rv">
+        <div class="card">
+          <h3 class="ac" style="margin:0 0 10px;font-size:17px">美国保险销售员收入分布 (BLS, May 2024)</h3>
+          <table class="compare-table" style="margin-top:0">
+            <tr><th>分位</th><th>年收入</th><th>说明</th></tr>
+            <tr><td><b>底部 25%</b></td><td>$34,940</td><td>兼职 / 入门级</td></tr>
+            <tr><td><b>中位数 50%</b></td><td class="key-c">$60,370</td><td>全职稳定水平</td></tr>
+            <tr><td><b>75% 分位</b></td><td>$83,420</td><td>成熟经纪人</td></tr>
+            <tr><td><b>头部 10%</b></td><td class="ok-c">$134,600+</td><td>5-7 年经验 / Rank 上位</td></tr>
+            <tr><td><b>头部 1%</b></td><td class="key-c">$208,000+</td><td>≈ 美国年收入 Top 1% (≈$60 万家庭)</td></tr>
+          </table>
+          <div class="source-line">来源:BLS Occupational Outlook Handbook, May 2024</div>
+        </div>
+        <div class="card">
+          <h3 class="ok" style="margin:0 0 10px;font-size:17px">恒晟实战数据 (Song 姐等团队 4 年)</h3>
+          <div style="font-size:14px;line-height:1.7">
+            <div class="check"><b>4 年</b> 团队发展出 <b class="key-c">7 位</b> 年收入 <b>$200K+</b> 团队长</div>
+            <div class="check">$200K 年收入 ≈ <b>美国 Top 1%</b>(单职工口径)</div>
+            <div class="check">全职路径:<b>3-5 年</b> 达到 $100K 年收入</div>
+            <div class="check">兼职路径:<b>3 年</b> 累计达到 $100K</div>
+            <div class="check"><b>Fast Track</b>:入职当年可冲 $50K-$70K</div>
+          </div>
+          <div class="quote" style="margin-top:10px;font-size:13px;line-height:1.5">
+            <b>Song 姐原话(2025-03 总结)</b>:"2 月份我们本来是要做 120 万业绩的,虽然没做到,但 3 月初通过 fast track + 团队接力,4.8 万分里有 1% 来自团队,这就是长期做的好处 — 你不只有自己的单,还有团队和家人的单。"
+          </div>
+        </div>
+      </div>
+      <div class="source-line rv">数据来源:BLS May 2024 / 恒晟集团 v4 佣金制度 + 4 年团队实战 · 详见 <span class="ac">02_保险知识/团队管理/03:01:2025_song_总结.md</span></div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 5 4 种模式对比 — 起点 / 中位 / 顶端 -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow">
+        <div class="tag rv" style="background:var(--key);color:#fff;border:none">模式对比 · 4 种路径</div>
+        <div class="stepno rv">05&nbsp;/&nbsp;14</div>
+      </div>
+      <h1 class="rv" style="font-size:clamp(28px,4vw,44px);margin:6px 0 14px">
+        <span class="key-1">4 种模式</span> 横向对比
+      </h1>
+      <table class="compare-table rv">
+        <tr>
+          <th style="width:18%">维度</th>
+          <th style="width:20%"><span class="dn-c">纽约人寿(NYL)</span><br/>传统专属代理</th>
+          <th style="width:20%"><span class="dn-c">独立经纪人</span><br/>像范宇那种</th>
+          <th style="width:21%"><span class="key-c">PFA / 网络直销</span><br/>纯线上中介</th>
+          <th style="width:21%"><span class="ok-c">恒晟模式</span><br/>直销 + AI 赋能</th>
+        </tr>
+        <tr>
+          <td><b>产品来源</b></td>
+          <td>单一公司(NYL 自家)</td>
+          <td>多公司选品</td>
+          <td>多公司报价,无服务</td>
+          <td>10+ 家 A 级公司选品</td>
+        </tr>
+        <tr>
+          <td><b>佣金率</b></td>
+          <td>10%-30%(内部阶梯)</td>
+          <td>30%-50%(看公司)</td>
+          <td>线上 50%-80%</td>
+          <td><b class="ok-c">Rank 50→50% 至 Rank 90→90%</b><br/>(v1 制度 7 级阶梯)</td>
+        </tr>
+        <tr>
+          <td><b>团队 / 代际奖</b></td>
+          <td>有,但封顶 5 代</td>
+          <td>无(纯个人)</td>
+          <td>无</td>
+          <td><b>代差池 38%</b>,9 代总和封顶</td>
+        </tr>
+        <tr>
+          <td><b>客户来源</b></td>
+          <td>公司分配名单</td>
+          <td>个人 Cold Call / 展会</td>
+          <td>纯线上投放</td>
+          <td><b>小红书陪跑</b> + CRM 私域</td>
+        </tr>
+        <tr>
+          <td><b>客户管理</b></td>
+          <td>公司 CRM(功能弱)</td>
+          <td>Excel / 自购系统</td>
+          <td>无(转化即结束)</td>
+          <td><b>Heysen 8-Agent CRM</b><br/>AI 自动跟进 + 客户分层</td>
+        </tr>
+        <tr>
+          <td><b>起步难度</b></td>
+          <td class="dn-c">中等(有名单)</td>
+          <td class="dn-c">高(全靠自己)</td>
+          <td class="dn-c">高(获客成本)</td>
+          <td class="ok-c"><b>低</b>(平台给工具 + AI 提效)</td>
+        </tr>
+        <tr>
+          <td><b>长期天花板</b></td>
+          <td>$80K-$150K</td>
+          <td>$100K-$250K</td>
+          <td>$50K-$120K</td>
+          <td><b class="key-c">无封顶</b>(个人 + 团队双引擎)</td>
+        </tr>
+      </table>
+      <div class="rv" style="margin-top:14px;font-size:13px;line-height:1.6;color:var(--ink-2)">
+        <b class="ac">核心差异</b>:传统专属代理靠"公司喂名单"但产品单一;独立经纪人靠"个人英雄主义"但缺体系;纯网络直销靠"流量"但无服务深度;<b class="ok-1">恒晟模式</b> = 多家产品选品 + 高佣金率 + AI 工具提效 + 团队代际奖 = <b>完整商业系统</b>。
+      </div>
+      <div class="source-line rv">来源:<span class="ac">02_保险知识/佣金制度/Broker区别_Jason.md</span> + <span class="ac">👍Song姐：PFA和其它代理公司的区别.md</span> + 恒晟 v1 佣金体系(2026-06-27)</div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 6 模式详解 1 — 纽约人寿(NYL) -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow">
+        <div class="tag rv" style="background:var(--ink-2);color:#fff;border:none">模式拆解 · 1/4</div>
+        <div class="stepno rv">06&nbsp;/&nbsp;14</div>
+      </div>
+      <h1 class="rv" style="font-size:clamp(28px,4vw,42px);margin:6px 0 14px">
+        <span class="dn-c">传统专属代理</span> · 1845 年成立的纽约人寿
+      </h1>
+      <div class="grid2 rv">
+        <div class="model-card gray">
+          <div class="head">
+            <span class="tag">NEW YORK LIFE · 1845</span>
+          </div>
+          <div style="font-size:13px;line-height:1.6;color:var(--ink-2);margin-bottom:8px">美国最大 mutual life insurer,雇员代理人(career agent)制度,2024 年管理资产 $3,500+ 亿。</div>
+          <div class="check">公司分配 lead,无需自己找客户</div>
+          <div class="check">专属产品线 + 公司品牌背书</div>
+          <div class="check">完整培训体系 + 内部分级</div>
+          <div class="check">福利好(医疗 + 退休金 + 股票)</div>
+        </div>
+        <div class="model-card gray">
+          <div class="head"><span class="tag" style="background:var(--danger)">痛点</span></div>
+          <div class="cross">产品单一(只有 NYL 自家),无法横向对比</div>
+          <div class="cross">佣金率 10%-30%(远低于独立经纪)</div>
+          <div class="cross">客户属于公司,离职 = 客户流失</div>
+          <div class="cross">中文服务能力弱(华裔客户体验差)</div>
+          <div class="cross">晋升路径长(Managing Partner 通常 8-10 年)</div>
+          <div class="cross">无团队代际奖(只赚个人单)</div>
+        </div>
+      </div>
+      <div class="quote rv" style="margin-top:14px;font-size:13px;line-height:1.6">
+        <b>Jason 实战观察(2024 CFT)</b>:"纽约人寿 1845 年成立,比 NLG 还早 100 多年,为什么你不加入纽约人寿呢?很简单 — 过去 sales 做过,做了三五年撞天花板,人挪活树挪死,有的从 NYL 跳到我们这,非常欢迎。"
+      </div>
+      <div class="source-line rv">来源:<span class="ac">02_保险知识/佣金制度/Broker区别_Jason.md</span> + LIMRA / III 行业报告</div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 7 模式详解 2 — 独立经纪人(像范宇) -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow">
+        <div class="tag rv" style="background:var(--ink-2);color:#fff;border:none">模式拆解 · 2/4</div>
+        <div class="stepno rv">07&nbsp;/&nbsp;14</div>
+      </div>
+      <h1 class="rv" style="font-size:clamp(28px,4vw,42px);margin:6px 0 14px">
+        <span class="dn-c">独立经纪人</span> · 范宇范总这条路
+      </h1>
+      <div class="grid2 rv">
+        <div class="model-card gray">
+          <div class="head"><span class="tag">FAN YU · Trans-Pac / General Agency</span></div>
+          <div style="font-size:13px;line-height:1.6;color:var(--ink-2);margin-bottom:8px">Song 姐原话:"General Agency 代表性:New York Life / Trans-Pacific(泛宇)/ Mass Mutual — 都叫 GA。" 范宇走的是独立经纪人/GA 路线。</div>
+          <div class="check">产品选品自由(10+ 公司横向比价)</div>
+          <div class="check">佣金率 30%-50%(比专属代理高)</div>
+          <div class="check">客户 100% 属于自己</div>
+          <div class="check">无坐班 / 时间灵活</div>
+        </div>
+        <div class="model-card gray">
+          <div class="head"><span class="tag" style="background:var(--danger)">痛点</span></div>
+          <div class="cross">起步期获客全靠自己(Cold Call / 展会)</div>
+          <div class="cross">无系统化培训(踩坑全靠经验)</div>
+          <div class="cross">客户管理靠自己(Excel / 自费 CRM)</div>
+          <div class="cross">无团队代际奖(纯个人收入)</div>
+          <div class="cross">收入波动大(有单 / 没单冰火两重天)</div>
+          <div class="cross">天花板明显(个人英雄主义,3-5 年见顶)</div>
+        </div>
+      </div>
+      <div class="quote rv" style="margin-top:14px;font-size:13px;line-height:1.6">
+        <b>独立经纪人现实</b>:做得好的像范宇做到 GMQP (General Agent)、区域冠军,年收入可达 $300K-$500K;<b class="dn-1">但大部分</b>独立经纪人 3 年内会因"获客难 + 没团队支撑"退出行业。个人英雄主义的"上限很高,平均线很低"。
+      </div>
+      <div class="source-line rv">来源:<span class="ac">02_保险知识/佣金制度/👍Song姐：PFA和其它代理公司的区别.md</span> + 行业公开报道</div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 8 模式详解 3 — PFA / 网络直销 -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow">
+        <div class="tag rv" style="background:var(--key);color:#fff;border:none">模式拆解 · 3/4</div>
+        <div class="stepno rv">08&nbsp;/&nbsp;14</div>
+      </div>
+      <h1 class="rv" style="font-size:clamp(28px,4vw,42px);margin:6px 0 14px">
+        <span class="key-1">网络直销</span> · 中介平台流量打法
+      </h1>
+      <div class="grid2 rv">
+        <div class="model-card gold">
+          <div class="head"><span class="tag">PFA / SelectQuote / Policygenius</span></div>
+          <div style="font-size:13px;line-height:1.6;color:var(--ink-2);margin-bottom:8px">纯线上中介,客户自己在网站填表,平台派单给经纪人。无 1v1 服务、无客户关系沉淀。</div>
+          <div class="check">客户主动找平台(获客成本低)</div>
+          <div class="check">多家报价,价格透明</div>
+          <div class="check">下单流程标准化</div>
+          <div class="check">佣金率 50%-80%(线上分润模型)</div>
+        </div>
+        <div class="model-card gold">
+          <div class="head"><span class="tag" style="background:var(--danger)">痛点</span></div>
+          <div class="cross">无 1v1 顾问服务(纯交易型)</div>
+          <div class="cross">客户 = 平台资产,经纪人无客户关系</div>
+          <div class="cross">无后续服务(签完即结束)</div>
+          <div class="cross">无团队体系(经纪人孤立)</div>
+          <div class="cross">续保率低(无客户经营)</div>
+          <div class="cross">天花板 $50K-$120K(纯流量变现)</div>
+        </div>
+      </div>
+      <div class="rv" style="margin-top:14px;font-size:13px;line-height:1.6">
+        <b class="ac">核心逻辑差异</b>:网络直销 = <b>"流量 → 转化 → 结束"</b>的漏斗模型,追求单次交易利润最大化;<br/>
+        <b class="ok-1">恒晟模式</b> = <b>"获客 → 服务 → 复购 + 转介绍"</b>的复利模型,追求客户终身价值最大化。
+      </div>
+      <div class="source-line rv">来源:PFA / SelectQuote 公司财报 + 行业公开分析</div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 9 模式详解 4 — 恒晟直销 + AI -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow">
+        <div class="tag rv" style="background:var(--ok);color:#fff;border:none">模式拆解 · 4/4 我们的路</div>
+        <div class="stepno rv">09&nbsp;/&nbsp;14</div>
+      </div>
+      <h1 class="rv" style="font-size:clamp(28px,4vw,42px);margin:6px 0 14px">
+        <span class="ok-1">恒晟模式</span> · 直销基础上加 AI 赋能
+      </h1>
+      <div class="grid2 rv">
+        <div class="model-card green">
+          <div class="head"><span class="tag">HENGSHENG · 2021 创立</span></div>
+          <div style="font-size:13px;line-height:1.6;color:var(--ink-2);margin-bottom:8px">在网络直销效率基础上 + 1v1 顾问服务 + AI 工具提效 + 团队代际奖 = 完整商业系统。</div>
+          <div class="check">10+ 家 A 级公司(独立经纪选品)</div>
+          <div class="check"><b>Rank 50→50% 至 Rank 90→90%</b> 7 级阶梯</div>
+          <div class="check">代差池 38% / 9 代总和封顶</div>
+          <div class="check">小红书陪跑 + 私域 + 转介绍三重获客</div>
+          <div class="check">Heysen 8-Agent CRM(AI 自动跟进)</div>
+          <div class="check">团队长培训体系 + 代际奖</div>
+          <div class="check"><b>AI 工具提效</b> = 1 人当 3 人用</div>
+        </div>
+        <div class="card" style="background:linear-gradient(135deg,rgba(44,138,96,0.06),rgba(42,74,140,0.06))">
+          <h3 class="ok" style="margin:0 0 10px;font-size:16px">6 大 AI 工具 = 时间复利</h3>
+          <div class="check">📱 <b>智能助理</b>:自动回微信,客户随时有响应</div>
+          <div class="check">📊 <b>客户分层</b>:AI 给客户打分,优先跟进高分</div>
+          <div class="check">📝 <b>话术生成</b>:AI 根据场景生成个性化文案</div>
+          <div class="check">🎓 <b>产品知识库</b>:AI 即时回答产品问题</div>
+          <div class="check">📅 <b>跟进提醒</b>:AI 自动安排跟进时点</div>
+          <div class="check">📈 <b>业绩看板</b>:实时看到自己 / 团队进展</div>
+        </div>
+      </div>
+      <div class="rv" style="margin-top:14px;font-size:13px;line-height:1.6">
+        <b class="ok-1">核心优势</b>:同样的获客成本,我们的经纪人能服务 3 倍客户;同样的服务深度,我们的获客成本是纯直销的 1/3。<b class="key-1">这是为什么我们 4 年做到 7 位 $200K+</b>。
+      </div>
+      <div class="source-line rv">来源:恒晟 v1 佣金体系 + Heysen IAIOS 平台规划 + 团队实战数据</div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 10 长期做的 6 个支柱 — 心态基础 -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow">
+        <div class="tag rv" style="background:var(--key);color:#fff;border:none">长期主义 · 6 大支柱</div>
+        <div class="stepno rv">10&nbsp;/&nbsp;14</div>
+      </div>
+      <h1 class="rv" style="font-size:clamp(28px,4vw,42px);margin:6px 0 14px">
+        长期做下去的 <span class="key-1">6 个支柱</span>
+      </h1>
+      <div class="rv" style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <div class="pillar">
+          <div class="num">01</div>
+          <h3 class="key-1">百年老行业,越来越成熟</h3>
+          <div class="body">美国寿险业自 1759 年,260+ 年沉淀,2025 仍创历史新高。越成熟的市场,合规和服务越值钱,新人越有体系可学。</div>
+        </div>
+        <div class="pillar">
+          <div class="num">02</div>
+          <h3 class="key-1">收入是可策划 / 可测算的</h3>
+          <div class="body">全职 3-5 年达到 $100K,Fast Track 当年可冲 $50K-$70K。不是"赌一把",而是 <b>用恒晟 v1 制度算出来</b>。</div>
+        </div>
+        <div class="pillar">
+          <div class="num">03</div>
+          <h3 class="ok-1">4 年 7 位 $200K+ 的实证</h3>
+          <div class="body">我们不是讲理论 — 我们 4 年走出 7 位年收入 $200K+ 的团队长,这是 <b>可复制的方法论</b>,不是偶然个例。</div>
+        </div>
+        <div class="pillar">
+          <div class="num">04</div>
+          <h3 class="ok-1">受人尊重 + 被动收入</h3>
+          <div class="body">$200K ≈ 美国 Top 1%,社会认可度高;客户介绍客户,熟练度提升做更大单子 — 真正的 <b>复利型职业</b>。</div>
+        </div>
+        <div class="pillar">
+          <div class="num">05</div>
+          <h3 class="accent-1">零金钱成本,AI 释放时间</h3>
+          <div class="body">投入时间 + 投入学习,无启动资金。Heysen AI 工具帮经纪人把繁琐事务自动化,专注客户关系 — <b>把时间花在值得的事上</b>。</div>
+        </div>
+        <div class="pillar">
+          <div class="num">06</div>
+          <h3 class="accent-1">小红书陪跑 + CRM 系统</h3>
+          <div class="body">线上获客已跑通,叙事能力帮经纪人获客 + 促成;Heysen CRM 把客户关系维护好,长期成为忠诚客户。</div>
+        </div>
+      </div>
+      <div class="source-line rv">来源:Kevin 原话整理 + 恒晟团队 4 年实战数据</div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 11 心态校准 — 3 个事实 -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow">
+        <div class="tag rv" style="background:var(--accent);color:#fff;border:none">心态校准 · 3 个事实</div>
+        <div class="stepno rv">11&nbsp;/&nbsp;14</div>
+      </div>
+      <h1 class="rv" style="font-size:clamp(28px,4vw,42px);margin:6px 0 14px">
+        做这份事业前,<span class="ac">先认清 3 个事实</span>
+      </h1>
+      <div class="rv" style="display:grid;grid-template-columns:1fr;gap:12px;margin-top:14px">
+        <div class="principle">
+          <span class="n">1</span>
+          <b class="key-1">这是一个慢事业,不是快事业</b>
+          <div style="font-size:14px;line-height:1.6;margin-top:6px;color:var(--ink-2)">
+            前 6 个月是学习期,12 个月打基础,24-36 个月开始有稳定产出,3-5 年达到中位以上。<b class="dn-1">期待 3 个月赚 $10K = 大概率失望</b>;接受 12-18 个月成长期 = 大概率成功。
+          </div>
+        </div>
+        <div class="principle">
+          <span class="n">2</span>
+          <b class="key-1">客户关系是复利,不是 1 次性销售</b>
+          <div style="font-size:14px;line-height:1.6;margin-top:6px;color:var(--ink-2)">
+            一张保单是开始不是结束。客户介绍客户(转介绍率 30%-50%) + 续保 + 加保 + 家庭成员 — <b>1 个客户 = 5-10 张单</b> 的长期价值。短期看收入,长期看客户数。
+          </div>
+        </div>
+        <div class="principle">
+          <span class="n">3</span>
+          <b class="key-1">方法论比个人能力更可靠</b>
+          <div style="font-size:14px;line-height:1.6;margin-top:6px;color:var(--ink-2)">
+            独立经纪人靠"个人魅力"上限高但平均低;<b class="ok-1">恒晟模式靠系统 + AI + 培训 + 团队</b>,上限和平均都拉高。这是为什么我们 4 年出 7 位 $200K+。
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 12 时间线 — 3-5 年成长路径 -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow">
+        <div class="tag rv" style="background:var(--ok);color:#fff;border:none">成长路径 · 5 年路线图</div>
+        <div class="stepno rv">12&nbsp;/&nbsp;14</div>
+      </div>
+      <h1 class="rv" style="font-size:clamp(28px,4vw,42px);margin:6px 0 14px">
+        从 <span class="ac">第 1 天</span> 到 <span class="key-1">第 5 年</span> 的清晰路径
+      </h1>
+      <div class="rv" style="margin-top:14px;display:grid;grid-template-columns:repeat(5,1fr);gap:10px">
+        <div class="pillar" style="border-left:4px solid var(--accent)">
+          <div class="num" style="color:var(--accent);opacity:0.4">Y1</div>
+          <h3 style="font-size:14px">学习期</h3>
+          <div class="body" style="font-size:12px">产品 + 合规 + 销售基础。Fast Track 目标 <b>$50K-$70K</b>。前 6 个月为投入期,接受慢成长。</div>
+        </div>
+        <div class="pillar" style="border-left:4px solid var(--key)">
+          <div class="num" style="color:var(--key);opacity:0.4">Y2</div>
+          <h3 style="font-size:14px">打基础</h3>
+          <div class="body" style="font-size:12px">客户数 30-50,转介绍启动。年收入突破 <b>$80K-$100K</b>,晋升 Rank 60/70。</div>
+        </div>
+        <div class="pillar" style="border-left:4px solid var(--ok)">
+          <div class="num" style="color:var(--ok);opacity:0.4">Y3</div>
+          <h3 style="font-size:14px">稳产出</h3>
+          <div class="body" style="font-size:12px">客户数 100+,开始招第 1 个下线。年收入 <b>$120K-$150K</b>,晋升 Rank 75/80。</div>
+        </div>
+        <div class="pillar" style="border-left:4px solid var(--danger)">
+          <div class="num" style="color:var(--danger);opacity:0.4">Y4</div>
+          <h3 style="font-size:14px">团队化</h3>
+          <div class="body" style="font-size:12px">团队 3-5 人,代际奖启动。年收入 <b>$180K-$250K</b>,进入团队长赛道。</div>
+        </div>
+        <div class="pillar" style="border-left:4px solid #8B5CF6">
+          <div class="num" style="color:#8B5CF6;opacity:0.4">Y5</div>
+          <h3 style="font-size:14px">复利期</h3>
+          <div class="body" style="font-size:12px">团队 8-15 人,被动收入占比 40%+。年收入 <b>$300K+</b>,Rank 90 顶级。</div>
+        </div>
+      </div>
+      <div class="quote rv" style="margin-top:16px;font-size:13px;line-height:1.6">
+        <b class="key-1">关键拐点</b>:Y2 末(第 24-30 个月)是大多数人放弃的时点 — 投入大但收入未达预期。撑过去的人,3 年后基本都有稳定 $100K+;撑不过去的人,3 个月就转行了。<b>长期做 = 撑过前 30 个月</b>。
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 13 立即开始 — 3 步 -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow">
+        <div class="tag rv" style="background:var(--key);color:#fff;border:none">立即开始 · 3 步走</div>
+        <div class="stepno rv">13&nbsp;/&nbsp;14</div>
+      </div>
+      <h1 class="rv" style="font-size:clamp(28px,4vw,42px);margin:6px 0 14px">
+        <span class="key-1">今天开始</span> · 3 步启动
+      </h1>
+      <div class="rv" style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px">
+        <div class="pillar" style="text-align:center">
+          <div style="font-family:Georgia,serif;font-size:54px;font-weight:800;color:var(--key);line-height:1">1</div>
+          <h3 style="font-size:18px;color:var(--ink);margin-top:6px">了解制度</h3>
+          <div class="body" style="font-size:13px">
+            看 <b>恒晟 v1 佣金体系</b> + <b>4 模式对比</b>(本 deck slide 5-9)<br/>
+            1v1 沟通 + 团队长分享<br/>
+            目标:理解收入模型,回答"我能不能做到"
+          </div>
+        </div>
+        <div class="pillar" style="text-align:center">
+          <div style="font-family:Georgia,serif;font-size:54px;font-weight:800;color:var(--accent);line-height:1">2</div>
+          <h3 style="font-size:18px;color:var(--ink);margin-top:6px">启动学习</h3>
+          <div class="body" style="font-size:13px">
+            拿 NLG 牌照(免考试通道)<br/>
+            <b>Heysen AI 培训</b> + 团队长 1v1<br/>
+            目标:60 天考牌 + 学会基本销售流程
+          </div>
+        </div>
+        <div class="pillar" style="text-align:center">
+          <div style="font-family:Georgia,serif;font-size:54px;font-weight:800;color:var(--ok);line-height:1">3</div>
+          <h3 style="font-size:18px;color:var(--ink);margin-top:6px">实战起步</h3>
+          <div class="body" style="font-size:13px">
+            <b>小红书陪跑</b> 启动获客<br/>
+            团队长带做第 1-5 单<br/>
+            目标:6 个月内 Fast Track 达成
+          </div>
+        </div>
+      </div>
+      <div class="rv" style="margin-top:24px;padding:16px 20px;border-radius:10px;background:linear-gradient(135deg,rgba(168,126,46,0.08),rgba(42,74,140,0.08));border-left:4px solid var(--key);font-size:14px;line-height:1.7">
+        <b class="key-1">零金钱成本</b> · 仅投入时间 + 学习意愿<br/>
+        <b class="ok-1">零风险起步</b> · 团队长 1v1 + AI 工具 + 客户资源<br/>
+        <b class="accent-1">稳定路径</b> · 4 年实证 + v1 制度算清楚
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 14 学完就考 CTA -->
+  <!-- ============================================ -->
+  <section class="slide center" style="background:linear-gradient(135deg,#0d2847 0%,#1a3a5c 100%);color:#fff">
+    <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"
+         style="position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:0.4">
+      <circle cx="200" cy="200" r="180" fill="#A87E2E" filter="url(#cv-blur-lt)">
+        <animate attributeName="cx" values="200;1400;200" dur="80s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="1400" cy="700" r="180" fill="#2C8A60" filter="url(#cv-blur-lt)">
+        <animate attributeName="cy" values="700;200;700" dur="90s" repeatCount="indefinite"/>
+      </circle>
+    </svg>
+    <div class="wrap" style="position:relative;z-index:1">
+      <div class="toprow">
+        <div class="tag rv" style="background:var(--ok);color:#fff;border:none">🎓 学完就考</div>
+        <div class="stepno rv" style="color:#fff">14&nbsp;/&nbsp;14</div>
+      </div>
+      <h1 class="rv" style="font-size:clamp(34px,5vw,56px);margin:6px 0;color:#fff">
+        学完 → <span style="color:#FFD700">立刻考</span>
+      </h1>
+      <p class="lead rv" style="font-size:clamp(16px,1.8vw,22px);margin:14px 0 22px;color:rgba(255,255,255,0.9)">
+        <b style="color:#FFD700">15 道题</b> · <b style="color:#FFD700">70 分及格</b> · <b style="color:#FFD700">10 分钟</b><br/>
+        <span style="font-size:14px;opacity:0.85">考试成绩所获积分将计入奖励标准,请认真答题</span>
+      </p>
+      <a class="exam-cta rv" href="https://kevin89887634.github.io/training-quiz/?course=longterm-career-2026" target="_blank" rel="noopener">
+        ▶ 开始考试 · 10 分钟
+      </a>
+      <div style="margin-top:14px;font-family:monospace;font-size:13px;background:rgba(0,0,0,0.3);padding:8px 14px;border-radius:6px;display:inline-block;color:#fff">
+        https://kevin89887634.github.io/training-quiz/?course=longterm-career-2026
+      </div>
+      <div class="exam-meta rv" style="justify-content:center">
+        <span class="pill">📝 15 道题</span>
+        <span class="pill">⏱ 10 分钟</span>
+        <span class="pill">🎯 70 分及格</span>
+        <span class="pill">📱 手机可考</span>
+      </div>
+      <div class="step-cards rv">
+        <div class="step-card">
+          <div class="n">1</div>
+          <div class="t">点击上方按钮</div>
+          <div class="d">填写姓名 + 团队 → 进入考试</div>
+        </div>
+        <div class="step-card">
+          <div class="n">2</div>
+          <div class="t">答 15 道题</div>
+          <div class="d">单选为主,部分多选 · 考完看解析</div>
+        </div>
+        <div class="step-card">
+          <div class="n">3</div>
+          <div class="t">≥ 70 分通关</div>
+          <div class="d">没通过可重考 · 错题会自动标记</div>
+        </div>
+      </div>
+      <div class="tipbox rv" style="margin-top:18px;background:rgba(255,255,255,0.08);border-left:3px solid #FFD700;padding:10px 14px;border-radius:0 6px 6px 0;font-size:13px;color:rgba(255,255,255,0.85)">
+        <b style="color:#FFD700">📌 链接打不开?</b> 复制上方 URL → 浏览器粘贴 → 进入考试页。
+      </div>
+      <div class="logo rv" style="margin-top:18px"><span class="mk" style="background:linear-gradient(135deg,#A87E2E,#FFD700);color:#0d2847;font-weight:700;width:60px;height:60px;display:inline-flex;align-items:center;justify-content:center;border-radius:10px;font-size:24px">HS</span>恒晟集团 · Hengsheng Group</div>
+    </div>
+  </section>
+
+</div>
+
+<script src="../../assets/deck.js"></script>
+</body>
+</html>
