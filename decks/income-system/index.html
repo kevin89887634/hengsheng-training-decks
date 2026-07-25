@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>恒晟收入体系讲解 · 4 大来源 + 7 级晋级 — 恒晟集团</title>
+<link rel="stylesheet" href="../../assets/tokens.css">
+<link rel="stylesheet" href="../../assets/deck.css">
+<style>
+/* === income-system · 15 slide · 2026-07-11 === */
+body{font-feature-settings:"kern" 1,"liga" 1}
+.speaker-note{display:none;background:#fff8e1;border-left:3px solid #A87E2E;padding:6px 10px;margin:8px 0;font-size:12px;color:#7a5a18;border-radius:0 4px 4px 0}
+.speaker-note::before{content:"🎤 讲师内部提示:";font-weight:600;margin-right:4px}
+.kw{color:var(--key);font-weight:600}
+.ok{color:var(--ok);font-weight:600}
+.ac{color:var(--accent);font-weight:600}
+.dn{color:var(--danger);font-weight:600}
+.stat{font-family:Georgia,serif;font-size:clamp(36px,4.6vw,64px);font-weight:800;line-height:1;color:var(--key);letter-spacing:-0.5px}
+.stat-sub{font-size:13px;color:var(--ink-2);margin-top:6px}
+.source-line{font-size:11px;color:var(--ink-2);font-style:italic;margin-top:8px}
+.quote{border-left:4px solid var(--accent);padding:10px 16px;background:rgba(42,74,140,0.06);border-radius:0 6px 6px 0;margin:12px 0}
+.quote b{color:var(--accent)}
+.formula{background:linear-gradient(135deg,rgba(168,126,46,0.08),rgba(42,74,140,0.08));padding:14px 18px;border-radius:10px;border-left:4px solid var(--key);font-family:Georgia,serif;font-size:clamp(16px,1.8vw,22px);margin:10px 0;line-height:1.5}
+.formula b{color:var(--key)}
+.income-card{padding:18px 20px;border-radius:12px;background:#fff;border:1px solid rgba(42,74,140,0.18);margin-bottom:12px;position:relative}
+.income-card .num{position:absolute;top:14px;right:18px;font-family:Georgia,serif;font-size:42px;font-weight:800;color:var(--key);opacity:0.25;line-height:1}
+.income-card .head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.income-card .head .tag{padding:3px 10px;border-radius:6px;font-size:11px;font-weight:600;color:#fff;background:var(--key);letter-spacing:0.3px}
+.income-card.blue .head .tag{background:var(--accent)}
+.income-card.green .head .tag{background:var(--ok)}
+.income-card.purple .head .tag{background:#8B5CF6}
+.income-card .body{font-size:13.5px;line-height:1.6;color:var(--ink-2)}
+.income-card .formula-inline{background:rgba(168,126,46,0.06);padding:8px 12px;border-radius:6px;font-family:Georgia,serif;font-size:14px;margin:8px 0;color:var(--ink)}
+.check{display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:13.5px;line-height:1.5}
+.check::before{content:"✓";color:var(--ok);font-weight:700;flex-shrink:0;margin-top:1px}
+.cross{display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:13.5px;line-height:1.5}
+.cross::before{content:"✗";color:var(--danger);font-weight:700;flex-shrink:0;margin-top:1px}
+.pillar{padding:14px 18px;border-radius:10px;background:rgba(168,126,46,0.06);border-left:4px solid var(--key);margin:10px 0}
+.ladder{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:14px}
+.ladder-step{padding:14px 6px;border-radius:8px;text-align:center;color:#fff;font-weight:600;position:relative}
+.ladder-step .lvl{font-size:13px;font-weight:800;letter-spacing:0.5px}
+.ladder-step .rate{font-family:Georgia,serif;font-size:22px;font-weight:800;margin-top:4px;line-height:1}
+.ladder-step .gate{font-size:10px;opacity:0.9;margin-top:4px;line-height:1.2;padding:0 4px}
+.compare-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13.5px}
+.compare-table th{background:var(--accent);color:#fff;padding:9px 10px;text-align:left;font-weight:600}
+.compare-table td{padding:9px 10px;border-bottom:1px solid rgba(42,74,140,0.12)}
+.compare-table tr:nth-child(even) td{background:rgba(42,74,140,0.03)}
+.compare-table .ok-c{color:var(--ok);font-weight:600}
+.compare-table .dn-c{color:var(--danger);font-weight:600}
+.compare-table .key-c{color:var(--key);font-weight:600}
+.timeline{position:relative;margin:14px 0 8px;padding:8px 0}
+.timeline-line{position:absolute;left:30px;right:30px;top:22px;height:3px;background:linear-gradient(90deg,var(--accent),var(--key),var(--ok));border-radius:2px;opacity:0.5}
+.timeline-stops{display:grid;grid-template-columns:repeat(6,1fr);gap:0;position:relative}
+.tl-stop{text-align:center;position:relative}
+.tl-stop .dot{width:14px;height:14px;border-radius:50%;background:var(--key);margin:14px auto 6px;border:3px solid #fff;box-shadow:0 0 0 2px var(--key)}
+.tl-stop .yr{font-size:11px;font-weight:700;color:var(--key);margin-top:4px;letter-spacing:0.5px}
+.tl-stop .lvl{font-size:12px;color:var(--ink);font-weight:600;margin-top:2px}
+.tl-stop .earn{font-size:11px;color:var(--ok);margin-top:2px;font-weight:600}
+.exam-cta{background:linear-gradient(135deg,#2A4A8C 0%,#2C8A60 100%);color:#fff;padding:18px 28px;border-radius:14px;font-size:clamp(16px,2vw,22px);font-weight:700;display:inline-flex;align-items:center;gap:10px;text-decoration:none;box-shadow:0 4px 18px rgba(42,74,140,0.3)}
+.exam-meta{display:flex;gap:14px;flex-wrap:wrap;margin:14px 0;font-size:13px;justify-content:center}
+.exam-meta .pill{padding:6px 12px;border-radius:20px;background:rgba(255,255,255,0.15);color:#fff}
+.step-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.step-card{padding:14px 16px;background:rgba(255,255,255,0.12);border-radius:10px;text-align:left;color:#fff}
+.step-card .n{font-family:Georgia,serif;font-size:30px;font-weight:800;line-height:1;opacity:0.85}
+.step-card .t{font-size:14px;margin-top:6px;font-weight:600}
+.step-card .d{font-size:12px;opacity:0.85;margin-top:4px;line-height:1.4}
+.danger-1{color:#B14E39}.danger-2{background:rgba(177,78,57,0.08)}.danger-3{stroke:#B14E39}
+.danger-4{fill:#B14E39}.danger-5{border-color:#B14E39}.danger-6{text-decoration-color:#B14E39}
+.danger-7{box-shadow:inset 0 0 0 1px #B14E39}.danger-8{caret-color:#B14E39}
+.danger-9{accent-color:#B14E39}.danger-10{outline-color:#B14E39}
+.danger-11{background-image:linear-gradient(90deg,transparent,#B14E39,transparent)}
+.danger-12{border-right-color:#B14E39}
+.ok-1{color:#2C8A60}.ok-2{stroke:#2C8A60}.ok-3{fill:#2C8A60}
+.ok-4{background:rgba(44,138,96,0.08)}.ok-5{outline-color:#2C8A60}.ok-6{border-color:#2C8A60}
+.ok-7{box-shadow:inset 0 0 0 1px #2C8A60}.ok-8{caret-color:#2C8A60}
+.ok-9{accent-color:#2C8A60}.ok-10{outline-color:#2C8A60}
+.accent-1{color:#2A4A8C}.accent-2{stroke:#2A4A8C}.accent-3{fill:#2A4A8C}
+.accent-4{background:rgba(42,74,140,0.08)}.accent-5{outline-color:#2A4A8C}
+.accent-6{border-color:#2A4A8C}.accent-7{box-shadow:inset 0 0 0 1px #2A4A8C}
+.key-1{color:#A87E2E}.key-2{stroke:#A87E2E}.key-3{fill:#A87E2E}
+.key-4{background:rgba(168,126,46,0.08)}.key-5{outline-color:#A87E2E}
+.key-6{border-color:#A87E2E}.key-7{box-shadow:inset 0 0 0 1px #A87E2E}
+</style>
+<style>
+.wrap { padding-top: 24px !important; }
+.toprow { margin-top: 0 !important; }
+</style>
+</head>
+<body>
+<script src="../../assets/coach.js" defer></script>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="cv-blur-is" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="60"/></filter>
+    <filter id="ring-blur-is" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>
+    <radialGradient id="grad-gold-is" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#A87E2E" stop-opacity="0.9"/><stop offset="100%" stop-color="#A87E2E" stop-opacity="0"/></radialGradient>
+  </defs>
+</svg>
+<div class="bar" id="bar"></div>
+<div class="deck">
+
+  <!-- ============================================ -->
+  <!-- 1 封面 -->
+  <!-- ============================================ -->
+  <section class="slide center">
+    <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"
+         style="position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:0.35">
+      <circle cx="320" cy="240" r="220" fill="#A87E2E" opacity="0.45" filter="url(#cv-blur-is)">
+        <animate attributeName="cx" values="320;1280;320" dur="78s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="240;660;240" dur="86s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="1280" cy="660" r="220" fill="#2A4A8C" opacity="0.42" filter="url(#cv-blur-is)">
+        <animate attributeName="cx" values="1280;320;1280" dur="92s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="800" cy="450" r="180" fill="#2C8A60" opacity="0.30" filter="url(#cv-blur-is)">
+        <animate attributeName="cy" values="450;200;450" dur="68s" repeatCount="indefinite"/>
+      </circle>
+      <!-- 装饰线 4 条 + 节点呼吸 -->
+      <path d="M 0 100 Q 800 60 1600 120" stroke="#A87E2E" stroke-width="1.5" fill="none" opacity="0.35" stroke-dasharray="8 8">
+        <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" begin="0s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 0 300 Q 800 260 1600 320" stroke="#2A4A8C" stroke-width="1.5" fill="none" opacity="0.30" stroke-dasharray="8 8">
+        <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 0 600 Q 800 640 1600 580" stroke="#2C8A60" stroke-width="1.5" fill="none" opacity="0.28" stroke-dasharray="8 8">
+        <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" begin="1s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 0 800 Q 800 760 1600 820" stroke="#A87E2E" stroke-width="1.5" fill="none" opacity="0.25" stroke-dasharray="8 8">
+        <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+      </path>
+      <circle cx="400" cy="450" r="6" fill="#A87E2E" opacity="0.7">
+        <animate attributeName="r" values="6;12;6" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;0.3;0.7" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="800" cy="450" r="6" fill="#2A4A8C" opacity="0.7">
+        <animate attributeName="r" values="6;12;6" dur="3s" begin="1s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;0.3;0.7" dur="3s" begin="1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="1200" cy="450" r="6" fill="#2C8A60" opacity="0.7">
+        <animate attributeName="r" values="6;12;6" dur="3s" begin="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;0.3;0.7" dur="3s" begin="2s" repeatCount="indefinite"/>
+      </circle>
+    </svg>
+    <div class="wrap" style="position:relative;z-index:1">
+      <div class="toprow">
+        <div class="tag rv" style="background:var(--key);color:#fff;border:none">收入体系 · 15 张幻灯片</div>
+        <div class="stepno rv">01&nbsp;/&nbsp;15</div>
+      </div>
+      <h1 class="rv" style="font-size:clamp(38px,5.6vw,76px);margin:0;line-height:1.1">
+        <span class="key-1">恒晟收入体系</span>讲解<br/>从<span class="ac">小白</span>到<span class="ok-1">高级合伙人</span>
+      </h1>
+      <p class="lead rv" style="font-size:clamp(17px,1.9vw,24px);margin:18px 0 8px;color:var(--ink)">
+        <b style="color:var(--key)">4 大来源</b> · <b style="color:var(--accent)">7 级晋级</b> · <b style="color:var(--ok)">公式 + 案例</b> · <b style="color:#8B5CF6">未来人的希望</b>
+      </p>
+      <div class="body rv" style="margin-top:14px;color:var(--ink-2);font-size:14px;max-width:780px">
+        个人佣金 · 团队级差 · 代际管理奖 · CFT 合作佣金 · 双通道 · 实战路径 · 心态校准
+      </div>
+      <div class="logo rv" style="margin-top:18px"><span class="mk" style="background:linear-gradient(135deg,#A87E2E,#2A4A8C);color:#fff;font-weight:700;width:60px;height:60px;display:inline-flex;align-items:center;justify-content:center;border-radius:10px;font-size:24px">HS</span>恒晟集团 · Hengsheng Group</div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 2 一句话看懂收入 — 4 大来源 + 4 个核心数字 -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow">
+        <div class="tag rv" style="background:var(--key);color:#fff;border:none">总览 · 4 大来源</div>
+        <div class="stepno rv">02&nbsp;/&nbsp;15</div>
+      </div>
+      <h1 class="rv" style="font-size:clamp(28px,4vw,44px);margin:6px 0 14px">
+        收入 = <span class="key-1">个人佣金</span> + <span class="ac">团队级差</span> + <span class="ok-1">代际奖</span> + <span style="color:#8B5CF6">CFT 合作佣金</span>
+      </h1>
+      <div class="formula rv">
+        你的实际到账 = <b>Premium Amt × 个人佣金率</b> + <b>(上级% − 下级%) × TP</b> + <b>TP × 代际奖比例</b> + <b>CFT 50% 分成</b>
+      </div>
+      <div class="grid3 rv" style="margin-top:14px">
+        <div class="card" style="text-align:center">
+          <div class="stat key-1">50% – 90%</div>
+          <div class="stat-sub">个人佣金率<br/><b style="color:var(--key)">按职级从 TA→CEO 7 档递增</b></div>
+        </div>
+        <div class="card" style="text-align:center">
+          <div class="stat accent-1">38%</div>
+          <div class="stat-sub">代际管理奖封顶<br/><b style="color:var(--accent)">9 代总和 · CEO 满档</b></div>
+        </div>
+        <div class="card" style="text-align:center">
+          <div class="stat ok-1">125%</div>
+          <div class="stat-sub">NLG 直接给平台的总佣金<br/><b style="color:var(--ok)">已签 NLG 直接合同</b></div>
+        </div>
+      </div>
+      <div class="rv" style="margin-top:14px;font-size:13px;line-height:1.7">
+        <b class="ac">5 个职级核心:</b><br/>
+        ① <b>TA(50%)</b> 入门 → ② <b>SA(60%)</b> 提速 → ③ <b>QMD(70%)</b> 团队级差 + 代际奖解锁 → ④ <b>SMD(75%)</b> 30% 代际 → ⑤ <b>CEO(90%)</b> 38% 代际封顶
+      </div>
+      <div class="source-line rv">数据来源:v1 制度(2026-06-19 Kevin 修正版)· 恒晟集团 v4 佣金与晋升指南</div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 3 第 1 大来源 · 个人销售佣金 -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow">
+        <div class="tag rv" style="background:var(--key);color:#fff;border:none">收入来源 1/4</div>
+        <div class="stepno rv">03&nbsp;/&nbsp;15</div>
+      </div>
+      <h1 class="rv" style="font-size:clamp(28px,4vw,44px);margin:6px 0 14px">
+        <span class="key-1">个人销售佣金</span> · 最基础也最稳
+      </h1>
+      <div class="formula rv">
+        <b>个人佣金 = Premium Amt × 个人佣金率</b>
+      </div>
+      <div class="rv" style="font-size:13px;color:var(--ink-2);margin-top:4px"><b>Premium Amt</b>(以 NLG 实际发放金额为准):</div>
+      <table class="compare-table rv" style="margin-top:6px">
+        <tr><th>场景</th><th>判定方法</th><th>Premium Amt</th></tr>
+        <tr><td><b>年缴保单</b></td><td>Premium/TP = 100%</td><td class="key-c">Premium = TP</td></tr>
+        <tr><td><b>月缴保单</b></td><td>Premium/TP ≈ 8.33%</td><td class="key-c">Premium = TP ÷ 12</td></tr>
+        <tr><td><b>超额缴费</b></td><td>modal_premium &gt; AAP</td><td class="key-c">取 min(Modal, AAP) = TP</td></tr>
+        <tr><td><b>实际到账</b></td><td>银行流水 vs 公式</td><td class="key-c">取 NLG 实际发放值</td></tr>
+      </table>
+      <div class="quote rv" style="margin-top:14px;font-size:13.5px;line-height:1.7">
+        <b class="ac">举例 · TA 卖 1 张年缴 IUL</b>:<br/>
+        客户 TP = <b>$10,000</b>(年缴) → Premium Amt = $10,000<br/>
+        TA 佣金率 = 50% → <b class="key-c">个人佣金 = $10,000 × 50% = $5,000</b><br/>
+        <span style="color:var(--ink-2)">如果是月缴 TP $10,000 → Premium = $833/月 → 12 个月首年 $10K → 仍按 $5K 佣金算</span>
+      </div>
+      <div class="source-line rv">数据来源:v4 佣金与晋升指南 § 七、佣金计算标准 · 2026</div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 4 第 2 大来源 · Spread Override 团队级差奖 -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow">
+        <div class="tag rv" style="background:var(--accent);color:#fff;border:none">收入来源 2/4</div>
+        <div class="stepno rv">04&nbsp;/&nbsp;15</div>
+      </div>
+      <h1 class="rv" style="font-size:clamp(28px,4vw,44px);margin:6px 0 14px">
+        <span class="ac">Spread Override</span> · 团队级差奖
+      </h1>
+      <div class="formula rv">
+        <b>级差奖 = (你的佣金率 − 下线佣金率) × TP</b>
+      </div>
+      <div class="rv" style="font-size:13px;color:var(--ink-2);margin-top:4px">
+        <b>核心点</b>:你必须比下线<b>高至少一档</b>(且 ≥ QMD 70%)才能拿级差。
+      </div>
+      <div class="quote rv" style="margin-top:14px;font-size:13.5px;line-height:1.7">
+        <b class="ac">举例 · Amy 冲 QMD 后第一个月</b>:<br/>
+        Amy QMD 70% · 下线 Jane TA 50%<br/>
+        Jane 签 1 张 TP $10,000 保单 → Jane 自己拿 $5,000(50%)<br/>
+        <b class="key-c">Amy 拿级差 = (70% − 50%) × $10,000 = $2,000</b><br/>
+        <span style="color:var(--ink-2)">关键:Amy 必须冲到 70% 才能拿。TA 50% 跟 TA 50% 没级差,等于 0。</span>
+      </div>
+      <div class="rv" style="margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <div class="card" style="padding:12px">
+          <h4 class="ok" style="margin:0 0 6px;font-size:14px">📈 你能拿多少?</h4>
+          <div class="check">QMD 70% − TA 50% = <b>20%</b> 级差</div>
+          <div class="check">QMD 70% − SA 60% = <b>10%</b> 级差</div>
+          <div class="check">SMD 75% − QMD 70% = <b>5%</b> 级差</div>
+        </div>
+        <div class="card" style="padding:12px">
+          <h4 class="dn" style="margin:0 0 6px;font-size:14px">⚠️ 必须满足 2 条件</h4>
+          <div class="check">① 你是 QMD(70%)及以上</div>
+          <div class="check">② 下线职级 <b>低于</b> 你的职级</div>
+          <div class="cross">自己 50% / 下线 50% → <b>0 级差</b></div>
+        </div>
+      </div>
+      <div class="source-line rv">数据来源:知识库团队管理 GMT20240501 培训原文(70% − 50% × $10K = $2,000)· v4 制度</div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 5 第 3 大来源 · 代际管理奖 -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow">
+        <div class="tag rv" style="background:var(--ok);color:#fff;border:none">收入来源 3/4</div>
+        <div class="stepno rv">05&nbsp;/&nbsp;15</div>
+      </div>
+      <h1 class="rv" style="font-size:clamp(28px,4vw,44px);margin:6px 0 14px">
+        <span class="ok-1">代际管理奖</span> · 9 代封顶 38%
+      </h1>
+      <div class="formula rv">
+        <b>代际奖 = 下线 TP × 对应代际比例</b> &nbsp;·&nbsp; <b>解锁条件 = 冲 QMD(70%)</b>
+      </div>
+      <table class="compare-table rv" style="margin-top:10px">
+        <tr>
+          <th>职级</th><th>支付率</th><th>第1代</th><th>第2代</th><th>第3代</th><th>第4-5代</th><th>第6-7代</th><th>第8-9代</th><th>总奖</th>
+        </tr>
+        <tr><td><b class="key-c">QMD</b></td><td>70%</td><td>15%</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="key-c">15%</td></tr>
+        <tr><td><b class="key-c">SMD</b></td><td>75%</td><td>15%</td><td>10%</td><td>5%</td><td>—</td><td>—</td><td>—</td><td class="key-c">30%</td></tr>
+        <tr><td><b class="key-c">NVP</b></td><td>80%</td><td>15%</td><td>10%</td><td>5%</td><td>2%+2%</td><td>—</td><td>—</td><td class="key-c">34%</td></tr>
+        <tr><td><b class="key-c">EVP</b></td><td>85%</td><td>15%</td><td>10%</td><td>5%</td><td>2%+2%</td><td>1%+1%</td><td>—</td><td class="key-c">36%</td></tr>
+        <tr><td><b class="ok-c">CEO</b></td><td>90%</td><td>15%</td><td>10%</td><td>5%</td><td>2%+2%</td><td>1%+1%</td><td>各 1%</td><td class="ok-c">38%</td></tr>
+      </table>
+      <div class="quote rv" style="margin-top:12px;font-size:13.5px;line-height:1.7">
+        <b class="ac">举例 · Amy 是 NVP(80%),团队累计 TP $1,000,000</b>:<br/>
+        第 1 代 15% × 50万 = $75,000 &nbsp;·&nbsp; 第 2 代 10% × 25万 = $25,000<br/>
+        第 3 代 5% × 15万 = $7,500 &nbsp;·&nbsp; 第 4-5 代 各 2% × 10万 = $4,000<br/>
+        <b class="key-c">合计代际奖 ≈ $111,500 / 年</b>(34% × 整体产出加总,实际封顶按代际细分)
+      </div>
+      <div class="source-line rv">数据来源:v4 § 二、代际管理奖表 · 解锁条件:必须冲 QMD 70%</div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 6 第 4 大来源 · CFT 合作佣金 -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow">
+        <div class="tag rv" style="background:#8B5CF6;color:#fff;border:none">收入来源 4/4</div>
+        <div class="stepno rv">06&nbsp;/&nbsp;15</div>
+      </div>
+      <h1 class="rv" style="font-size:clamp(28px,4vw,44px);margin:6px 0 14px">
+        <span style="color:#8B5CF6">CFT 合作佣金</span> · 辅导成交 50/50
+      </h1>
+      <div class="formula rv">
+        <b>辅导成交单:CFT 与新人各拿 50%</b> &nbsp;·&nbsp; <b>新人必须为写单人</b>
+      </div>
+      <div class="quote rv" style="margin-top:14px;font-size:13.5px;line-height:1.7">
+        <b class="ac">举例 · Amy 做 CFT,带新人 Lily 成交</b>:<br/>
+        客户签 TP $10,000 保单 → Lily 是写单人<br/>
+        <b class="key-c">Lily 拿 = $10,000 × 50% × 50% = $5,000</b>(新人 50%)<br/>
+        <b class="key-c">Amy 拿 = $10,000 × 50% × 50% = $5,000</b>(CFT 50%)<br/>
+        <span style="color:var(--ink-2)">新人拿当期现金分成,计为辅导成交记录(Supervised Sale)</span>
+      </div>
+      <div class="rv" style="margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <div class="card" style="padding:12px">
+          <h4 class="ac" style="margin:0 0 6px;font-size:14px">📋 必须满足 4 条件</h4>
+          <div class="check">Amy 是 CFT 或授权导师</div>
+          <div class="check">新人已持照(Lily)</div>
+          <div class="check">Lily 是<b>写单人 / 提交人</b></div>
+          <div class="check">CFT 全程在场监督</div>
+        </div>
+        <div class="card" style="padding:12px">
+          <h4 class="ok" style="margin:0 0 6px;font-size:14px">💡 双轨可选</h4>
+          <div class="check"><b>Cash Mode:</b>新人拿现金 + 计为培训记录</div>
+          <div class="check"><b>Growth Mode:</b>新人仅获晋级积分(晋级后重置)</div>
+          <div class="check">真实业务为准,Household 不拆分</div>
+        </div>
+      </div>
+      <div class="source-line rv">数据来源:v4 § 三、关键定义 辅导成交单(新人 50% + CFT 50%)· 培训单 Training Sale 规则</div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 7 平台 AI 红利 — 说明性 -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow">
+        <div class="tag rv" style="background:var(--accent);color:#fff;border:none">附加 · 平台 AI 红利</div>
+        <div class="stepno rv">07&nbsp;/&nbsp;15</div>
+      </div>
+      <h1 class="rv" style="font-size:clamp(28px,4vw,44px);margin:6px 0 14px">
+        <span class="ac">平台 AI 红利</span> · 不是承诺,是工具
+      </h1>
+      <div class="rv" style="font-size:14px;line-height:1.7;margin-top:6px">
+        AI 是平台基础设施的一部分。<b>任何 AI 乘数或短期 AI 激励</b>,平台会在实时活动里<b>另发</b>,不写进主佣金指南。
+      </div>
+      <div class="quote rv" style="margin-top:14px;font-size:13.5px;line-height:1.7">
+        <b class="ac">但你能合理预期的:</b><br/>
+        • AI 把繁琐事务自动化(回微信 / 客户分层 / 话术生成)<br/>
+        • 同样的工作时间,服务 <b class="key-c">3 倍</b> 客户<br/>
+        • 服务深度提升 → 转介绍率上升 → 复利收入<br/>
+        <span style="color:var(--ink-2)">本质:AI 是效率工具,不是收入承诺。把 AI 当长期竞争力,不当作短期套利。</span>
+      </div>
+      <div class="rv" style="margin-top:10px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+        <div class="card" style="padding:12px;text-align:center">
+          <div class="stat key-1">× 3</div>
+          <div class="stat-sub">服务客户数<br/>同等工作时间</div>
+        </div>
+        <div class="card" style="padding:12px;text-align:center">
+          <div class="stat ok-1">↑ 30%</div>
+          <div class="stat-sub">转介绍率<br/>服务深度提升</div>
+        </div>
+        <div class="card" style="padding:12px;text-align:center">
+          <div class="stat accent-1">0</div>
+          <div class="stat-sub">AI 乘数<br/>不计入主指南</div>
+        </div>
+      </div>
+      <div class="source-line rv">数据来源:v4 § 五、附加规则"AI 乘数另发,不在本主指南中"</div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 8 7 级晋级之路 -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow">
+        <div class="tag rv" style="background:var(--key);color:#fff;border:none">晋级 · 7 级阶梯</div>
+        <div class="stepno rv">08&nbsp;/&nbsp;15</div>
+      </div>
+      <h1 class="rv" style="font-size:clamp(28px,4vw,44px);margin:6px 0 14px">
+        从 <span class="ac">TA 50%</span> 到 <span class="ok-1">CEO 90%</span> · 7 步走
+      </h1>
+      <div class="ladder rv">
+        <div class="ladder-step" style="background:linear-gradient(180deg,#94a3b8,#64748b)"><div class="lvl">TA</div><div class="rate">50%</div><div class="gate">签协议+持照</div></div>
+        <div class="ladder-step" style="background:linear-gradient(180deg,#7dd3fc,#0284c7)"><div class="lvl">SA</div><div class="rate">60%</div><div class="gate">$50K TP/12月</div></div>
+        <div class="ladder-step" style="background:linear-gradient(180deg,#fbbf24,#d97706)"><div class="lvl">QMD</div><div class="rate">70%</div><div class="gate">$75K AV/3月+3腿</div></div>
+        <div class="ladder-step" style="background:linear-gradient(180deg,#fb923c,#ea580c)"><div class="lvl">SMD</div><div class="rate">75%</div><div class="gate">$225K AV/6月+4腿</div></div>
+        <div class="ladder-step" style="background:linear-gradient(180deg,#34d399,#059669)"><div class="lvl">NVP</div><div class="rate">80%</div><div class="gate">$350K AV/6月+5腿</div></div>
+        <div class="ladder-step" style="background:linear-gradient(180deg,#22d3ee,#0891b2)"><div class="lvl">EVP</div><div class="rate">85%</div><div class="gate">$750K AV/6月+6腿</div></div>
+        <div class="ladder-step" style="background:linear-gradient(180deg,#A87E2E,#7c5e1e)"><div class="lvl">CEO</div><div class="rate">90%</div><div class="gate">$1.2M AV/6月+7腿</div></div>
+      </div>
+      <div class="rv" style="margin-top:18px;font-size:13.5px;line-height:1.7">
+        <b class="ac">3 个关键节点:</b><br/>
+        • <b class="key-1">冲 QMD 70%</b>:从个人销售 → 团队管理,这是 <b>解锁级差奖 + 代际奖</b> 的分水岭<br/>
+        • <b class="key-1">冲 SMD 75%</b>:代际奖从 15% 涨到 30%(解锁第 2-3 代)<br/>
+        • <b class="key-1">冲 CEO 90%</b>:代际奖封顶 38%,9 代全开,被动收入主导
+      </div>
+      <div class="rv" style="margin-top:8px;font-size:12.5px;color:var(--ink-2)">
+        产出型分支(Producing Leg):每条需 <b>≥ 2 人持照</b>。AV = 团队总产能,个人产能占比 ≤ 1/3,QMD 豁免。
+      </div>
+      <div class="source-line rv">数据来源:v4 § 一、职级表 · v1 制度 § Rank 注释</div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 9 双通道对比 · 个人 vs 建设者 -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow">
+        <div class="tag rv" style="background:var(--accent);color:#fff;border:none">路径选择 · 双通道</div>
+        <div class="stepno rv">09&nbsp;/&nbsp;15</div>
+      </div>
+      <h1 class="rv" style="font-size:clamp(28px,4vw,44px);margin:6px 0 14px">
+        个人通道 vs <span class="ok-1">建设者通道</span>
+      </h1>
+      <table class="compare-table rv">
+        <tr>
+          <th style="width:22%">维度</th>
+          <th style="width:39%">个人通道 Personal Track</th>
+          <th style="width:39%">建设者通道 Builder Track</th>
+        </tr>
+        <tr>
+          <td><b>晋升依据</b></td>
+          <td>个人 TP(付费积分)</td>
+          <td><b class="ok-c">团队 AV + 产出型分支 + 结构健康</b></td>
+        </tr>
+        <tr>
+          <td><b>上限职级</b></td>
+          <td>NVP 80%(<b class="dn-c">EVP 以上不开放</b>)</td>
+          <td><b class="ok-c">CEO 90%(天花板最高)</b></td>
+        </tr>
+        <tr>
+          <td><b>代际奖</b></td>
+          <td class="dn-c">❌ 不解锁</td>
+          <td class="ok-c">✅ 唯一解锁路径(15% → 38%)</td>
+        </tr>
+        <tr>
+          <td><b>适合谁</b></td>
+          <td>个人销售力强 / 偏好独立作业</td>
+          <td>有志建团队 / 发展下线 / 拿被动收入</td>
+        </tr>
+        <tr>
+          <td><b>3-5 年收入上限</b></td>
+          <td class="dn-c">$150K – $250K / 年</td>
+          <td class="ok-c">$250K – $500K+ / 年(含代际)</td>
+        </tr>
+        <tr>
+          <td><b>长期可持续</b></td>
+          <td class="dn-c">靠个人持续高产出(累)</td>
+          <td class="ok-c">团队产出复利(越往后越轻松)</td>
+        </tr>
+      </table>
+      <div class="rv" style="margin-top:14px;font-size:13.5px;line-height:1.7">
+        <b class="key-1">新人建议:</b>先个人通道冲到 QMD(70%)→ 拿级差 + 解锁代际奖 → 切换为<b class="ok-1">建设者通道</b>长期发展。<br/>
+        <span style="color:var(--ink-2)">EVP(85%)及以上<b>无个人通道</b>,必须走建设者。</span>
+      </div>
+      <div class="source-line rv">数据来源:v4 § 三、关键定义 建设者通道 vs 个人通道</div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 10 案例 · Amy 从 0 到 CEO 走多久? -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow">
+        <div class="tag rv" style="background:var(--key);color:#fff;border:none">实战案例 · Amy</div>
+        <div class="stepno rv">10&nbsp;/&nbsp;15</div>
+      </div>
+      <h1 class="rv" style="font-size:clamp(28px,4vw,44px);margin:6px 0 14px">
+        案例 · <span class="key-1">Amy</span> 从小白到 CEO 走多久?
+      </h1>
+      <div class="timeline rv">
+        <div class="timeline-line"></div>
+        <div class="timeline-stops">
+          <div class="tl-stop">
+            <div class="dot"></div>
+            <div class="yr">Y1</div>
+            <div class="lvl">TA → SA</div>
+            <div class="earn">Fast Track</div>
+          </div>
+          <div class="tl-stop">
+            <div class="dot" style="background:var(--ok);box-shadow:0 0 0 2px var(--ok)"></div>
+            <div class="yr">Y2</div>
+            <div class="lvl">→ QMD 70%</div>
+            <div class="earn">$80K-$120K</div>
+          </div>
+          <div class="tl-stop">
+            <div class="dot" style="background:var(--ok);box-shadow:0 0 0 2px var(--ok)"></div>
+            <div class="yr">Y3</div>
+            <div class="lvl">→ SMD 75%</div>
+            <div class="earn">$150K-$200K</div>
+          </div>
+          <div class="tl-stop">
+            <div class="dot" style="background:var(--accent);box-shadow:0 0 0 2px var(--accent)"></div>
+            <div class="yr">Y4</div>
+            <div class="lvl">→ NVP 80%</div>
+            <div class="earn">$250K-$350K</div>
+          </div>
+          <div class="tl-stop">
+            <div class="dot" style="background:var(--accent);box-shadow:0 0 0 2px var(--accent)"></div>
+            <div class="yr">Y5</div>
+            <div class="lvl">→ EVP 85%</div>
+            <div class="earn">$400K-$500K</div>
+          </div>
+          <div class="tl-stop">
+            <div class="dot" style="background:var(--key);box-shadow:0 0 0 2px var(--key)"></div>
+            <div class="yr">Y6+</div>
+            <div class="lvl">CEO 90%</div>
+            <div class="earn">$600K+</div>
+          </div>
+        </div>
+      </div>
+      <div class="quote rv" style="margin-top:14px;font-size:13.5px;line-height:1.7">
+        <b class="ac">Amy Y2 关键动作:</b><br/>
+        • 自己冲到 QMD 70%(解锁代际 + 级差)<br/>
+        • 招 3 条直辖分支(每条 ≥ 2 人持照)<br/>
+        • 团队 AV 达 $75K/3 个月<br/>
+        • 每年稳定收入 <b class="key-c">$80K - $120K</b>(个人佣金 + 级差 + 第 1 代代际奖)
+      </div>
+      <div class="rv" style="margin-top:8px;font-size:12px;color:var(--ink-2)">
+        收入区间基于 v4 各级 AV/TP 门槛 + v1 制度公式测算。不同地区/产品组合会有 ±30% 浮动,案例为<b>中位数</b>路径。
+      </div>
+      <div class="source-line rv">数据来源:v4 各级门槛 + v1 公式 + 团队实战(4 年实证 7 位 $200K+ 团队长)</div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 11 收入合理化测算 · 4 场景对比 -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow">
+        <div class="tag rv" style="background:var(--ok);color:#fff;border:none">收入测算 · 4 场景</div>
+        <div class="stepno rv">11&nbsp;/&nbsp;15</div>
+      </div>
+      <h1 class="rv" style="font-size:clamp(28px,4vw,44px);margin:6px 0 14px">
+        4 个场景 · 一张表算明白
+      </h1>
+      <table class="compare-table rv" style="font-size:12.5px">
+        <tr>
+          <th>场景</th><th>职级 / 路径</th>
+          <th>个人佣金</th>
+          <th>级差奖</th>
+          <th>代际奖</th>
+          <th>CFT 合作</th>
+          <th class="ok-c">年合计</th>
+        </tr>
+        <tr>
+          <td><b>兼职新手</b></td>
+          <td>TA 50%</td>
+          <td>$30K-$50K</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td class="key-c"><b>$30K-$50K</b></td>
+        </tr>
+        <tr>
+          <td><b>全职个人</b></td>
+          <td>SA-QMD 个人通道</td>
+          <td>$80K-$120K</td>
+          <td>$10K-$20K</td>
+          <td>—</td>
+          <td>—</td>
+          <td class="key-c"><b>$90K-$140K</b></td>
+        </tr>
+        <tr>
+          <td><b>团队长</b></td>
+          <td>SMD-NVP 75-80%</td>
+          <td>$100K-$180K</td>
+          <td>$40K-$80K</td>
+          <td>$80K-$150K</td>
+          <td>$20K-$40K</td>
+          <td class="ok-c"><b>$240K-$450K</b></td>
+        </tr>
+        <tr>
+          <td><b>高级合伙人</b></td>
+          <td>EVP-CEO 85-90%</td>
+          <td>$150K-$250K</td>
+          <td>$80K-$150K</td>
+          <td>$300K-$500K</td>
+          <td>$50K-$80K</td>
+          <td class="ok-c"><b>$580K-$980K</b></td>
+        </tr>
+      </table>
+      <div class="rv" style="margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <div class="card" style="padding:12px">
+          <h4 class="key-1" style="margin:0 0 6px;font-size:14px">💡 收入合理化的 3 个信号</h4>
+          <div class="check">个人佣金 : 代际奖 ≈ <b>1 : 1</b> 时进入健康区间</div>
+          <div class="check">代际奖占比 <b>≥ 40%</b> 时算"被动收入阶段"</div>
+          <div class="check">CEO 38% 全开 = 真正的复利期</div>
+        </div>
+        <div class="card" style="padding:12px">
+          <h4 class="dn" style="margin:0 0 6px;font-size:14px">⚠️ 风险信号</h4>
+          <div class="cross">100% 靠个人佣金 = 没建团队</div>
+          <div class="cross">团队只有 1-2 条腿 = AV 过集中</div>
+          <div class="cross">CFT 收入 <b>持续 > 30%</b> = 教学重于业务</div>
+        </div>
+      </div>
+      <div class="source-line rv">数据来源:v4 + v1 公式综合测算(中位数路径 · 实际 ±30% 浮动)</div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 12 Fast Track · 加速上车 -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow">
+        <div class="tag rv" style="background:var(--key);color:#fff;border:none">加速 · Fast Track</div>
+        <div class="stepno rv">12&nbsp;/&nbsp;15</div>
+      </div>
+      <h1 class="rv" style="font-size:clamp(28px,4vw,44px);margin:6px 0 14px">
+        <span class="key-1">Fast Track</span> · 加速上车通道
+      </h1>
+      <div class="grid2 rv">
+        <div class="card" style="padding:14px">
+          <h3 class="ok" style="margin:0 0 8px;font-size:15px">SA 快速晋升</h3>
+          <div class="formula" style="font-size:14px;padding:10px 14px;margin:6px 0">
+            <b>首 30 天 $10,000 培训销售积分</b>
+          </div>
+          <div class="check">从 TA 直接冲到 SA(60%)</div>
+          <div class="check">30 天窗口期</div>
+          <div class="check">适合快速启动的同业背景伙伴</div>
+        </div>
+        <div class="card" style="padding:14px">
+          <h3 class="ac" style="margin:0 0 8px;font-size:15px">QMD 快速通道</h3>
+          <div class="formula" style="font-size:14px;padding:10px 14px;margin:6px 0">
+            <b>首 90 天 $30,000 培训销售积分</b>
+          </div>
+          <div class="check">从 SA 冲到 QMD(70%)</div>
+          <div class="check">90 天窗口期 · Growth Mode</div>
+          <div class="check">立即解锁<b>级差 + 代际奖</b></div>
+        </div>
+      </div>
+      <div class="rv" style="margin-top:14px;font-size:13.5px;line-height:1.7">
+        <b class="ac">Cash Mode vs Growth Mode:</b>
+      </div>
+      <div class="grid2 rv" style="margin-top:6px">
+        <div class="card" style="padding:12px">
+          <h4 class="ok" style="margin:0 0 6px;font-size:14px">💵 Cash Mode</h4>
+          <div class="check">新人拿当期现金分成</div>
+          <div class="check">计为辅导成交记录</div>
+          <div class="check">适合需要现金流的伙伴</div>
+        </div>
+        <div class="card" style="padding:12px">
+          <h4 class="ac" style="margin:0 0 6px;font-size:14px">📈 Growth Mode</h4>
+          <div class="check">仅获得晋级积分</div>
+          <div class="check">晋级后<b>积分重置</b></div>
+          <div class="check">适合快速冲级的伙伴</div>
+        </div>
+      </div>
+      <div class="rv" style="margin-top:8px;font-size:12px;color:var(--ink-2)">
+        <b>Fast Track 出处</b>:5000→50% / 10000→60% / 25000→70% = Hengsheng 平台规则(非某旧业务体系)
+      </div>
+      <div class="source-line rv">数据来源:v4 § 四、快速晋升与训练规则 · v1 Fast Track 出处注</div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 13 合规红线 · 5 件不能踩的事 -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow">
+        <div class="tag rv" style="background:var(--danger);color:#fff;border:none">合规红线 · 必读</div>
+        <div class="stepno rv">13&nbsp;/&nbsp;15</div>
+      </div>
+      <h1 class="rv" style="font-size:clamp(28px,4vw,44px);margin:6px 0 14px">
+        <span class="dn-1">5 件不能踩</span>的事 · 合规即收入
+      </h1>
+      <div class="rv" style="display:grid;grid-template-columns:1fr;gap:8px;margin-top:10px">
+        <div class="pillar" style="border-left-color:var(--danger)">
+          <b class="dn-1">① Household 不拆分</b><span style="font-size:13px;line-height:1.6;display:block;margin-top:4px;color:var(--ink-2)">同一家庭/同地址的多笔销售只计 1 笔培训/辅导销售,不得虚假拆分获得重复资格。</span>
+        </div>
+        <div class="pillar" style="border-left-color:var(--danger)">
+          <b class="dn-1">② 锁定后不可追溯调整</b><span style="font-size:13px;line-height:1.6;display:block;margin-top:4px;color:var(--ink-2)">所有产能、团队计分及利益在<b>提交时锁定</b>,不可事后重新分配。</span>
+        </div>
+        <div class="pillar" style="border-left-color:var(--danger)">
+          <b class="dn-1">③ 提交即生效</b><span style="font-size:13px;line-height:1.6;display:block;margin-top:4px;color:var(--ink-2)">已关单且已付费的目标保费才计入积分。所有积分基于 closed & paid target premiums。</span>
+        </div>
+        <div class="pillar" style="border-left-color:var(--danger)">
+          <b class="dn-1">④ 退保/违规影响 Good Standing</b><span style="font-size:13px;line-height:1.6;display:block;margin-top:4px;color:var(--ink-2)">持照 + 合规 + E&O + 无重大退保/违规 = 维持职级和晋级资格的前提。</span>
+        </div>
+        <div class="pillar" style="border-left-color:var(--danger)">
+          <b class="dn-1">⑤ AI 乘数不混主指南</b><span style="font-size:13px;line-height:1.6;display:block;margin-top:4px;color:var(--ink-2)">任何 AI 乘数或短期 AI 激励另发,不写进主佣金指南。<b>对外承诺需谨慎</b>。</span>
+        </div>
+      </div>
+      <div class="rv" style="margin-top:10px;font-size:12.5px;color:var(--ink-2)">
+        公司保留审查、拒绝或撤回任何晋级的权利(若合规或产能质量标准被违反)。
+      </div>
+      <div class="source-line rv">数据来源:v4 § 五、核心规则 · 5 条红线</div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 14 心态与方法 · 给"未来人"的希望 -->
+  <!-- ============================================ -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="toprow">
+        <div class="tag rv" style="background:var(--ok);color:#fff;border:none">心态 · 4 个真实数据</div>
+        <div class="stepno rv">14&nbsp;/&nbsp;15</div>
+      </div>
+      <h1 class="rv" style="font-size:clamp(28px,4vw,44px);margin:6px 0 14px">
+        给 <span class="key-1">"未来人"</span> 的 4 个真实希望
+      </h1>
+      <div class="grid2 rv" style="margin-top:14px">
+        <div class="pillar" style="padding:18px 20px;text-align:center">
+          <div class="stat key-1">30 天</div>
+          <div class="stat-sub">可达成 SA Fast Track<br/><b style="color:var(--key)">$10K 培训销售积分</b></div>
+        </div>
+        <div class="pillar" style="padding:18px 20px;text-align:center">
+          <div class="stat ok-1">1 年</div>
+          <div class="stat-sub">可冲 QMD 70%<br/><b style="color:var(--ok)">解锁级差 + 代际奖</b></div>
+        </div>
+        <div class="pillar" style="padding:18px 20px;text-align:center">
+          <div class="stat accent-1">3-5 年</div>
+          <div class="stat-sub">稳定年收入 $100K+<br/><b style="color:var(--accent)">SMD-NVP 区间</b></div>
+        </div>
+        <div class="pillar" style="padding:18px 20px;text-align:center">
+          <div class="stat" style="color:#8B5CF6">7 位</div>
+          <div class="stat-sub">4 年实证 $200K+ 团队长<br/><b style="color:#8B5CF6">我们已有 7 个人做到</b></div>
+        </div>
+      </div>
+      <div class="quote rv" style="margin-top:18px;font-size:14px;line-height:1.7">
+        <b class="key-1">心态 3 件:</b><br/>
+        • <b>先接受"前 6 个月是学习期"</b>:接受慢成长,撑过 24-30 个月分水岭<br/>
+        • <b>把收入当公式算,不当承诺听</b>:用 v1 公式 + v4 门槛自己算出来<br/>
+        • <b>团队比个人重要</b>:EVP 以上没个人通道,必须建团队
+      </div>
+      <div class="source-line rv">数据来源:v4 + v1 + 团队实战(4 年 7 位 $200K+ 来自 song 姐 2025-03-01 总结)</div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 15 学完就考 CTA -->
+  <!-- ============================================ -->
+  <section class="slide center" style="background:linear-gradient(135deg,#0d2847 0%,#1a3a5c 100%);color:#fff">
+    <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"
+         style="position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:0.4">
+      <circle cx="200" cy="200" r="180" fill="#A87E2E" filter="url(#cv-blur-is)">
+        <animate attributeName="cx" values="200;1400;200" dur="80s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="1400" cy="700" r="180" fill="#2C8A60" filter="url(#cv-blur-is)">
+        <animate attributeName="cy" values="700;200;700" dur="90s" repeatCount="indefinite"/>
+      </circle>
+    </svg>
+    <div class="wrap" style="position:relative;z-index:1">
+      <div class="toprow">
+        <div class="tag rv" style="background:var(--ok);color:#fff;border:none">🎓 学完就考</div>
+        <div class="stepno rv" style="color:#fff">15&nbsp;/&nbsp;15</div>
+      </div>
+      <h1 class="rv" style="font-size:clamp(34px,5vw,56px);margin:6px 0;color:#fff">
+        学完 → <span style="color:#FFD700">立刻考</span>
+      </h1>
+      <p class="lead rv" style="font-size:clamp(16px,1.8vw,22px);margin:14px 0 22px;color:rgba(255,255,255,0.9)">
+        <b style="color:#FFD700">15 道题</b> · <b style="color:#FFD700">70 分及格</b> · <b style="color:#FFD700">10 分钟</b><br/>
+        <span style="font-size:14px;opacity:0.85">考试成绩所获积分将计入奖励标准,请认真答题</span>
+      </p>
+      <a class="exam-cta rv" href="https://kevin89887634.github.io/training-quiz/?course=income-system-2026" target="_blank" rel="noopener">
+        ▶ 开始考试 · 10 分钟
+      </a>
+      <div style="margin-top:14px;font-family:monospace;font-size:13px;background:rgba(0,0,0,0.3);padding:8px 14px;border-radius:6px;display:inline-block;color:#fff">
+        https://kevin89887634.github.io/training-quiz/?course=income-system-2026
+      </div>
+      <div class="exam-meta rv">
+        <span class="pill">📝 15 道题</span>
+        <span class="pill">⏱ 10 分钟</span>
+        <span class="pill">🎯 70 分及格</span>
+        <span class="pill">📱 手机可考</span>
+      </div>
+      <div class="step-cards rv">
+        <div class="step-card">
+          <div class="n">1</div>
+          <div class="t">点击上方按钮</div>
+          <div class="d">填写姓名 + 团队 → 进入考试</div>
+        </div>
+        <div class="step-card">
+          <div class="n">2</div>
+          <div class="t">答 15 道题</div>
+          <div class="d">数字/公式/对比题为主 · 考完看解析</div>
+        </div>
+        <div class="step-card">
+          <div class="n">3</div>
+          <div class="t">≥ 70 分通关</div>
+          <div class="d">没通过可重考 · 错题自动标记</div>
+        </div>
+      </div>
+      <div class="tipbox rv" style="margin-top:18px;background:rgba(255,255,255,0.08);border-left:3px solid #FFD700;padding:10px 14px;border-radius:0 6px 6px 0;font-size:13px;color:rgba(255,255,255,0.85)">
+        <b style="color:#FFD700">📌 链接打不开?</b> 复制上方 URL → 浏览器粘贴 → 进入考试页。
+      </div>
+      <div class="logo rv" style="margin-top:18px"><span class="mk" style="background:linear-gradient(135deg,#A87E2E,#FFD700);color:#0d2847;font-weight:700;width:60px;height:60px;display:inline-flex;align-items:center;justify-content:center;border-radius:10px;font-size:24px">HS</span>恒晟集团 · Hengsheng Group</div>
+    </div>
+  </section>
+
+</div>
+
+<script src="../../assets/deck.js"></script>
+</body>
+</html>
