@@ -14,6 +14,13 @@ doc_type: 招商 PPT 双版本
 
 ---
 
+## 🔗 在线演示（最快）
+
+- **Gamma v0.3 极简版**：https://gamma.app/docs/s39qd3gz8y0e15w（浏览器原生播放，不需要下载）
+- **GH Pages 落地页**：https://kevin89887634.github.io/hengsheng-training-decks/decks/hengsheng-china-partner-2026-09-14/index.html
+
+---
+
 ## 📦 文件清单
 
 | 文件 | 版本 | 风格 | 大小 | 页数 |
